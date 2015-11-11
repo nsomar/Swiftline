@@ -1,4 +1,6 @@
-# Swiftline
+# Swiftline 
+🎨❓🏃
+
 
 [![Build Status](https://travis-ci.org/oarrabi/swiftline.svg?branch=master)](https://travis-ci.org/oarrabi/swiftline)
 
@@ -8,9 +10,9 @@ Swiftline is a set of tools to help you create command line applications. Swiftl
 
 Swiftline can be divided to three main parts:
 
-- Colorize; Helps adding colors to strings written to the terminal
-- Ask, Choose and agree; Easily create prompt for asking the user more info
-- Runner; A quick way to run an external command and read its standard output and standard error. 
+- Colorize 🎨; Helps adding colors to strings written to the terminal
+- Ask , Choose  and agree ❓; Easily create prompt for asking the user more info
+- Runner 🏃; A quick way to run an external command and read its standard output and standard error. 
 
 ## Installation
 
@@ -47,7 +49,7 @@ You can compose foreground, background, and style:
     print("I am an underlined red on white string".s.Underline.f.Red.b.White)
 ```
 
-##  Ask, Choose, Agree
+##  Ask, Choose, Agree ❓
 Ask, Choose and Agree are used to prompt the user for more information.
 
 ### Ask
@@ -182,7 +184,7 @@ If the user enters any invalid input, agree will keep prompting him for a Yes/No
     
     You entered false
 
-## Runner
+## Runner 🏃
 Runner provides a quick, concise way to run an external command and read its standard output and standard error.
 
 To execute a simple command you would do:
@@ -225,11 +227,11 @@ Set `interactive` to true if you expect the launched command to ask input from t
     
 `runWithoutCapture("command")` is a quick way to run a command in interactive mode. The return value is the exit code of that command.
 
-### Improvement
+### Future Improvement
 - Better documentation
 - Add gather (from [highline](https://github.com/JEG2/highline)) to ask function
 - Figure out a way to eliminate the need of `interactive`
 
 ## Tests
-Tests can be found [here](). They can be normally run from the Xcode
+Tests can be found [here](https://github.com/oarrabi/Swiftline/tree/master/SwiftlineTests). They can be normally run from the Xcode
 .
