@@ -232,6 +232,8 @@ Set `interactive` to true if you expect the launched command to ask input from t
 - Add gather (from [highline](https://github.com/JEG2/highline)) to ask function
 - Figure out a way to eliminate the need of `interactive`
 
+## Examples
+A list of examples can be found [here](https://github.com/oarrabi/Swiftline/tree/master/Examples)
 ## Tests
 Tests can be found [here](https://github.com/oarrabi/Swiftline/tree/master/SwiftlineTests). They can be normally run from the Xcode
 .

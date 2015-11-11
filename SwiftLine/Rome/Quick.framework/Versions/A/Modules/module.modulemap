@@ -1,0 +1,10 @@
+framework module Quick {
+  umbrella header "Pods-Quick-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Quick.Swift {
+    header "Quick-Swift.h"
+}
