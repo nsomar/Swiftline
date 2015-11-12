@@ -1,8 +1,8 @@
 # Swiftline 
-🎨❓🏃
 
 
-[![Build Status](https://travis-ci.org/oarrabi/Swiftline.svg?branch=master)](https://travis-ci.org/oarrabi/Swiftline)
+🎨 ❓ 🏃 [![Build Status](https://travis-ci.org/oarrabi/Swiftline.svg?branch=master)](https://travis-ci.org/oarrabi/Swiftline)   
+    
 
 Swiftline is a set of tools to help you create command line applications. Swiftline is inspired by [highline](https://github.com/JEG2/highline)
 
@@ -10,9 +10,9 @@ Swiftline is a set of tools to help you create command line applications. Swiftl
 
 Swiftline can be divided to three main parts:
 
-- 🎨 Colorize: Helps adding colors to strings written to the terminal
-- ❓Ask , Choose  and agree: Easily create prompt for asking the user more info
-- 🏃Run: A quick way to run an external command and read its standard output and standard error. 
+- Colorize: Helps adding colors to strings written to the terminal
+- Ask , Choose  and agree: Easily create prompt for asking the user more info
+- Run: A quick way to run an external command and read its standard output and standard error. 
 
 ## Usage
 
