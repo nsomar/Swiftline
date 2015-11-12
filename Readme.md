@@ -2,7 +2,7 @@
 🎨❓🏃
 
 
-[![Build Status](https://travis-ci.org/oarrabi/swiftline.svg?branch=master)](https://travis-ci.org/oarrabi/swiftline)
+[![Build Status](https://travis-ci.org/oarrabi/Swiftline.svg?branch=master)](https://travis-ci.org/oarrabi/Swiftline)
 
 Swiftline is a set of tools to help you create command line applications. Swiftline is inspired by [highline](https://github.com/JEG2/highline)
 
@@ -10,16 +10,13 @@ Swiftline is a set of tools to help you create command line applications. Swiftl
 
 Swiftline can be divided to three main parts:
 
-- Colorize 🎨; Helps adding colors to strings written to the terminal
-- Ask , Choose  and agree ❓; Easily create prompt for asking the user more info
-- Runner 🏃; A quick way to run an external command and read its standard output and standard error. 
-
-## Installation
-
+- 🎨 Colorize: Helps adding colors to strings written to the terminal
+- ❓Ask , Choose  and agree: Easily create prompt for asking the user more info
+- 🏃Run: A quick way to run an external command and read its standard output and standard error. 
 
 ## Usage
 
-## Colorize
+## Colorize 🎨
 Colorize helps styling the strings before printing them to the terminal. You can change the text color, the text background and the text style.
 Colorize works by extending `String` struct to add styling to it.
 
@@ -184,8 +181,8 @@ If the user enters any invalid input, agree will keep prompting him for a Yes/No
     
     You entered false
 
-## Runner 🏃
-Runner provides a quick, concise way to run an external command and read its standard output and standard error.
+## Run 🏃
+Run provides a quick, concise way to run an external command and read its standard output and standard error.
 
 To execute a simple command you would do:
 
@@ -227,13 +224,31 @@ Set `interactive` to true if you expect the launched command to ask input from t
     
 `runWithoutCapture("command")` is a quick way to run a command in interactive mode. The return value is the exit code of that command.
 
-### Future Improvement
-- Better documentation
-- Add gather (from [highline](https://github.com/JEG2/highline)) to ask function
-- Figure out a way to eliminate the need of `interactive`
+## Installation
+You can install Swiftline using cocoapods,
+
+### Cocoapods
+    use_frameworks!
+    pod 'Swiftline'
+
+### Cocoapods + Rome plugin
+If you want to use swiftline in a script you can use [Rome](https://github.com/neonichu/Rome) cocoapod plugin. This plugin builds the framework from the pod file and place them in a Rome directory.
+
+    platform :osx, '10.10'
+    plugin 'cocoapods-rome'
+
+    pod 'Swiftline'
+
+### Manual 
+To install Swiftline manually, add `Pod/Swiftline` directory to your project.
 
 ## Examples
 A list of examples can be found [here](https://github.com/oarrabi/Swiftline/tree/master/Examples)
+
 ## Tests
 Tests can be found [here](https://github.com/oarrabi/Swiftline/tree/master/SwiftlineTests). They can be normally run from the Xcode
 .
+## Future Improvement
+- Better documentation
+- Add gather (from [highline](https://github.com/JEG2/highline)) to ask function
+- Figure out a way to eliminate the need of `interactive`

@@ -186,7 +186,8 @@
 				D727662E1BF416C600126D99 /* Misc */,
 				D72766331BF416C600126D99 /* Runner */,
 			);
-			path = Swiftline;
+			name = Swiftline;
+			path = ../../Pod/Swiftline;
 			sourceTree = "<group>";
 		};
 		D727661E1BF416C600126D99 /* Agree */ = {
@@ -587,6 +588,7 @@
 				D72766191BF416AC00126D99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D727661A1BF416AC00126D99 /* Build configuration list for PBXNativeTarget "SwiftlineTests" */ = {
 			isa = XCConfigurationList;
@@ -595,6 +597,7 @@
 				D727661C1BF416AC00126D99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

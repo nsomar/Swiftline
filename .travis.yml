@@ -2,7 +2,7 @@ sudo: false
 language: objective-c
 osx_image: xcode7.1
 cache: cocoapods
-podfile: Swiftline/Podfile
+podfile: SwiftlineTests/Podfile
 
 before_install:
 - gem install cocoapods-rome
@@ -12,7 +12,7 @@ install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- cd Swiftline; xctool -project Swiftline.xcodeproj -scheme Swiftline clean build test -sdk macosx GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+- cd SwiftlineTests; xctool -project Swiftline.xcodeproj -scheme Swiftline clean build test -sdk macosx GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 - cd ..; pod lib lint --quick
 
 after_success:

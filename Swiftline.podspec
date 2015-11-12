@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.platform     = :osx, '10.9'
   s.requires_arc = true
 
-  s.source_files = 'Swiftline/Swiftline/**/*'
+  s.source_files = 'Pod/Swiftline/**/*'
 end
