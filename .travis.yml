@@ -6,7 +6,7 @@ podfile: SwiftlineTests/Podfile
 
 before_install:
 - gem install cocoapods-rome
-- pod install --project-directory=Swiftline --no-integrate
+- pod install --project-directory=SwiftlineTests --no-integrate
 
 install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
