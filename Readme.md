@@ -34,7 +34,7 @@ To change the text background color, use either `string.b` or `string.background
     print("My background color is green".background.Green)
 ```
 
-To change the text background color, use either `string.s` or `string.style`:
+To change the text background style, use either `string.s` or `string.style`:
 
 ```swift
     print("I am a bold string".s.Bold)
