@@ -202,7 +202,7 @@ While `run("command")` can split the arguments by spaces. Some times argument sp
     let result = run("ls", args: "-all")
 ```
 
-To costumize the run function, you can pass in a customization block:
+To customize the run function, you can pass in a customization block:
 
 ```swift
     let result = run("ls -all") { settings in
