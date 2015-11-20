@@ -16,52 +16,36 @@ extension String {
         let string: String
         
         public var Black: String {
-            get {
-                return Colorizer(string: string, color: ForegroundColor.Black).description
-            }
+            return Colorizer(string: string, color: ForegroundColor.Black).description
         }
         
         public var Red: String {
-            get {
-                return Colorizer(string: string, color: ForegroundColor.Red).description
-            }
+            return Colorizer(string: string, color: ForegroundColor.Red).description
         }
         
         public var Green: String {
-            get {
-                return Colorizer(string: string, color: ForegroundColor.Green).description
-            }
+            return Colorizer(string: string, color: ForegroundColor.Green).description
         }
         
         public var Yellow: String {
-            get {
-                return Colorizer(string: string, color: ForegroundColor.Yellow).description
-            }
+            return Colorizer(string: string, color: ForegroundColor.Yellow).description
         }
         
         public var Blue: String {
-            get {
-                return Colorizer(string: string, color: ForegroundColor.Blue).description
-            }
+            return Colorizer(string: string, color: ForegroundColor.Blue).description
         }
         
         public var Magenta: String {
-            get {
-                return Colorizer(string: string, color: ForegroundColor.Magenta).description
-            }
+            return Colorizer(string: string, color: ForegroundColor.Magenta).description
         }
         
         public var Cyan: String {
-            get {
-                return Colorizer(string: string, color: ForegroundColor.Cyan).description
-            }
+            return Colorizer(string: string, color: ForegroundColor.Cyan).description
         }
         
         public var White: String {
-            get {
-                return Colorizer(string: string, color: ForegroundColor.White).description
-            }
+            return Colorizer(string: string, color: ForegroundColor.White).description
         }
     }
-
+    
 }
