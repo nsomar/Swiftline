@@ -25,7 +25,7 @@ class AgreeSettings: AskerValidator {
     }
     
     func invalidItemMessage(string: String?) -> String? {
-        if positiveValues.contains(string!) || negativeValues.contains(string!) {
+        if let message = string where positiveValues.contains(message) || negativeValues.contains(message) {
             return nil
         }
         

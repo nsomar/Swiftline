@@ -11,30 +11,14 @@ import Foundation
 
 class PromptSettings {
     
-    static var reader: PromptReader!
-    static var printer: PromptPrinter!
-    
-    class func getReader() -> PromptReader {
-        if let reader = PromptSettings.reader {
-            return reader
-        } else {
-            return ConsolePromptReader()
-        }
-    }
-    
-    class func getPrinter() -> PromptPrinter {
-        if let printer = PromptSettings.printer {
-            return printer
-        } else {
-            return ConsolePromptPrinter()
-        }
-    }
+    static var reader: PromptReader = ConsolePromptReader()
+    static var printer: PromptPrinter = ConsolePromptPrinter()
     
     class func read() -> String? {
-        return getReader().read()
+        return reader.read()
     }
     
     class func print(string: String, terminator: String = "\n") {
-        return getPrinter().printString(string, terminator: terminator)
+        return printer.printString(string, terminator: terminator)
     }
 }

@@ -14,32 +14,32 @@ extension String {
     
     /// Access the methods to change the foreground color
     public var f: StringForegroundColorizer {
-        get { return foreground }
+        return foreground
     }
 
     /// Access the methods to change the foreground color
     public var foreground: StringForegroundColorizer {
-        get { return StringForegroundColorizer(string: self) }
+        return StringForegroundColorizer(string: self)
     }
     
     /// Access the methods to change the background color
     public var b: StringBackgroundColorizer {
-        get { return background }
+        return background
     }
 
     /// Access the methods to change the background color
     public var background: StringBackgroundColorizer {
-        get { return StringBackgroundColorizer(string: self) }
+        return StringBackgroundColorizer(string: self)
     }
     
     /// Access the methods to change the text style
     public var s: StringStyleColorizer {
-        get { return style }
+        return style
     }
 
     /// Access the methods to change the text style
     public var style: StringStyleColorizer {
-        get { return StringStyleColorizer(string: self) }
+        return StringStyleColorizer(string: self)
     }
     
 }
@@ -57,10 +57,6 @@ class Colorizer: CustomStringConvertible {
     }
     
     var description: String {
-        
-        get {
-            return color.colorize(string: string)
-        }
-        
+        return color.colorize(string: string)
     }
 }

@@ -21,7 +21,7 @@ protocol AskerValidator {
 func askForValidatedItem<T, W: AskerValidator where W.Item == T>
     (originalValue value: String, validator: W) -> T {
     
-    var validatedValue: String? = value
+    var validatedValue: String = value
         
     while true {
         guard let invalidMessage = validator.invalidItemMessage(validatedValue) else {
@@ -34,5 +34,5 @@ func askForValidatedItem<T, W: AskerValidator where W.Item == T>
         validatedValue = readStringOrEmpty()
     }
     
-    return validator.validatedItem(forString: validatedValue!)
+    return validator.validatedItem(forString: validatedValue)
 }
