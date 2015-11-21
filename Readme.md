@@ -1,7 +1,7 @@
 # Swiftline 
 
 
-🎨 ❓ 🏃 [![Build Status](https://travis-ci.org/oarrabi/Swiftline.svg?branch=master)](https://travis-ci.org/oarrabi/Swiftline)   
+🎨 ❓ 🏃 [![Build Status](https://travis-ci.org/Swiftline/Swiftline.svg?branch=master)](https://travis-ci.org/Swiftline/Swiftline)    
     
 
 Swiftline is a set of tools to help you create command line applications. Swiftline is inspired by [highline](https://github.com/JEG2/highline)
