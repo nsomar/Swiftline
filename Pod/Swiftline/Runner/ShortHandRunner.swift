@@ -32,7 +32,7 @@ public func run(command: String, args: String...) -> RunResults {
  - returns: RunResults describing the command results
  */
 public func run(command: String, args: [String]) -> RunResults {
-    return 🏃.run(command, args: args as [String])
+    return 🏃.run(command, args: args)
 }
 
 

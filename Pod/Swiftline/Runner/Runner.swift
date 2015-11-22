@@ -50,7 +50,7 @@ class 🏃{
         
         let commandParts = commandToRun(command, args: args)
         
-        var result: RunResults!
+        let result: RunResults
         
         echoCommand(commandParts, settings: settings)
         
@@ -105,7 +105,7 @@ class 🏃{
         if settings.echo.contains(.Stderr) {
             echoStringIfNotEmpty("Stderr", string: result.stderr)
         }
-        1}
+    }
     
     private class func echoStringIfNotEmpty(title: String, string: String) {
         if !string.isEmpty {

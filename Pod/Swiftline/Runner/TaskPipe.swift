@@ -15,7 +15,7 @@ protocol TaskPipe {
 
 extension NSPipe: TaskPipe {
     func read() -> NSData {
-        return self.fileHandleForReading.readDataToEndOfFile()
+        return fileHandleForReading.readDataToEndOfFile()
     }
 }
 

@@ -25,6 +25,6 @@ class DummyPromptPrinter: PromptPrinter {
     var printed = ""
     
     func printString(string: String, terminator: String = "\n") {
-        self.printed += string + terminator
+        printed += string + terminator
     }
 }

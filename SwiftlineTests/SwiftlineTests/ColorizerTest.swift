@@ -7,7 +7,7 @@ import Nimble
 class ColorizerTest: QuickSpec {
     override func spec() {        
         
-        describe("Foreground Extension") { () -> Void in
+        describe("Foreground Extension") {
             
             it("returns a black string") {
                 let string  = "the string".f.Black
@@ -51,7 +51,7 @@ class ColorizerTest: QuickSpec {
             
         }
         
-        describe("Background Extension") { () -> Void in
+        describe("Background Extension") {
             
             it("returns a black string") {
                 let string  = "the string".b.Black
@@ -95,7 +95,7 @@ class ColorizerTest: QuickSpec {
             
         }
         
-        describe("Style Extension") { () -> Void in
+        describe("Style Extension") {
             
             it("returns a bold string") {
                 let string  = "the string".s.Bold
@@ -154,7 +154,7 @@ class ColorizerTest: QuickSpec {
             
         }
         
-        describe("Mixing Styles Extension") { () -> Void in
+        describe("Mixing Styles Extension") {
             
             it("returns a bold red with white foreground string ") {
                 let string  = "the string".s.Bold.f.Red.b.White
