@@ -27,7 +27,7 @@ protocol TaskExecutor {
 
 class DryTaskExecutor: TaskExecutor {
     
-    func execute(commandParts: [String]) -> ExecutorReturnValue  {
+    func execute(commandParts: [String]) -> ExecutorReturnValue {
         let command = commandParts.joinWithSeparator(" ")
         PromptSettings.print("Executed command '\(command)'")
         return (0,
