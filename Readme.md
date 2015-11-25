@@ -8,11 +8,12 @@ Swiftline is a set of tools to help you create command line applications. Swiftl
 
 ---
 
-Swiftline can be divided to three main parts:
+Swiftline contains the following:
 
 - Colorize: Helps adding colors to strings written to the terminal
 - Ask , Choose  and agree: Easily create prompt for asking the user more info
 - Run: A quick way to run an external command and read its standard output and standard error. 
+- Env: Read and write environment variables [ruby-flavored](http://ruby-doc.org/core-2.2.0/ENV.html)
 
 ## Usage
 
@@ -223,6 +224,23 @@ To customize the run function, you can pass in a customization block:
 Set `interactive` to true if you expect the launched command to ask input from the user through the stdin. 
     
 `runWithoutCapture("command")` is a quick way to run a command in interactive mode. The return value is the exit code of that command.
+
+## Env
+Env is used to read and write the environment variables passed to the script
+```swift
+// Set enviroment variable
+Env.set("key1", "value1")
+
+// Get environment variable
+Env.get("SomeKey")
+
+// Clear all variables
+Env.clear()
+
+// Get all keys and values
+Env.keys()
+Env.values()
+```
 
 ## Installation
 You can install Swiftline using cocoapods,

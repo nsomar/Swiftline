@@ -43,6 +43,8 @@
 		D72766631BF4178900126D99 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72766611BF4178900126D99 /* Quick.framework */; };
 		D72766651BF417AF00126D99 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D72766601BF4178900126D99 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D72766661BF417AF00126D99 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D72766611BF4178900126D99 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D72E3EBD1C052E2E00B77D49 /* ENVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E3EBC1C052E2E00B77D49 /* ENVTests.swift */; };
+		D72E3EC01C052E9100B77D49 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E3EBF1C052E9100B77D49 /* Env.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		D72766571BF416F700126D99 /* AgreeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreeTests.swift; sourceTree = "<group>"; };
 		D72766601BF4178900126D99 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Rome/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		D72766611BF4178900126D99 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Rome/Quick.framework; sourceTree = SOURCE_ROOT; };
+		D72E3EBC1C052E2E00B77D49 /* ENVTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENVTests.swift; sourceTree = "<group>"; };
+		D72E3EBF1C052E9100B77D49 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 				D72766561BF416F700126D99 /* AskSettingsTests.swift */,
 				D72766571BF416F700126D99 /* AgreeTests.swift */,
 				D72766141BF416AC00126D99 /* Info.plist */,
+				D72E3EBC1C052E2E00B77D49 /* ENVTests.swift */,
 			);
 			path = SwiftlineTests;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				D72766211BF416C600126D99 /* Ask */,
 				D72766251BF416C600126D99 /* Choose */,
 				D72766281BF416C600126D99 /* Colorize */,
+				D72E3EBE1C052E7C00B77D49 /* ENV */,
 				D727662E1BF416C600126D99 /* Misc */,
 				D72766331BF416C600126D99 /* Runner */,
 			);
@@ -252,6 +258,14 @@
 				D72766391BF416C600126D99 /* TaskPipe.swift */,
 			);
 			path = Runner;
+			sourceTree = "<group>";
+		};
+		D72E3EBE1C052E7C00B77D49 /* ENV */ = {
+			isa = PBXGroup;
+			children = (
+				D72E3EBF1C052E9100B77D49 /* Env.swift */,
+			);
+			path = ENV;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +391,7 @@
 				D72766411BF416C600126D99 /* Colorizer.swift in Sources */,
 				D727664D1BF416C600126D99 /* RunResults.swift in Sources */,
 				D72766471BF416C600126D99 /* PromptPrinter.swift in Sources */,
+				D72E3EC01C052E9100B77D49 /* Env.swift in Sources */,
 				D72766461BF416C600126D99 /* ArgConvertible.swift in Sources */,
 				D727663C1BF416C600126D99 /* Ask.swift in Sources */,
 				D727664C1BF416C600126D99 /* RunnerSettings.swift in Sources */,
@@ -392,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72E3EBD1C052E2E00B77D49 /* ENVTests.swift in Sources */,
 				D727665B1BF416F700126D99 /* ChooseTests.swift in Sources */,
 				D727665D1BF416F700126D99 /* AskTests.swift in Sources */,
 				D727665F1BF416F700126D99 /* AgreeTests.swift in Sources */,
