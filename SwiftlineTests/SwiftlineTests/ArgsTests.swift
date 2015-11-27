@@ -91,19 +91,31 @@ class ArgsTests: QuickSpec {
         expect(r.0[2].argument.name).to(equal("help"))
         expect(r.0[2].value).to(equal("x"))
       }
+      
+      it("stops parsing flags when -- is found") {
+        let r = ArgsParser.parseFlags(["one", "-f", "-w", "omar", "two", "--", "--help", "x", "hello"])
+        
+        expect(r.1).to(equal(["one", "two", "--help", "x", "hello"]))
+        
+        expect(r.0[0].argument.name).to(equal("f"))
+        expect(r.0[0].value).to(beNil())
+        
+        expect(r.0[1].argument.name).to(equal("w"))
+        expect(r.0[1].value).to(equal("omar"))
+      }
     }
     
     describe("Argument") {
       
       it("knows the arg type for a string") {
         expect(Argument.ArgumentType("-f"))
-          .to(equal(Argument.ArgumentType.ShortPrefixedFlag))
+          .to(equal(Argument.ArgumentType.ShortFlag))
         
         expect(Argument.ArgumentType("--force"))
-          .to(equal(Argument.ArgumentType.LongPrefixedFlag))
+          .to(equal(Argument.ArgumentType.LongFlag))
         
         expect(Argument.ArgumentType("--no-repo-update"))
-          .to(equal(Argument.ArgumentType.LongPrefixedFlag))
+          .to(equal(Argument.ArgumentType.LongFlag))
         
         expect(Argument.ArgumentType("not an arg"))
           .to(equal(Argument.ArgumentType.NotAFlag))
@@ -113,10 +125,10 @@ class ArgsTests: QuickSpec {
       }
       
       it("knows if an argument is a flag") {
-        expect(Argument.ArgumentType.ShortPrefixedFlag.isFlag)
+        expect(Argument.ArgumentType.ShortFlag.isFlag)
           .to(beTrue())
         
-        expect(Argument.ArgumentType.LongPrefixedFlag.isFlag)
+        expect(Argument.ArgumentType.LongFlag.isFlag)
           .to(beTrue())
         
         expect(Argument.ArgumentType.NotAFlag.isFlag)

@@ -12,10 +12,21 @@ class ArgsParser {
     var options = [Option]()
     var others = [String]()
     var previousArgument: Argument?
+    var argsTerminated = false
     
     for argumentString in args {
       let argument = Argument(argumentString)
       defer { previousArgument = argument }
+      
+      if argsTerminated {
+        others += [argumentString]
+        continue
+      }
+      
+      if argument.isFlagTerminator {
+        argsTerminated = true
+        continue
+      }
       
       if argument.isFlag {
         options += [Option(argument: argument)]

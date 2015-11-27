@@ -19,20 +19,27 @@ struct Option {
 struct Argument {
   
   enum ArgumentType {
-    case ShortPrefixedFlag
-    case LongPrefixedFlag
+    case ShortFlag
+    case LongFlag
     case NotAFlag
+    case FlagsTerminator
     
     var isFlag: Bool {
       return self != .NotAFlag
     }
     
+    var isFlagTerminator: Bool {
+      return self == .FlagsTerminator
+    }
+    
     init(_ argument: String) {
       
-      if argument.hasPrefix("--") {
-        self = .LongPrefixedFlag
+      if argument == "--" {
+        self = .FlagsTerminator
+      } else if argument.hasPrefix("--") {
+        self = .LongFlag
       } else if argument.hasPrefix("-") {
-        self = .ShortPrefixedFlag
+        self = .ShortFlag
       } else {
         self = .NotAFlag
       }
@@ -51,14 +58,20 @@ struct Argument {
     return type.isFlag
   }
   
+  var isFlagTerminator: Bool {
+    return type.isFlagTerminator
+  }
+  
   var name: String {
     switch type {
     case .NotAFlag:
       return argument
-    case .ShortPrefixedFlag:
+    case .ShortFlag:
       return argument[1..<argument.utf8.count]
-    case .LongPrefixedFlag:
+    case .LongFlag:
       return argument[2..<argument.utf8.count]
+    case .FlagsTerminator:
+      return ""
     }
   }
   
