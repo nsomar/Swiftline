@@ -14,6 +14,7 @@ Swiftline contains the following:
 - Ask , Choose  and agree: Easily create prompt for asking the user more info
 - Run: A quick way to run an external command and read its standard output and standard error. 
 - Env: Read and write environment variables [ruby-flavored](http://ruby-doc.org/core-2.2.0/ENV.html)
+- Args: Parses command line arguments and return a hash of the passed flags
 
 ## Usage
 
@@ -241,6 +242,17 @@ Env.clear()
 Env.keys()
 Env.values()
 ```
+
+## Args
+Returns the arguments passed to the script. For example when calling `script -f1 val1 -f2 val2 -- val3 val4`
+
+`Args.all() ` returns an array of all the raw arguments, in this example it will be `["-f1", "val1", "-f2", "val2", "--", "val3", "val4"`
+
+`Args.args() ` returns a structure that contains a parsed map of arguments and an array of arguments, for this example:    
+
+
+`Args.args().parameters` returns `["val3", "val4"]`    
+`Args.args().flags` returns a dictinary of flags `["f1": "val1", "f2", "val2"]`
 
 ## Installation
 You can install Swiftline using cocoapods,
