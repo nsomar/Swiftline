@@ -8,6 +8,16 @@
 
 public class Env {
   
+  public static var keys: [String] {
+    let keyValues = run("env").stdout.componentsSeparatedByString("\n")
+    let keys = keyValues.map { $0.componentsSeparatedByString("=").first! }.filter { !$0.isEmpty }
+    return keys
+  }
+  
+  public static var values: [String] {
+    return self.keys.map { self.get($0)! }
+  }
+  
   public static func get(key: String) -> String? {
     let value = getenv(key)
     return String.fromCString(value)
@@ -22,32 +32,22 @@ public class Env {
   }
   
   public static func clear() {
-    self.keys()
+    self.keys
       .map { String($0) }
       .filter { $0 != nil }
       .forEach{ self.set($0!, nil) }
   }
   
-  public static func keys() -> [String] {
-    let keyValues = run("env").stdout.componentsSeparatedByString("\n")
-    let keys = keyValues.map { $0.componentsSeparatedByString("=").first! }.filter { !$0.isEmpty }
-    return keys;
-  }
-  
-  public static func values() -> [String] {
-    return self.keys().map { self.get($0)! }
-  }
-  
   public static func hasKey(key: String) -> Bool {
-    return self.keys().contains(key)
+    return self.keys.contains(key)
   }
   
   public static func hasValue(value: String) -> Bool {
-    return self.values().contains(value)
+    return self.values.contains(value)
   }
   
   public static func eachPair(callback: (key: String, value: String) -> ()) {
-    zip(self.keys(), self.values()).forEach(callback)
+    zip(self.keys, self.values).forEach(callback)
   }
   
 }

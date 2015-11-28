@@ -43,9 +43,9 @@ class ENVTests: QuickSpec {
       Env.set("key1", "value1")
       Env.set("key2", "value2")
       
-      expect(Env.keys()).to(equal(["key1", "key2"]))
+      expect(Env.keys).to(equal(["key1", "key2"]))
       Env.clear()
-      expect(Env.keys().count).to(equal(0))
+      expect(Env.keys.count).to(equal(0))
     }
     
     it("return all values") {
@@ -53,7 +53,7 @@ class ENVTests: QuickSpec {
       Env.set("key1", "value1")
       Env.set("key2", "value2")
       
-      expect(Env.values()).to(equal(["value1", "value2"]))
+      expect(Env.values).to(equal(["value1", "value2"]))
     }
     
     it("checks if key exists") {

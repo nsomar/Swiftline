@@ -9,12 +9,12 @@ class ArgsTests: QuickSpec {
     describe("Args") {
       
       it("returns the correct number of args passed") {
-        expect(Args.all().count).to(beGreaterThan(0))
+        expect(Args.all.count).to(beGreaterThan(0))
       }
       
       it("returns the exact argument passed to the app") {
         ProcessInfo.internalProcessInfo = DummyProcessInfo("1", "2", "3")
-        expect(Args.all()).to(equal(["1", "2", "3"]))
+        expect(Args.all).to(equal(["1", "2", "3"]))
       }
       
       it("creats a hash from passed args") {
@@ -24,8 +24,8 @@ class ArgsTests: QuickSpec {
           "integer": "1",
           "no-ff": ""]
         
-        expect(Args.args().flags).to(equal(result))
-        expect(Args.args().parameters).to(equal(["Some custom one", "one", "two"]))
+        expect(Args.parsed.flags).to(equal(result))
+        expect(Args.parsed.parameters).to(equal(["Some custom one", "one", "two"]))
       }
     }
     

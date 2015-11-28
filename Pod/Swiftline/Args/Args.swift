@@ -10,13 +10,13 @@
 
 public class Args {
   
-  public static func all() -> [String] {
+  public static var all: [String] {
     return ProcessInfo.arguments
   }
   
-  public static func args() -> ParsedArgs {
+  public static var parsed: ParsedArgs {
     var result = [String: String]()
-    let parsedArges = ArgsParser.parseFlags(all())
+    let parsedArges = ArgsParser.parseFlags(all)
     
     parsedArges.0.forEach {
       result[$0.argument.name] = $0.value ?? ""
@@ -28,6 +28,6 @@ public class Args {
 
 
 public struct ParsedArgs {
-  let flags: [String: String]
-  let parameters: [String]
+  public let flags: [String: String]
+  public let parameters: [String]
 }
