@@ -8,6 +8,8 @@
 
 //import Foundation
 
+
+/// Return the command line arguments passed to the script
 public class Args {
   
   /// Return the list of arguments passed to the script

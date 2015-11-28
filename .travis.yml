@@ -12,7 +12,7 @@ install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- cd SwiftlineTests; xctool -project Swiftline.xcodeproj -scheme Swiftline clean build test -sdk macosx GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+- make test
 - cd ..; pod lib lint --quick
 
 after_success:
