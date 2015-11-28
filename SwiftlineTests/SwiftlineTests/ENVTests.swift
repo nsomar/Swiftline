@@ -7,6 +7,15 @@ import Nimble
 class ENVTests: QuickSpec {
   override func spec() {
     
+    beforeEach {
+      CommandExecutor.currentTaskExecutor = ActualTaskExecutor()
+    }
+    
+    it("Reads environment variables") {
+      expect(Env.get("NSApplicationQuitWithoutSuddenTermination"))
+        .to(equal("YES"))
+    }
+    
     it("returns nil when key does not exists") {
       expect(Env.get("AAAAA"))
         .to(beNil())
