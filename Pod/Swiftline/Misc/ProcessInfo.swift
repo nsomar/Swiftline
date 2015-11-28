@@ -8,9 +8,11 @@
 
 protocol ProcessInfoType {
   var arguments: [String] { get }
+  var cacheResults: Bool { get }
 }
 
 extension NSProcessInfo: ProcessInfoType {
+  var cacheResults: Bool { return true }
 }
 
 class DummyProcessInfo: ProcessInfoType {
@@ -24,6 +26,8 @@ class DummyProcessInfo: ProcessInfoType {
   var arguments: [String] {
     return argsToReturn
   }
+  
+  var cacheResults: Bool { return false }
 }
 
 class ProcessInfo {
@@ -32,6 +36,10 @@ class ProcessInfo {
   
   static var arguments: [String] {
     return internalProcessInfo.arguments
+  }
+  
+  static var cacheResults: Bool {
+    return internalProcessInfo.cacheResults
   }
   
 }

@@ -14,7 +14,14 @@ public class Args {
     return ProcessInfo.arguments
   }
   
+  static var cachedResults: ParsedArgs?
+  
   public static var parsed: ParsedArgs {
+    
+    if let result = cachedResults where ProcessInfo.cacheResults {
+      return result
+    }
+    
     var result = [String: String]()
     let parsedArges = ArgsParser.parseFlags(all)
     
@@ -22,7 +29,8 @@ public class Args {
       result[$0.argument.name] = $0.value ?? ""
     }
     
-    return ParsedArgs(flags: result, parameters: parsedArges.1)
+    cachedResults = ParsedArgs(flags: result, parameters: parsedArges.1)
+    return cachedResults!
   }
 }
 
