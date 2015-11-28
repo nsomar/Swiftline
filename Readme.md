@@ -1,7 +1,7 @@
-<center>
+<p align="center">
 <img src="http://swiftline.github.io/Swiftline/img/app-icon-board.svg" width="400" align="middle"/>
 <br/>
-</center>
+</p>
 [![Build Status](https://travis-ci.org/Swiftline/Swiftline.svg?branch=master)](https://travis-ci.org/Swiftline/Swiftline) 
 [![Platform](https://img.shields.io/badge/platform-osx-lightgrey.svg)](https://travis-ci.org/Swiftline/Swiftline) 
 [![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)](https://travis-ci.org/Swiftline/Swiftline) 
