@@ -1,43 +1,20 @@
 # Swiftline 
 
 
-🎨 ❓ 🏃 
-<p align="center">
-    <img src="https://img.shields.io/badge/platform-osx-lightgrey.svg"
-         alt="Platform">
-    <img src="https://img.shields.io/badge/language-swift-orange.svg"
-         alt="Language: Swift">
-    <a href="https://cocoapods.org/pods/Swiftline">
-        <img src="https://img.shields.io/cocoapods/v/Swiftline.svg"
-             alt="CocoaPods">
-    </a>
-    <a href="https://github.com/Carthage/Carthage">
-        <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"
-             alt="Carthage">
-    </a>
-    <br>
-    <a href="https://gitter.im/Swiftline?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
-        <img src="https://img.shields.io/badge/GITTER-join%20chat-00D06F.svg"
-             alt="GITTER: join chat">
-    </a>
-    <img src="https://img.shields.io/badge/license-MIT-000000.svg"
-         alt="License">
-</p>
-
-<p align="center">
-    <a href="#usage">Usage </a> 
-    <a href="#installation">Installation </a> 
-    <a href="#examples">Examples </a> 
-    <a href="#tests">Tests </a> 
-</p>
-
-[![Build Status](https://travis-ci.org/Swiftline/Swiftline.svg?branch=master)](https://travis-ci.org/Swiftline/Swiftline)    
-    
-
-Swiftline is a set of tools to help you create command line applications. Swiftline is inspired by [highline](https://github.com/JEG2/highline)
-
----
-
+🎨 ❓ 🏃       
+<br/>
+<center>
+[![Build Status](https://travis-ci.org/Swiftline/Swiftline.svg?branch=master)](https://travis-ci.org/Swiftline/Swiftline) 
+[![Platform](https://img.shields.io/badge/platform-osx-lightgrey.svg)](https://travis-ci.org/Swiftline/Swiftline) 
+[![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)](https://travis-ci.org/Swiftline/Swiftline) 
+[![CocoaPods](https://img.shields.io/cocoapods/v/Swiftline.svg)](https://cocoapods.org/pods/Swiftline) 
+[![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
+[![GITTER: join chat](https://img.shields.io/badge/GITTER-join%20chat-00D06F.svg)](https://gitter.im/Swiftline?utm_source=share-link&utm_medium=link&utm_campaign=share-link) 
+[![GITTER: join chat](https://img.shields.io/badge/license-MIT-000000.svg)](https://github.com/Swiftline/Swiftline/blob/oarrabi/adding-env-and-args/LICENCE) 
+</center>
+<br/>  
+Swiftline is a set of tools to help you create command line applications. Swiftline is inspired by [highline](https://github.com/JEG2/highline)   
+<br/>
 Swiftline contains the following:
 
 - Colorize: Helps adding colors to strings written to the terminal
@@ -45,6 +22,13 @@ Swiftline contains the following:
 - Run: A quick way to run an external command and read its standard output and standard error. 
 - Env: Read and write environment variables [ruby-flavored](http://ruby-doc.org/core-2.2.0/ENV.html)
 - Args: Parses command line arguments and return a hash of the passed flags
+
+## Contents
+[Usage](#usage)   
+[Installation](#installation)   
+[Examples](#examples)   
+[Docs](http://swiftline.github.io/Swiftline/index.html)   
+[Tests](#tests)   
 
 ## Usage
 
@@ -309,6 +293,10 @@ A list of examples can be found [here](https://github.com/oarrabi/Swiftline/tree
 ## Tests
 Tests can be found [here](https://github.com/oarrabi/Swiftline/tree/master/SwiftlineTests). They can be normally run from the Xcode
 .
+
+## Documentation
+Documentation can be found [here](http://swiftline.github.io/Swiftline/index.html)
+
 ## Future Improvement
 - Better documentation
 - Add gather (from [highline](https://github.com/JEG2/highline)) to ask function
