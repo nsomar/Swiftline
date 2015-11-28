@@ -246,13 +246,14 @@ Env.values()
 ## Args
 Returns the arguments passed to the script. For example when calling `script -f1 val1 -f2 val2 -- val3 val4`
 
-`Args.all() ` returns an array of all the raw arguments, in this example it will be `["-f1", "val1", "-f2", "val2", "--", "val3", "val4"`
+`Args.all ` returns an array of all the raw arguments, in this example it will be `["-f1", "val1", "-f2", "val2", "--", "val3", "val4"`
 
-`Args.args() ` returns a structure that contains a parsed map of arguments and an array of arguments, for this example:    
+`Args.parsed ` returns a structure that contains a parsed map of arguments and an array of arguments, for this example:    
 
 
-`Args.args().parameters` returns `["val3", "val4"]`    
-`Args.args().flags` returns a dictinary of flags `["f1": "val1", "f2", "val2"]`
+`Args.parsed.parameters` returns `["val3", "val4"]`    
+
+`Args.parsed.flags` returns a dictinary of flags `["f1": "val1", "f2", "val2"]`
 
 ## Installation
 You can install Swiftline using cocoapods,
