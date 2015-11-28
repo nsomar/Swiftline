@@ -1,7 +1,37 @@
 # Swiftline 
 
 
-🎨 ❓ 🏃 [![Build Status](https://travis-ci.org/Swiftline/Swiftline.svg?branch=master)](https://travis-ci.org/Swiftline/Swiftline)    
+🎨 ❓ 🏃 
+<p align="center">
+    <img src="https://img.shields.io/badge/platform-osx-lightgrey.svg"
+         alt="Platform">
+    <img src="https://img.shields.io/badge/language-swift-orange.svg"
+         alt="Language: Swift">
+    <a href="https://cocoapods.org/pods/Swiftline">
+        <img src="https://img.shields.io/cocoapods/v/Swiftline.svg"
+             alt="CocoaPods">
+    </a>
+    <a href="https://github.com/Carthage/Carthage">
+        <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"
+             alt="Carthage">
+    </a>
+    <br>
+    <a href="https://gitter.im/Swiftline?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
+        <img src="https://img.shields.io/badge/GITTER-join%20chat-00D06F.svg"
+             alt="GITTER: join chat">
+    </a>
+    <img src="https://img.shields.io/badge/license-MIT-000000.svg"
+         alt="License">
+</p>
+
+<p align="center">
+    <a href="#usage">Usage </a> 
+    <a href="#installation">Installation </a> 
+    <a href="#examples">Examples </a> 
+    <a href="#tests">Tests </a> 
+</p>
+
+[![Build Status](https://travis-ci.org/Swiftline/Swiftline.svg?branch=master)](https://travis-ci.org/Swiftline/Swiftline)    
     
 
 Swiftline is a set of tools to help you create command line applications. Swiftline is inspired by [highline](https://github.com/JEG2/highline)
