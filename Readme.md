@@ -1,18 +1,31 @@
-# Swiftline 
-
-
-🎨 ❓ 🏃 [![Build Status](https://travis-ci.org/Swiftline/Swiftline.svg?branch=master)](https://travis-ci.org/Swiftline/Swiftline)    
-    
-
-Swiftline is a set of tools to help you create command line applications. Swiftline is inspired by [highline](https://github.com/JEG2/highline)
-
----
-
-Swiftline can be divided to three main parts:
+<center>
+<img src="http://swiftline.github.io/Swiftline/img/app-icon-board.svg" width="400" align="middle"/>
+<br/>
+</center>
+[![Build Status](https://travis-ci.org/Swiftline/Swiftline.svg?branch=master)](https://travis-ci.org/Swiftline/Swiftline) 
+[![Platform](https://img.shields.io/badge/platform-osx-lightgrey.svg)](https://travis-ci.org/Swiftline/Swiftline) 
+[![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)](https://travis-ci.org/Swiftline/Swiftline) 
+[![CocoaPods](https://img.shields.io/cocoapods/v/Swiftline.svg)](https://cocoapods.org/pods/Swiftline) 
+[![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
+[![GITTER: join chat](https://img.shields.io/badge/GITTER-join%20chat-00D06F.svg)](https://gitter.im/Swiftline?utm_source=share-link&utm_medium=link&utm_campaign=share-link) 
+[![GITTER: join chat](https://img.shields.io/badge/license-MIT-000000.svg)](https://github.com/Swiftline/Swiftline/blob/oarrabi/adding-env-and-args/LICENCE) 
+<br/>  
+Swiftline is a set of tools to help you create command line applications. Swiftline is inspired by [highline](https://github.com/JEG2/highline)   
+<br/>
+Swiftline contains the following:
 
 - Colorize: Helps adding colors to strings written to the terminal
 - Ask , Choose  and agree: Easily create prompt for asking the user more info
 - Run: A quick way to run an external command and read its standard output and standard error. 
+- Env: Read and write environment variables [ruby-flavored](http://ruby-doc.org/core-2.2.0/ENV.html)
+- Args: Parses command line arguments and return a hash of the passed flags
+
+## Contents
+[Usage](#usage)   
+[Installation](#installation)   
+[Examples](#examples)   
+[Docs](http://swiftline.github.io/Swiftline/index.html)   
+[Tests](#tests)   
 
 ## Usage
 
@@ -224,6 +237,35 @@ Set `interactive` to true if you expect the launched command to ask input from t
     
 `runWithoutCapture("command")` is a quick way to run a command in interactive mode. The return value is the exit code of that command.
 
+## Env
+Env is used to read and write the environment variables passed to the script
+```swift
+// Set enviroment variable
+Env.set("key1", "value1")
+
+// Get environment variable
+Env.get("SomeKey")
+
+// Clear all variables
+Env.clear()
+
+// Get all keys and values
+Env.keys()
+Env.values()
+```
+
+## Args
+Returns the arguments passed to the script. For example when calling `script -f1 val1 -f2 val2 -- val3 val4`
+
+`Args.all ` returns an array of all the raw arguments, in this example it will be `["-f1", "val1", "-f2", "val2", "--", "val3", "val4"`
+
+`Args.parsed ` returns a structure that contains a parsed map of arguments and an array of arguments, for this example:    
+
+
+`Args.parsed.parameters` returns `["val3", "val4"]`    
+
+`Args.parsed.flags` returns a dictinary of flags `["f1": "val1", "f2", "val2"]`
+
 ## Installation
 You can install Swiftline using cocoapods,
 
@@ -248,7 +290,16 @@ A list of examples can be found [here](https://github.com/oarrabi/Swiftline/tree
 ## Tests
 Tests can be found [here](https://github.com/oarrabi/Swiftline/tree/master/SwiftlineTests). They can be normally run from the Xcode
 .
+
+## Documentation
+Documentation can be found [here](http://swiftline.github.io/Swiftline/index.html)
+
 ## Future Improvement
-- Better documentation
 - Add gather (from [highline](https://github.com/JEG2/highline)) to ask function
 - Figure out a way to eliminate the need of `interactive`
+- Add Glob handling
+- Better documentation
+
+## Credits
+Daniel Beere for creating the log [@DanielBeere](https://twitter.com/DanielBeere) check out [danielbeere on dribble](https://dribbble.com/danielbeere)    
+Omar Abdelhafith current project maintainer [@ifnottrue](https://twitter.com/ifnottrue)
