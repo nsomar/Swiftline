@@ -1,9 +1,7 @@
-# Swiftline 
-
-
-🎨 ❓ 🏃       
-<br/>
 <center>
+<img src="http://swiftline.github.io/Swiftline/img/app-icon-board.svg" width="400" align="middle"/>
+<br/>
+</center>
 [![Build Status](https://travis-ci.org/Swiftline/Swiftline.svg?branch=master)](https://travis-ci.org/Swiftline/Swiftline) 
 [![Platform](https://img.shields.io/badge/platform-osx-lightgrey.svg)](https://travis-ci.org/Swiftline/Swiftline) 
 [![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)](https://travis-ci.org/Swiftline/Swiftline) 
@@ -11,7 +9,6 @@
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
 [![GITTER: join chat](https://img.shields.io/badge/GITTER-join%20chat-00D06F.svg)](https://gitter.im/Swiftline?utm_source=share-link&utm_medium=link&utm_campaign=share-link) 
 [![GITTER: join chat](https://img.shields.io/badge/license-MIT-000000.svg)](https://github.com/Swiftline/Swiftline/blob/oarrabi/adding-env-and-args/LICENCE) 
-</center>
 <br/>  
 Swiftline is a set of tools to help you create command line applications. Swiftline is inspired by [highline](https://github.com/JEG2/highline)   
 <br/>
@@ -298,6 +295,11 @@ Tests can be found [here](https://github.com/oarrabi/Swiftline/tree/master/Swift
 Documentation can be found [here](http://swiftline.github.io/Swiftline/index.html)
 
 ## Future Improvement
-- Better documentation
 - Add gather (from [highline](https://github.com/JEG2/highline)) to ask function
 - Figure out a way to eliminate the need of `interactive`
+- Add Glob handling
+- Better documentation
+
+## Credits
+Daniel Beere for creating the log [@DanielBeere](https://twitter.com/DanielBeere) check out [danielbeere on dribble](https://dribbble.com/danielbeere)    
+Omar Abdelhafith current project maintainer [@ifnottrue](https://twitter.com/ifnottrue)
