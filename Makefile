@@ -9,7 +9,7 @@ build_help:
   --xcodebuild-arguments -scheme,Swiftline \
   --module Swiftline \
   --root-url https://realm.io/docs/swift/0.96.2/api/ \
-  --output docs/swift_output \
+  --output ../../Docs/swift_output \
 
 test:
 	cd SwiftlineTests; xctool -project Swiftline.xcodeproj -scheme Swiftline clean build test -sdk macosx GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
