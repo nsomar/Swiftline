@@ -8,21 +8,36 @@
 
 public class Env {
   
+  /// Return the list of all the enviromenment keys passed to the script
   public static var keys: [String] {
     let keyValues = run("env").stdout.componentsSeparatedByString("\n")
     let keys = keyValues.map { $0.componentsSeparatedByString("=").first! }.filter { !$0.isEmpty }
     return keys
   }
   
+  /// Return the list of all the enviromenment values passed to the script
   public static var values: [String] {
     return self.keys.map { self.get($0)! }
   }
   
+  /**
+   Return the enviromenment for the provided key
+   
+   - parameter key: The enviromenment variable key
+   
+   - returns: The enviromenment variable value
+   */
   public static func get(key: String) -> String? {
     let value = getenv(key)
     return String.fromCString(value)
   }
   
+  /**
+   Set a new value for the enviromenment variable
+   
+   - parameter key: The enviromenment variable key
+   - parameter value: The enviromenment variable value
+   */
   public static func set(key: String, _ value: String?) {
     if let newValue = value {
       setenv(key, newValue, 1)
@@ -31,6 +46,10 @@ public class Env {
     }
   }
   
+  
+  /**
+   Clear all the enviromenment variables
+   */
   public static func clear() {
     self.keys
       .map { String($0) }
@@ -38,14 +57,34 @@ public class Env {
       .forEach{ self.set($0!, nil) }
   }
   
+  /**
+   Check if the enviromenment variable key exists
+   
+   - parameter key: The enviromenment variable key
+   
+   - returns: true if exists false otherwise
+   */
   public static func hasKey(key: String) -> Bool {
     return self.keys.contains(key)
   }
   
+  
+  /**
+   Check if the enviromenment variable value exists
+   
+   - parameter key: The enviromenment variable value
+   
+   - returns: true if exists false otherwise
+   */
   public static func hasValue(value: String) -> Bool {
     return self.values.contains(value)
   }
   
+  /**
+   Iterate through the list of enviromenment variables
+   
+   - parameter callback: callback to call on each key/value pair
+   */
   public static func eachPair(callback: (key: String, value: String) -> ()) {
     zip(self.keys, self.values).forEach(callback)
   }

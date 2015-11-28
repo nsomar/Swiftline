@@ -10,12 +10,17 @@
 
 public class Args {
   
+  /// Return the list of arguments passed to the script
   public static var all: [String] {
     return ProcessInfo.arguments
   }
   
   static var cachedResults: ParsedArgs?
   
+  /// Return a parsed list of arguments containing the flags and the parameters passed to the scripts
+  /// The flags are recognized as short flags `-f` or long flags `--force`
+  /// The flag value will be the argument that follows the flag
+  /// `--` is used to mark the terminatin of the flags
   public static var parsed: ParsedArgs {
     
     if let result = cachedResults where ProcessInfo.cacheResults {
@@ -36,6 +41,9 @@ public class Args {
 
 
 public struct ParsedArgs {
+  /// Parsed flags will be prepred in a dictionary, the key is the flag and the value is the flag value
   public let flags: [String: String]
+  
+  /// List of parameters passed to the script
   public let parameters: [String]
 }
