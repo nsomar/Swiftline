@@ -301,5 +301,5 @@ Documentation can be found [here](http://swiftline.github.io/Swiftline/index.htm
 - Better documentation
 
 ## Credits
-Daniel Beere for creating the log [@DanielBeere](https://twitter.com/DanielBeere) check out [danielbeere on dribble](https://dribbble.com/danielbeere)    
+Daniel Beere for creating the logo [@DanielBeere](https://twitter.com/DanielBeere) check out [danielbeere on dribble](https://dribbble.com/danielbeere)    
 Omar Abdelhafith current project maintainer [@ifnottrue](https://twitter.com/ifnottrue)
