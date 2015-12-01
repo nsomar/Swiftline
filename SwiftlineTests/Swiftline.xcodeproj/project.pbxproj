@@ -50,6 +50,8 @@
 		D76B2CFF1C06FD54009FF606 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B2CFE1C06FD54009FF606 /* ProcessInfo.swift */; };
 		D76B2D7A1C079978009FF606 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B2D791C079978009FF606 /* Argument.swift */; };
 		D7DA6D531C08FA3500B94F95 /* ArgsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA6D521C08FA3500B94F95 /* ArgsParser.swift */; };
+		D7EEFD511C0BEF1D00BF0F5D /* Glob.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFD501C0BEF1D00BF0F5D /* Glob.swift */; };
+		D7EEFD531C0BEF4500BF0F5D /* GlobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		D76B2CFE1C06FD54009FF606 /* ProcessInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
 		D76B2D791C079978009FF606 /* Argument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Argument.swift; sourceTree = "<group>"; };
 		D7DA6D521C08FA3500B94F95 /* ArgsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgsParser.swift; sourceTree = "<group>"; };
+		D7EEFD501C0BEF1D00BF0F5D /* Glob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glob.swift; sourceTree = "<group>"; };
+		D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 				D72766141BF416AC00126D99 /* Info.plist */,
 				D72E3EBC1C052E2E00B77D49 /* ENVTests.swift */,
 				D72E3EC41C05B4FE00B77D49 /* ArgsTests.swift */,
+				D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */,
 			);
 			path = SwiftlineTests;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				D72766311BF416C600126D99 /* PromptReader.swift */,
 				D72766321BF416C600126D99 /* PromptSettings.swift */,
 				D76B2CFE1C06FD54009FF606 /* ProcessInfo.swift */,
+				D7EEFD501C0BEF1D00BF0F5D /* Glob.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 				D72766461BF416C600126D99 /* ArgConvertible.swift in Sources */,
 				D727663C1BF416C600126D99 /* Ask.swift in Sources */,
 				D727664C1BF416C600126D99 /* RunnerSettings.swift in Sources */,
+				D7EEFD511C0BEF1D00BF0F5D /* Glob.swift in Sources */,
 				D727663E1BF416C600126D99 /* AskSettings.swift in Sources */,
 				D7DA6D531C08FA3500B94F95 /* ArgsParser.swift in Sources */,
 				D727663F1BF416C600126D99 /* Choose.swift in Sources */,
@@ -442,6 +449,7 @@
 				D72766581BF416F700126D99 /* AgreeSettingsTest.swift in Sources */,
 				D727665A1BF416F700126D99 /* RunnerTests.swift in Sources */,
 				D727665C1BF416F700126D99 /* ChooseSettingsTests.swift in Sources */,
+				D7EEFD531C0BEF4500BF0F5D /* GlobTests.swift in Sources */,
 				D72E3EC51C05B4FE00B77D49 /* ArgsTests.swift in Sources */,
 				D72766591BF416F700126D99 /* ColorizerTest.swift in Sources */,
 			);
