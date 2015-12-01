@@ -24,7 +24,7 @@ Swiftline contains the following:
 [Usage](#usage)   
 [Installation](#installation)   
 [Examples](#examples)   
-[Docs](http://swiftline.github.io/Swiftline/index.html)   
+[Docs](http://swiftline.github.io/docs/index.html)   
 [Tests](#tests)   
 
 ## Usage
@@ -273,6 +273,9 @@ You can install Swiftline using cocoapods,
     use_frameworks!
     pod 'Swiftline'
 
+### Carthage
+    github 'swiftline/swiftline'
+
 ### Cocoapods + Rome plugin
 If you want to use swiftline in a script you can use [Rome](https://github.com/neonichu/Rome) cocoapod plugin. This plugin builds the framework from the pod file and place them in a Rome directory.
 
@@ -292,7 +295,7 @@ Tests can be found [here](https://github.com/oarrabi/Swiftline/tree/master/Swift
 .
 
 ## Documentation
-Documentation can be found [here](http://swiftline.github.io/Swiftline/index.html)
+Documentation can be found [here](http://swiftline.github.io/docs/index.html)
 
 ## Future Improvement
 - Add gather (from [highline](https://github.com/JEG2/highline)) to ask function
