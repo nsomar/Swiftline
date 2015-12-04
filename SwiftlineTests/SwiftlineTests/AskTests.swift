@@ -16,7 +16,7 @@ class AskerTest: QuickSpec {
         
         it("reads a string from the stdin") {
             PromptSettings.reader = DummyPromptReader(toReturn: "A String")
-            let res = ask("Enter a string")
+            let res: String = ask("Enter a string")
             
             expect(res).to(equal("A String"))
             expect(promptPrinter.printed).to(equal("Enter a string\n"))
@@ -24,7 +24,7 @@ class AskerTest: QuickSpec {
         
         it("reads an Int from the stdin") {
             PromptSettings.reader = DummyPromptReader(toReturn: "1")
-            let res = ask("Enter a string", type: Int.self)
+            let res: Int = ask("Enter a string")
             
             expect(res).to(equal(1))
             expect(promptPrinter.printed).to(equal("Enter a string\n"))
@@ -33,7 +33,7 @@ class AskerTest: QuickSpec {
         it("keeps asking if entered is not an int") {
             PromptSettings.reader = DummyPromptReader(toReturn: "x", "y", "1")
             
-            let res = ask("Enter a string", type: Int.self)
+            let res: Int = ask("Enter a string")
             
             let prompt = ["Enter a string",
                 "You must enter a valid Integer.",
@@ -46,8 +46,8 @@ class AskerTest: QuickSpec {
         
         it("reads an double from the stdin") {
             PromptSettings.reader = DummyPromptReader(toReturn: "1")
-            let res = ask("Enter a string", type: Double.self)
-            
+            let res: Double = ask("Enter a string")
+          
             expect(res).to(equal(1.0))
             expect(promptPrinter.printed).to(equal("Enter a string\n"))
         }
@@ -69,7 +69,7 @@ class AskerTest: QuickSpec {
         
         it("ask for confirmation") {
             PromptSettings.reader = DummyPromptReader(toReturn: "val", "Y")
-            let res = ask("Enter a string") { $0.confirm = true }
+            let res: String = ask("Enter a string") { $0.confirm = true }
             
             expect(res).to(equal("val"))
             expect(promptPrinter.printed).to(equal("Enter a string\nAre you sure?  "))
@@ -77,7 +77,7 @@ class AskerTest: QuickSpec {
         
         it("ask for confirmation, if no is passed it keeps asking") {
             PromptSettings.reader = DummyPromptReader(toReturn: "val", "N", "other val", "y")
-            let res = ask("Enter a string") { $0.confirm = true }
+            let res: String = ask("Enter a string") { $0.confirm = true }
             
             expect(res).to(equal("other val"))
             
@@ -91,7 +91,7 @@ class AskerTest: QuickSpec {
             
             PromptSettings.reader = DummyPromptReader(toReturn: "1", "n", "10", "9", "yes")
             
-            let res = ask("Age?", type: Int.self) {
+            let res: Int = ask("Age?") {
                 $0.confirm = true
                 $0.addInvalidCase("Age not correct") { $0 == 10 }
             }

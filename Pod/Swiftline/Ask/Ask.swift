@@ -10,41 +10,25 @@ import Foundation
 
 
 /**
- Display a promt to the user
+ Display a prompt to the user
  
- - parameter prompt:   The message to display
- - parameter customizationBlock: The block to costumize the prompt before displaying
- 
- - returns: The string enters from the user
- */
-public func ask(prompt: String, customizationBlock: (AskSettings<String> -> Void)? = nil) -> String {
-    return ask(prompt, type: String.self, customizationBlock: customizationBlock)
-}
-
-
-/**
-  Display a promt to the user
-
  - parameter prompt:The message to display
- - parameter type: The value type to be expected from the user
  - parameter customizationBlock: The block to costumize the prompt before displaying
  
- - returns: The string casted to the type requested
+ - returns: The string casted to the type inferred
  - discussion: If the user enters a wrong type, ask will keep prompting until a correct value has been entered
  */
-public func ask<T: ArgConvertibleType>(prompt: String, type: T.Type, customizationBlock: (AskSettings<T> -> Void)? = nil) -> T {
-    
+public func ask<T: ArgConvertibleType>(prompt: String, customizationBlock: (AskSettings<T> -> Void)? = nil) -> T {
     PromptSettings.print(prompt)
-    
+  
     let settings = getSettings(customizationBlock)
-    
+  
     if settings.confirm {
         return getValidatedStringWithConfirmation(settings)
     } else {
         return getValidatedString(settings)
     }
 }
-
 
 // MARK:- Internal functions
 
