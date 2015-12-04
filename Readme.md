@@ -1,5 +1,5 @@
 <p align="center">
-<img src="http://swiftline.github.io/Swiftline/img/app-icon-board.svg" width="400" align="middle"/>
+<img src="http://swiftline.github.io/img/intro-bg.svg" width="400" align="middle"/>
 <br/>
 </p>
 [![Build Status](https://travis-ci.org/Swiftline/Swiftline.svg?branch=master)](https://travis-ci.org/Swiftline/Swiftline) 
