@@ -18,7 +18,7 @@ class ArgsTests: QuickSpec {
       }
       
       it("creats a hash from passed args") {
-        ProcessInfo.internalProcessInfo = DummyProcessInfo("-f", "file.rb", "--integer", "1", "Some custom one", "one", "two", "--no-ff")
+        ProcessInfo.internalProcessInfo = DummyProcessInfo("excutable_name", "-f", "file.rb", "--integer", "1", "Some custom one", "one", "two", "--no-ff")
         let result = [
           "f": "file.rb",
           "integer": "1",
@@ -26,6 +26,7 @@ class ArgsTests: QuickSpec {
         
         expect(Args.parsed.flags).to(equal(result))
         expect(Args.parsed.parameters).to(equal(["Some custom one", "one", "two"]))
+        expect(Args.parsed.command).to(equal("excutable_name"))
       }
     }
     
