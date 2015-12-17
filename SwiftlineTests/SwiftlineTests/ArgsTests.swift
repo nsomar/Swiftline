@@ -18,7 +18,7 @@ class ArgsTests: QuickSpec {
       }
       
       it("creats a hash from passed args") {
-        ProcessInfo.internalProcessInfo = DummyProcessInfo("-f", "file.rb", "--integer", "1", "Some custom one", "one", "two", "--no-ff")
+        ProcessInfo.internalProcessInfo = DummyProcessInfo("excutable_name", "-f", "file.rb", "--integer", "1", "Some custom one", "one", "two", "--no-ff")
         let result = [
           "f": "file.rb",
           "integer": "1",
