@@ -25,7 +25,8 @@ class ArgsTests: QuickSpec {
           "no-ff": ""]
         
         expect(Args.parsed.flags).to(equal(result))
-        expect(Args.parsed.parameters).to(equal(["Some custom one", "one", "two"]))
+        expect(Args.parsed.parameters).to(equal(["one", "two"]))
+        expect(Args.parsed.command).to(equal("Some custom one"))
       }
     }
     

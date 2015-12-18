@@ -266,6 +266,8 @@ Returns the arguments passed to the script. For example when calling `script -f1
 
 `Args.parsed.flags` returns a dictinary of flags `["f1": "val1", "f2", "val2"]`
 
+`Args.parsed.command` returns the name of the executable itself `"script"`
+
 ## Installation
 You can install Swiftline using cocoapods,
 

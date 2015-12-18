@@ -29,20 +29,32 @@ public class Args {
       return result
     }
     
-    var result = [String: String]()
-    let parsedArges = ArgsParser.parseFlags(all)
+    var parsedFlags = [String: String]()
+    let parsedArgs = ArgsParser.parseFlags(all)
     
-    parsedArges.0.forEach {
-      result[$0.argument.name] = $0.value ?? ""
+    parsedArgs.0.forEach {
+      parsedFlags[$0.argument.name] = $0.value ?? ""
     }
-    
-    cachedResults = ParsedArgs(flags: result, parameters: parsedArges.1)
+
+    var arguments = parsedArgs.1
+
+    // the first argument is always the executable's name
+    var commandName = ""
+    if let firstArgument = arguments.first { // just in case!
+        commandName = firstArgument
+        arguments.removeFirst(1)
+    }
+
+    cachedResults = ParsedArgs(command: commandName, flags: parsedFlags, parameters: arguments)
     return cachedResults!
   }
 }
 
 
 public struct ParsedArgs {
+  /// The name of the executable that was invoked from the command line
+  public let command: String
+
   /// Parsed flags will be prepred in a dictionary, the key is the flag and the value is the flag value
   public let flags: [String: String]
   
