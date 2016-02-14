@@ -6,6 +6,9 @@
 //  Copyright © 2015 Omar Abdelhafith. All rights reserved.
 //
 
+import Foundation
+import Darwin
+
 class Glob {
   
   static func expand(pattern: String) -> [String] {
