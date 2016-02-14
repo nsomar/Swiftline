@@ -271,7 +271,7 @@ Returns the arguments passed to the script. For example when calling `script -f1
 ## Installation
 You can install Swiftline using cocoapods, carthage and Swift package manager
 
-### Cocoapods
+### CocoaPods
     use_frameworks!
     pod 'Swiftline'
 
@@ -291,7 +291,7 @@ Add swiftline as dependency in your `Package.swift`
   )
 ```
 
-### Cocoapods + Rome plugin
+### CocoaPods + Rome plugin
 If you want to use swiftline in a script you can use [Rome](https://github.com/neonichu/Rome) cocoapod plugin. This plugin builds the framework from the pod file and place them in a Rome directory.
 
     platform :osx, '10.10'
