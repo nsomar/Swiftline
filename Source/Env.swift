@@ -6,6 +6,9 @@
 //  Copyright © 2015 Omar Abdelhafith. All rights reserved.
 //
 
+import Darwin
+
+
 public class Env {
   
   /// Return the list of all the enviromenment keys passed to the script
