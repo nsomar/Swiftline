@@ -9,28 +9,6 @@
 /* Begin PBXBuildFile section */
 		D72766071BF416AC00126D99 /* Swiftline.h in Headers */ = {isa = PBXBuildFile; fileRef = D72766061BF416AC00126D99 /* Swiftline.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D727660E1BF416AC00126D99 /* Swiftline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72766031BF416AC00126D99 /* Swiftline.framework */; };
-		D727663A1BF416C600126D99 /* Agree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727661F1BF416C600126D99 /* Agree.swift */; };
-		D727663B1BF416C600126D99 /* AgreeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766201BF416C600126D99 /* AgreeSettings.swift */; };
-		D727663C1BF416C600126D99 /* Ask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766221BF416C600126D99 /* Ask.swift */; };
-		D727663D1BF416C600126D99 /* AskerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766231BF416C600126D99 /* AskerValidator.swift */; };
-		D727663E1BF416C600126D99 /* AskSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766241BF416C600126D99 /* AskSettings.swift */; };
-		D727663F1BF416C600126D99 /* Choose.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766261BF416C600126D99 /* Choose.swift */; };
-		D72766401BF416C600126D99 /* ChooseSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766271BF416C600126D99 /* ChooseSettings.swift */; };
-		D72766411BF416C600126D99 /* Colorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766291BF416C600126D99 /* Colorizer.swift */; };
-		D72766421BF416C600126D99 /* StringBackgroundColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727662A1BF416C600126D99 /* StringBackgroundColorizer.swift */; };
-		D72766431BF416C600126D99 /* StringForegroundColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727662B1BF416C600126D99 /* StringForegroundColorizer.swift */; };
-		D72766441BF416C600126D99 /* StringStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727662C1BF416C600126D99 /* StringStyle.swift */; };
-		D72766451BF416C600126D99 /* StringStyleColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727662D1BF416C600126D99 /* StringStyleColorizer.swift */; };
-		D72766461BF416C600126D99 /* ArgConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727662F1BF416C600126D99 /* ArgConvertible.swift */; };
-		D72766471BF416C600126D99 /* PromptPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766301BF416C600126D99 /* PromptPrinter.swift */; };
-		D72766481BF416C600126D99 /* PromptReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766311BF416C600126D99 /* PromptReader.swift */; };
-		D72766491BF416C600126D99 /* PromptSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766321BF416C600126D99 /* PromptSettings.swift */; };
-		D727664A1BF416C600126D99 /* CommandExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766341BF416C600126D99 /* CommandExecutor.swift */; };
-		D727664B1BF416C600126D99 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766351BF416C600126D99 /* Runner.swift */; };
-		D727664C1BF416C600126D99 /* RunnerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766361BF416C600126D99 /* RunnerSettings.swift */; };
-		D727664D1BF416C600126D99 /* RunResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766371BF416C600126D99 /* RunResults.swift */; };
-		D727664E1BF416C600126D99 /* ShortHandRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766381BF416C600126D99 /* ShortHandRunner.swift */; };
-		D727664F1BF416C600126D99 /* TaskPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766391BF416C600126D99 /* TaskPipe.swift */; };
 		D72766581BF416F700126D99 /* AgreeSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766501BF416F700126D99 /* AgreeSettingsTest.swift */; };
 		D72766591BF416F700126D99 /* ColorizerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766511BF416F700126D99 /* ColorizerTest.swift */; };
 		D727665A1BF416F700126D99 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72766521BF416F700126D99 /* RunnerTests.swift */; };
@@ -44,13 +22,35 @@
 		D72766651BF417AF00126D99 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D72766601BF4178900126D99 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D72766661BF417AF00126D99 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D72766611BF4178900126D99 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D72E3EBD1C052E2E00B77D49 /* ENVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E3EBC1C052E2E00B77D49 /* ENVTests.swift */; };
-		D72E3EC01C052E9100B77D49 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E3EBF1C052E9100B77D49 /* Env.swift */; };
-		D72E3EC31C05B4E900B77D49 /* Args.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E3EC21C05B4E900B77D49 /* Args.swift */; };
 		D72E3EC51C05B4FE00B77D49 /* ArgsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E3EC41C05B4FE00B77D49 /* ArgsTests.swift */; };
-		D76B2CFF1C06FD54009FF606 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B2CFE1C06FD54009FF606 /* ProcessInfo.swift */; };
-		D76B2D7A1C079978009FF606 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76B2D791C079978009FF606 /* Argument.swift */; };
-		D7DA6D531C08FA3500B94F95 /* ArgsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA6D521C08FA3500B94F95 /* ArgsParser.swift */; };
-		D7EEFD511C0BEF1D00BF0F5D /* Glob.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFD501C0BEF1D00BF0F5D /* Glob.swift */; };
+		D7C7F8BB1C71289A00EA5D29 /* Agree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F89F1C71289A00EA5D29 /* Agree.swift */; };
+		D7C7F8BC1C71289A00EA5D29 /* AgreeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8A01C71289A00EA5D29 /* AgreeSettings.swift */; };
+		D7C7F8BD1C71289A00EA5D29 /* ArgConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8A11C71289A00EA5D29 /* ArgConvertible.swift */; };
+		D7C7F8BE1C71289A00EA5D29 /* Args.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8A21C71289A00EA5D29 /* Args.swift */; };
+		D7C7F8BF1C71289A00EA5D29 /* ArgsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8A31C71289A00EA5D29 /* ArgsParser.swift */; };
+		D7C7F8C01C71289A00EA5D29 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8A41C71289A00EA5D29 /* Argument.swift */; };
+		D7C7F8C11C71289A00EA5D29 /* Ask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8A51C71289A00EA5D29 /* Ask.swift */; };
+		D7C7F8C21C71289A00EA5D29 /* AskerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8A61C71289A00EA5D29 /* AskerValidator.swift */; };
+		D7C7F8C31C71289A00EA5D29 /* AskSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8A71C71289A00EA5D29 /* AskSettings.swift */; };
+		D7C7F8C41C71289A00EA5D29 /* Choose.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8A81C71289A00EA5D29 /* Choose.swift */; };
+		D7C7F8C51C71289A00EA5D29 /* ChooseSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8A91C71289A00EA5D29 /* ChooseSettings.swift */; };
+		D7C7F8C61C71289A00EA5D29 /* Colorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8AA1C71289A00EA5D29 /* Colorizer.swift */; };
+		D7C7F8C71C71289A00EA5D29 /* CommandExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8AB1C71289A00EA5D29 /* CommandExecutor.swift */; };
+		D7C7F8C81C71289A00EA5D29 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8AC1C71289A00EA5D29 /* Env.swift */; };
+		D7C7F8C91C71289A00EA5D29 /* Glob.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8AD1C71289A00EA5D29 /* Glob.swift */; };
+		D7C7F8CA1C71289A00EA5D29 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8AE1C71289A00EA5D29 /* ProcessInfo.swift */; };
+		D7C7F8CB1C71289A00EA5D29 /* PromptPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8AF1C71289A00EA5D29 /* PromptPrinter.swift */; };
+		D7C7F8CC1C71289A00EA5D29 /* PromptReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8B01C71289A00EA5D29 /* PromptReader.swift */; };
+		D7C7F8CD1C71289A00EA5D29 /* PromptSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8B11C71289A00EA5D29 /* PromptSettings.swift */; };
+		D7C7F8CE1C71289A00EA5D29 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8B21C71289A00EA5D29 /* Runner.swift */; };
+		D7C7F8CF1C71289A00EA5D29 /* RunnerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8B31C71289A00EA5D29 /* RunnerSettings.swift */; };
+		D7C7F8D01C71289A00EA5D29 /* RunResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8B41C71289A00EA5D29 /* RunResults.swift */; };
+		D7C7F8D11C71289A00EA5D29 /* ShortHandRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8B51C71289A00EA5D29 /* ShortHandRunner.swift */; };
+		D7C7F8D21C71289A00EA5D29 /* StringBackgroundColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8B61C71289A00EA5D29 /* StringBackgroundColorizer.swift */; };
+		D7C7F8D31C71289A00EA5D29 /* StringForegroundColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8B71C71289A00EA5D29 /* StringForegroundColorizer.swift */; };
+		D7C7F8D41C71289A00EA5D29 /* StringStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8B81C71289A00EA5D29 /* StringStyle.swift */; };
+		D7C7F8D51C71289A00EA5D29 /* StringStyleColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8B91C71289A00EA5D29 /* StringStyleColorizer.swift */; };
+		D7C7F8D61C71289A00EA5D29 /* TaskPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8BA1C71289A00EA5D29 /* TaskPipe.swift */; };
 		D7EEFD531C0BEF4500BF0F5D /* GlobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,28 +84,6 @@
 		D72766081BF416AC00126D99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D727660D1BF416AC00126D99 /* SwiftlineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftlineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72766141BF416AC00126D99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D727661F1BF416C600126D99 /* Agree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agree.swift; sourceTree = "<group>"; };
-		D72766201BF416C600126D99 /* AgreeSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreeSettings.swift; sourceTree = "<group>"; };
-		D72766221BF416C600126D99 /* Ask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ask.swift; sourceTree = "<group>"; };
-		D72766231BF416C600126D99 /* AskerValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskerValidator.swift; sourceTree = "<group>"; };
-		D72766241BF416C600126D99 /* AskSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskSettings.swift; sourceTree = "<group>"; };
-		D72766261BF416C600126D99 /* Choose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choose.swift; sourceTree = "<group>"; };
-		D72766271BF416C600126D99 /* ChooseSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSettings.swift; sourceTree = "<group>"; };
-		D72766291BF416C600126D99 /* Colorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colorizer.swift; sourceTree = "<group>"; };
-		D727662A1BF416C600126D99 /* StringBackgroundColorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringBackgroundColorizer.swift; sourceTree = "<group>"; };
-		D727662B1BF416C600126D99 /* StringForegroundColorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringForegroundColorizer.swift; sourceTree = "<group>"; };
-		D727662C1BF416C600126D99 /* StringStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringStyle.swift; sourceTree = "<group>"; };
-		D727662D1BF416C600126D99 /* StringStyleColorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringStyleColorizer.swift; sourceTree = "<group>"; };
-		D727662F1BF416C600126D99 /* ArgConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgConvertible.swift; sourceTree = "<group>"; };
-		D72766301BF416C600126D99 /* PromptPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptPrinter.swift; sourceTree = "<group>"; };
-		D72766311BF416C600126D99 /* PromptReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptReader.swift; sourceTree = "<group>"; };
-		D72766321BF416C600126D99 /* PromptSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptSettings.swift; sourceTree = "<group>"; };
-		D72766341BF416C600126D99 /* CommandExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandExecutor.swift; sourceTree = "<group>"; };
-		D72766351BF416C600126D99 /* Runner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
-		D72766361BF416C600126D99 /* RunnerSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunnerSettings.swift; sourceTree = "<group>"; };
-		D72766371BF416C600126D99 /* RunResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunResults.swift; sourceTree = "<group>"; };
-		D72766381BF416C600126D99 /* ShortHandRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortHandRunner.swift; sourceTree = "<group>"; };
-		D72766391BF416C600126D99 /* TaskPipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPipe.swift; sourceTree = "<group>"; };
 		D72766501BF416F700126D99 /* AgreeSettingsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreeSettingsTest.swift; sourceTree = "<group>"; };
 		D72766511BF416F700126D99 /* ColorizerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorizerTest.swift; sourceTree = "<group>"; };
 		D72766521BF416F700126D99 /* RunnerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
@@ -117,13 +95,35 @@
 		D72766601BF4178900126D99 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Rome/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		D72766611BF4178900126D99 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Rome/Quick.framework; sourceTree = SOURCE_ROOT; };
 		D72E3EBC1C052E2E00B77D49 /* ENVTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENVTests.swift; sourceTree = "<group>"; };
-		D72E3EBF1C052E9100B77D49 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
-		D72E3EC21C05B4E900B77D49 /* Args.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Args.swift; sourceTree = "<group>"; };
 		D72E3EC41C05B4FE00B77D49 /* ArgsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgsTests.swift; sourceTree = "<group>"; };
-		D76B2CFE1C06FD54009FF606 /* ProcessInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
-		D76B2D791C079978009FF606 /* Argument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Argument.swift; sourceTree = "<group>"; };
-		D7DA6D521C08FA3500B94F95 /* ArgsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgsParser.swift; sourceTree = "<group>"; };
-		D7EEFD501C0BEF1D00BF0F5D /* Glob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glob.swift; sourceTree = "<group>"; };
+		D7C7F89F1C71289A00EA5D29 /* Agree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Agree.swift; path = ../../Source/Agree.swift; sourceTree = "<group>"; };
+		D7C7F8A01C71289A00EA5D29 /* AgreeSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AgreeSettings.swift; path = ../../Source/AgreeSettings.swift; sourceTree = "<group>"; };
+		D7C7F8A11C71289A00EA5D29 /* ArgConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgConvertible.swift; path = ../../Source/ArgConvertible.swift; sourceTree = "<group>"; };
+		D7C7F8A21C71289A00EA5D29 /* Args.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Args.swift; path = ../../Source/Args.swift; sourceTree = "<group>"; };
+		D7C7F8A31C71289A00EA5D29 /* ArgsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgsParser.swift; path = ../../Source/ArgsParser.swift; sourceTree = "<group>"; };
+		D7C7F8A41C71289A00EA5D29 /* Argument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Argument.swift; path = ../../Source/Argument.swift; sourceTree = "<group>"; };
+		D7C7F8A51C71289A00EA5D29 /* Ask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ask.swift; path = ../../Source/Ask.swift; sourceTree = "<group>"; };
+		D7C7F8A61C71289A00EA5D29 /* AskerValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AskerValidator.swift; path = ../../Source/AskerValidator.swift; sourceTree = "<group>"; };
+		D7C7F8A71C71289A00EA5D29 /* AskSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AskSettings.swift; path = ../../Source/AskSettings.swift; sourceTree = "<group>"; };
+		D7C7F8A81C71289A00EA5D29 /* Choose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Choose.swift; path = ../../Source/Choose.swift; sourceTree = "<group>"; };
+		D7C7F8A91C71289A00EA5D29 /* ChooseSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChooseSettings.swift; path = ../../Source/ChooseSettings.swift; sourceTree = "<group>"; };
+		D7C7F8AA1C71289A00EA5D29 /* Colorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colorizer.swift; path = ../../Source/Colorizer.swift; sourceTree = "<group>"; };
+		D7C7F8AB1C71289A00EA5D29 /* CommandExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandExecutor.swift; path = ../../Source/CommandExecutor.swift; sourceTree = "<group>"; };
+		D7C7F8AC1C71289A00EA5D29 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Env.swift; path = ../../Source/Env.swift; sourceTree = "<group>"; };
+		D7C7F8AD1C71289A00EA5D29 /* Glob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Glob.swift; path = ../../Source/Glob.swift; sourceTree = "<group>"; };
+		D7C7F8AE1C71289A00EA5D29 /* ProcessInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProcessInfo.swift; path = ../../Source/ProcessInfo.swift; sourceTree = "<group>"; };
+		D7C7F8AF1C71289A00EA5D29 /* PromptPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromptPrinter.swift; path = ../../Source/PromptPrinter.swift; sourceTree = "<group>"; };
+		D7C7F8B01C71289A00EA5D29 /* PromptReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromptReader.swift; path = ../../Source/PromptReader.swift; sourceTree = "<group>"; };
+		D7C7F8B11C71289A00EA5D29 /* PromptSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromptSettings.swift; path = ../../Source/PromptSettings.swift; sourceTree = "<group>"; };
+		D7C7F8B21C71289A00EA5D29 /* Runner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Runner.swift; path = ../../Source/Runner.swift; sourceTree = "<group>"; };
+		D7C7F8B31C71289A00EA5D29 /* RunnerSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RunnerSettings.swift; path = ../../Source/RunnerSettings.swift; sourceTree = "<group>"; };
+		D7C7F8B41C71289A00EA5D29 /* RunResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RunResults.swift; path = ../../Source/RunResults.swift; sourceTree = "<group>"; };
+		D7C7F8B51C71289A00EA5D29 /* ShortHandRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShortHandRunner.swift; path = ../../Source/ShortHandRunner.swift; sourceTree = "<group>"; };
+		D7C7F8B61C71289A00EA5D29 /* StringBackgroundColorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringBackgroundColorizer.swift; path = ../../Source/StringBackgroundColorizer.swift; sourceTree = "<group>"; };
+		D7C7F8B71C71289A00EA5D29 /* StringForegroundColorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringForegroundColorizer.swift; path = ../../Source/StringForegroundColorizer.swift; sourceTree = "<group>"; };
+		D7C7F8B81C71289A00EA5D29 /* StringStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringStyle.swift; path = ../../Source/StringStyle.swift; sourceTree = "<group>"; };
+		D7C7F8B91C71289A00EA5D29 /* StringStyleColorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringStyleColorizer.swift; path = ../../Source/StringStyleColorizer.swift; sourceTree = "<group>"; };
+		D7C7F8BA1C71289A00EA5D29 /* TaskPipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskPipe.swift; path = ../../Source/TaskPipe.swift; sourceTree = "<group>"; };
 		D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,7 +169,34 @@
 		D72766051BF416AC00126D99 /* Swiftline */ = {
 			isa = PBXGroup;
 			children = (
-				D727661D1BF416C600126D99 /* Swiftline */,
+				D7C7F89F1C71289A00EA5D29 /* Agree.swift */,
+				D7C7F8A01C71289A00EA5D29 /* AgreeSettings.swift */,
+				D7C7F8A11C71289A00EA5D29 /* ArgConvertible.swift */,
+				D7C7F8A21C71289A00EA5D29 /* Args.swift */,
+				D7C7F8A31C71289A00EA5D29 /* ArgsParser.swift */,
+				D7C7F8A41C71289A00EA5D29 /* Argument.swift */,
+				D7C7F8A51C71289A00EA5D29 /* Ask.swift */,
+				D7C7F8A61C71289A00EA5D29 /* AskerValidator.swift */,
+				D7C7F8A71C71289A00EA5D29 /* AskSettings.swift */,
+				D7C7F8A81C71289A00EA5D29 /* Choose.swift */,
+				D7C7F8A91C71289A00EA5D29 /* ChooseSettings.swift */,
+				D7C7F8AA1C71289A00EA5D29 /* Colorizer.swift */,
+				D7C7F8AB1C71289A00EA5D29 /* CommandExecutor.swift */,
+				D7C7F8AC1C71289A00EA5D29 /* Env.swift */,
+				D7C7F8AD1C71289A00EA5D29 /* Glob.swift */,
+				D7C7F8AE1C71289A00EA5D29 /* ProcessInfo.swift */,
+				D7C7F8AF1C71289A00EA5D29 /* PromptPrinter.swift */,
+				D7C7F8B01C71289A00EA5D29 /* PromptReader.swift */,
+				D7C7F8B11C71289A00EA5D29 /* PromptSettings.swift */,
+				D7C7F8B21C71289A00EA5D29 /* Runner.swift */,
+				D7C7F8B31C71289A00EA5D29 /* RunnerSettings.swift */,
+				D7C7F8B41C71289A00EA5D29 /* RunResults.swift */,
+				D7C7F8B51C71289A00EA5D29 /* ShortHandRunner.swift */,
+				D7C7F8B61C71289A00EA5D29 /* StringBackgroundColorizer.swift */,
+				D7C7F8B71C71289A00EA5D29 /* StringForegroundColorizer.swift */,
+				D7C7F8B81C71289A00EA5D29 /* StringStyle.swift */,
+				D7C7F8B91C71289A00EA5D29 /* StringStyleColorizer.swift */,
+				D7C7F8BA1C71289A00EA5D29 /* TaskPipe.swift */,
 				D72766061BF416AC00126D99 /* Swiftline.h */,
 				D72766081BF416AC00126D99 /* Info.plist */,
 			);
@@ -195,106 +222,6 @@
 				D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */,
 			);
 			path = SwiftlineTests;
-			sourceTree = "<group>";
-		};
-		D727661D1BF416C600126D99 /* Swiftline */ = {
-			isa = PBXGroup;
-			children = (
-				D72E3EC11C05B47800B77D49 /* Args */,
-				D727661E1BF416C600126D99 /* Agree */,
-				D72766211BF416C600126D99 /* Ask */,
-				D72766251BF416C600126D99 /* Choose */,
-				D72766281BF416C600126D99 /* Colorize */,
-				D72E3EBE1C052E7C00B77D49 /* ENV */,
-				D727662E1BF416C600126D99 /* Misc */,
-				D72766331BF416C600126D99 /* Runner */,
-			);
-			name = Swiftline;
-			path = ../../Pod/Swiftline;
-			sourceTree = "<group>";
-		};
-		D727661E1BF416C600126D99 /* Agree */ = {
-			isa = PBXGroup;
-			children = (
-				D727661F1BF416C600126D99 /* Agree.swift */,
-				D72766201BF416C600126D99 /* AgreeSettings.swift */,
-			);
-			path = Agree;
-			sourceTree = "<group>";
-		};
-		D72766211BF416C600126D99 /* Ask */ = {
-			isa = PBXGroup;
-			children = (
-				D72766221BF416C600126D99 /* Ask.swift */,
-				D72766231BF416C600126D99 /* AskerValidator.swift */,
-				D72766241BF416C600126D99 /* AskSettings.swift */,
-			);
-			path = Ask;
-			sourceTree = "<group>";
-		};
-		D72766251BF416C600126D99 /* Choose */ = {
-			isa = PBXGroup;
-			children = (
-				D72766261BF416C600126D99 /* Choose.swift */,
-				D72766271BF416C600126D99 /* ChooseSettings.swift */,
-			);
-			path = Choose;
-			sourceTree = "<group>";
-		};
-		D72766281BF416C600126D99 /* Colorize */ = {
-			isa = PBXGroup;
-			children = (
-				D72766291BF416C600126D99 /* Colorizer.swift */,
-				D727662A1BF416C600126D99 /* StringBackgroundColorizer.swift */,
-				D727662B1BF416C600126D99 /* StringForegroundColorizer.swift */,
-				D727662C1BF416C600126D99 /* StringStyle.swift */,
-				D727662D1BF416C600126D99 /* StringStyleColorizer.swift */,
-			);
-			path = Colorize;
-			sourceTree = "<group>";
-		};
-		D727662E1BF416C600126D99 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-				D727662F1BF416C600126D99 /* ArgConvertible.swift */,
-				D72766301BF416C600126D99 /* PromptPrinter.swift */,
-				D72766311BF416C600126D99 /* PromptReader.swift */,
-				D72766321BF416C600126D99 /* PromptSettings.swift */,
-				D76B2CFE1C06FD54009FF606 /* ProcessInfo.swift */,
-				D7EEFD501C0BEF1D00BF0F5D /* Glob.swift */,
-			);
-			path = Misc;
-			sourceTree = "<group>";
-		};
-		D72766331BF416C600126D99 /* Runner */ = {
-			isa = PBXGroup;
-			children = (
-				D72766341BF416C600126D99 /* CommandExecutor.swift */,
-				D72766351BF416C600126D99 /* Runner.swift */,
-				D72766361BF416C600126D99 /* RunnerSettings.swift */,
-				D72766371BF416C600126D99 /* RunResults.swift */,
-				D72766381BF416C600126D99 /* ShortHandRunner.swift */,
-				D72766391BF416C600126D99 /* TaskPipe.swift */,
-			);
-			path = Runner;
-			sourceTree = "<group>";
-		};
-		D72E3EBE1C052E7C00B77D49 /* ENV */ = {
-			isa = PBXGroup;
-			children = (
-				D72E3EBF1C052E9100B77D49 /* Env.swift */,
-			);
-			path = ENV;
-			sourceTree = "<group>";
-		};
-		D72E3EC11C05B47800B77D49 /* Args */ = {
-			isa = PBXGroup;
-			children = (
-				D72E3EC21C05B4E900B77D49 /* Args.swift */,
-				D76B2D791C079978009FF606 /* Argument.swift */,
-				D7DA6D521C08FA3500B94F95 /* ArgsParser.swift */,
-			);
-			path = Args;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,7 +281,7 @@
 		D72765FA1BF416AC00126D99 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Omar Abdelhafith";
 				TargetAttributes = {
@@ -406,34 +333,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D76B2D7A1C079978009FF606 /* Argument.swift in Sources */,
-				D72766481BF416C600126D99 /* PromptReader.swift in Sources */,
-				D76B2CFF1C06FD54009FF606 /* ProcessInfo.swift in Sources */,
-				D727664A1BF416C600126D99 /* CommandExecutor.swift in Sources */,
-				D72766441BF416C600126D99 /* StringStyle.swift in Sources */,
-				D727664B1BF416C600126D99 /* Runner.swift in Sources */,
-				D72766491BF416C600126D99 /* PromptSettings.swift in Sources */,
-				D727663A1BF416C600126D99 /* Agree.swift in Sources */,
-				D72766451BF416C600126D99 /* StringStyleColorizer.swift in Sources */,
-				D727664E1BF416C600126D99 /* ShortHandRunner.swift in Sources */,
-				D727664F1BF416C600126D99 /* TaskPipe.swift in Sources */,
-				D72766401BF416C600126D99 /* ChooseSettings.swift in Sources */,
-				D72E3EC31C05B4E900B77D49 /* Args.swift in Sources */,
-				D727663B1BF416C600126D99 /* AgreeSettings.swift in Sources */,
-				D72766411BF416C600126D99 /* Colorizer.swift in Sources */,
-				D727664D1BF416C600126D99 /* RunResults.swift in Sources */,
-				D72766471BF416C600126D99 /* PromptPrinter.swift in Sources */,
-				D72E3EC01C052E9100B77D49 /* Env.swift in Sources */,
-				D72766461BF416C600126D99 /* ArgConvertible.swift in Sources */,
-				D727663C1BF416C600126D99 /* Ask.swift in Sources */,
-				D727664C1BF416C600126D99 /* RunnerSettings.swift in Sources */,
-				D7EEFD511C0BEF1D00BF0F5D /* Glob.swift in Sources */,
-				D727663E1BF416C600126D99 /* AskSettings.swift in Sources */,
-				D7DA6D531C08FA3500B94F95 /* ArgsParser.swift in Sources */,
-				D727663F1BF416C600126D99 /* Choose.swift in Sources */,
-				D72766431BF416C600126D99 /* StringForegroundColorizer.swift in Sources */,
-				D72766421BF416C600126D99 /* StringBackgroundColorizer.swift in Sources */,
-				D727663D1BF416C600126D99 /* AskerValidator.swift in Sources */,
+				D7C7F8CD1C71289A00EA5D29 /* PromptSettings.swift in Sources */,
+				D7C7F8C41C71289A00EA5D29 /* Choose.swift in Sources */,
+				D7C7F8C91C71289A00EA5D29 /* Glob.swift in Sources */,
+				D7C7F8BB1C71289A00EA5D29 /* Agree.swift in Sources */,
+				D7C7F8BD1C71289A00EA5D29 /* ArgConvertible.swift in Sources */,
+				D7C7F8CB1C71289A00EA5D29 /* PromptPrinter.swift in Sources */,
+				D7C7F8C71C71289A00EA5D29 /* CommandExecutor.swift in Sources */,
+				D7C7F8BE1C71289A00EA5D29 /* Args.swift in Sources */,
+				D7C7F8C21C71289A00EA5D29 /* AskerValidator.swift in Sources */,
+				D7C7F8CA1C71289A00EA5D29 /* ProcessInfo.swift in Sources */,
+				D7C7F8D21C71289A00EA5D29 /* StringBackgroundColorizer.swift in Sources */,
+				D7C7F8BF1C71289A00EA5D29 /* ArgsParser.swift in Sources */,
+				D7C7F8C11C71289A00EA5D29 /* Ask.swift in Sources */,
+				D7C7F8D01C71289A00EA5D29 /* RunResults.swift in Sources */,
+				D7C7F8D51C71289A00EA5D29 /* StringStyleColorizer.swift in Sources */,
+				D7C7F8C51C71289A00EA5D29 /* ChooseSettings.swift in Sources */,
+				D7C7F8CC1C71289A00EA5D29 /* PromptReader.swift in Sources */,
+				D7C7F8CF1C71289A00EA5D29 /* RunnerSettings.swift in Sources */,
+				D7C7F8D31C71289A00EA5D29 /* StringForegroundColorizer.swift in Sources */,
+				D7C7F8C31C71289A00EA5D29 /* AskSettings.swift in Sources */,
+				D7C7F8D11C71289A00EA5D29 /* ShortHandRunner.swift in Sources */,
+				D7C7F8C01C71289A00EA5D29 /* Argument.swift in Sources */,
+				D7C7F8D61C71289A00EA5D29 /* TaskPipe.swift in Sources */,
+				D7C7F8BC1C71289A00EA5D29 /* AgreeSettings.swift in Sources */,
+				D7C7F8CE1C71289A00EA5D29 /* Runner.swift in Sources */,
+				D7C7F8C61C71289A00EA5D29 /* Colorizer.swift in Sources */,
+				D7C7F8D41C71289A00EA5D29 /* StringStyle.swift in Sources */,
+				D7C7F8C81C71289A00EA5D29 /* Env.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +482,7 @@
 		D72766181BF416AC00126D99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -569,12 +497,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nsomar.Swiftline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D72766191BF416AC00126D99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;

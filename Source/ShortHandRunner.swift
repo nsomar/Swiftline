@@ -7,8 +7,6 @@
 //  Copyright © 2015 Omar Abdelhafith. All rights reserved.
 //
 
-import Foundation
-
 
 /**
  Executes a command and captures its output

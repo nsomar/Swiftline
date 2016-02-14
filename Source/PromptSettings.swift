@@ -6,8 +6,6 @@
 //  Copyright © 2015 Omar Abdelhafith. All rights reserved.
 //
 
-import Foundation
-
 
 class PromptSettings {
     

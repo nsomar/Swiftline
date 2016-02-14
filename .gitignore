@@ -170,3 +170,5 @@ crashlytics.properties
 crashlytics-build.properties
 
 Examples/Rome/
+TestPackage/.build
+.build/
