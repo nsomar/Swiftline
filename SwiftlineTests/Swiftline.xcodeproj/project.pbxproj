@@ -52,7 +52,6 @@
 		D7C7F8D51C71289A00EA5D29 /* StringStyleColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8B91C71289A00EA5D29 /* StringStyleColorizer.swift */; };
 		D7C7F8D61C71289A00EA5D29 /* TaskPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F8BA1C71289A00EA5D29 /* TaskPipe.swift */; };
 		D7EEFD531C0BEF4500BF0F5D /* GlobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */; };
-		D7EEFD551C0F5AB000BF0F5D /* DownloadBooks.ac in Resources */ = {isa = PBXBuildFile; fileRef = D7EEFD541C0F5AB000BF0F5D /* DownloadBooks.ac */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,7 +125,6 @@
 		D7C7F8B91C71289A00EA5D29 /* StringStyleColorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringStyleColorizer.swift; path = ../../Source/StringStyleColorizer.swift; sourceTree = "<group>"; };
 		D7C7F8BA1C71289A00EA5D29 /* TaskPipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskPipe.swift; path = ../../Source/TaskPipe.swift; sourceTree = "<group>"; };
 		D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobTests.swift; sourceTree = "<group>"; };
-		D7EEFD541C0F5AB000BF0F5D /* DownloadBooks.ac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DownloadBooks.ac; path = ../../../../DownloadBooks.ac; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,7 +220,6 @@
 				D72E3EBC1C052E2E00B77D49 /* ENVTests.swift */,
 				D72E3EC41C05B4FE00B77D49 /* ArgsTests.swift */,
 				D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */,
-				D7EEFD541C0F5AB000BF0F5D /* DownloadBooks.ac */,
 			);
 			path = SwiftlineTests;
 			sourceTree = "<group>";
@@ -326,7 +323,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7EEFD551C0F5AB000BF0F5D /* DownloadBooks.ac in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
