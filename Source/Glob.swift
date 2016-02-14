@@ -17,8 +17,7 @@ class Glob {
 
     if (glob(pattern.cStringUsingEncoding(NSUTF8StringEncoding)!, 0, nil, &gt) == 0) {
       
-      for (var i: Int32 = 0 ; i < gt.gl_matchc ; i++) {
-        
+      for i in (0..<gt.gl_matchc) {
         files.append(String(CString: gt.gl_pathv[Int(i)], encoding: NSUTF8StringEncoding)!)
       }
       
