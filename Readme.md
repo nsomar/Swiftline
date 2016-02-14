@@ -269,7 +269,7 @@ Returns the arguments passed to the script. For example when calling `script -f1
 `Args.parsed.command` returns the name of the executable itself `"script"`
 
 ## Installation
-You can install Swiftline using cocoapods, carthage and Swift package manager
+You can install Swiftline using CocoaPods, carthage and Swift package manager
 
 ### CocoaPods
     use_frameworks!
@@ -292,7 +292,7 @@ Add swiftline as dependency in your `Package.swift`
 ```
 
 ### CocoaPods + Rome plugin
-If you want to use swiftline in a script you can use [Rome](https://github.com/neonichu/Rome) cocoapod plugin. This plugin builds the framework from the pod file and place them in a Rome directory.
+If you want to use swiftline in a script you can use [Rome](https://github.com/neonichu/Rome) CocoaPods plugin. This plugin builds the framework from the pod file and place them in a Rome directory.
 
     platform :osx, '10.10'
     plugin 'cocoapods-rome'
