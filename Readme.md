@@ -267,9 +267,9 @@ Returns the arguments passed to the script. For example when calling `script -f1
 `Args.parsed.flags` returns a dictinary of flags `["f1": "val1", "f2", "val2"]`
 
 ## Installation
-You can install Swiftline using cocoapods, carthage and Swift package manager
+You can install Swiftline using CocoaPods, carthage and Swift package manager
 
-### Cocoapods
+### CocoaPods
     use_frameworks!
     pod 'Swiftline'
 
@@ -289,8 +289,8 @@ Add swiftline as dependency in your `Package.swift`
   )
 ```
 
-### Cocoapods + Rome plugin
-If you want to use swiftline in a script you can use [Rome](https://github.com/neonichu/Rome) cocoapod plugin. This plugin builds the framework from the pod file and place them in a Rome directory.
+### CocoaPods + Rome plugin
+If you want to use swiftline in a script you can use [Rome](https://github.com/neonichu/Rome) CocoaPods plugin. This plugin builds the framework from the pod file and place them in a Rome directory.
 
     platform :osx, '10.10'
     plugin 'cocoapods-rome'
