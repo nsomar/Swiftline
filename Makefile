@@ -23,3 +23,11 @@ build_help:
 
 test:
 	cd SwiftlineTests; xctool -project Swiftline.xcodeproj -scheme Swiftline clean build test -sdk macosx GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+
+test-spm:
+	cd TestPackage && rm -rf .build
+	cd TestPackage && swift build
+
+build-spm:
+	rm -rf .build
+	swift build
