@@ -6,8 +6,6 @@
 //  Copyright © 2015 Omar Abdelhafith. All rights reserved.
 //
 
-import Foundation
-
 
 /**
  *  Any type that extends ArgConvertibleType can be used in ask and choose

@@ -6,6 +6,9 @@
 //  Copyright © 2015 Omar Abdelhafith. All rights reserved.
 //
 
+import Foundation
+
+
 struct Option {
   let argument: Argument
   var value: String?

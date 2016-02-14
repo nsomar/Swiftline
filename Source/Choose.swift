@@ -7,8 +7,6 @@
 //
 
 
-import Foundation
-
 
 /**
  Presents a user with a menu of items to choose from

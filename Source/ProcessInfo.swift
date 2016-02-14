@@ -6,6 +6,9 @@
 //  Copyright © 2015 Omar Abdelhafith. All rights reserved.
 //
 
+import Foundation
+
+
 protocol ProcessInfoType {
   var arguments: [String] { get }
   var cacheResults: Bool { get }
@@ -16,30 +19,30 @@ extension NSProcessInfo: ProcessInfoType {
 }
 
 class DummyProcessInfo: ProcessInfoType {
-  
+
   var argsToReturn: [String]
-  
+
   init(_ argsToReturn: String...) {
     self.argsToReturn = argsToReturn
   }
-  
+
   var arguments: [String] {
     return argsToReturn
   }
-  
+
   var cacheResults: Bool { return false }
 }
 
 class ProcessInfo {
-  
+
   static var internalProcessInfo: ProcessInfoType = NSProcessInfo()
-  
+
   static var arguments: [String] {
     return internalProcessInfo.arguments
   }
-  
+
   static var cacheResults: Bool {
     return internalProcessInfo.cacheResults
   }
-  
+
 }

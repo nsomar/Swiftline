@@ -6,8 +6,6 @@
 //  Copyright © 2015 Omar Abdelhafith. All rights reserved.
 //
 
-import Foundation
-
 
 /// Settings to costumize the run function
 public class RunSettings {

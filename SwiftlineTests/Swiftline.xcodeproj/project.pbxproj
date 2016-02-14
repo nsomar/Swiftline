@@ -52,6 +52,7 @@
 		D7DA6D531C08FA3500B94F95 /* ArgsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA6D521C08FA3500B94F95 /* ArgsParser.swift */; };
 		D7EEFD511C0BEF1D00BF0F5D /* Glob.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFD501C0BEF1D00BF0F5D /* Glob.swift */; };
 		D7EEFD531C0BEF4500BF0F5D /* GlobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */; };
+		D7EEFD551C0F5AB000BF0F5D /* DownloadBooks.ac in Resources */ = {isa = PBXBuildFile; fileRef = D7EEFD541C0F5AB000BF0F5D /* DownloadBooks.ac */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		D7DA6D521C08FA3500B94F95 /* ArgsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgsParser.swift; sourceTree = "<group>"; };
 		D7EEFD501C0BEF1D00BF0F5D /* Glob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glob.swift; sourceTree = "<group>"; };
 		D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobTests.swift; sourceTree = "<group>"; };
+		D7EEFD541C0F5AB000BF0F5D /* DownloadBooks.ac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DownloadBooks.ac; path = ../../../../DownloadBooks.ac; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				D72E3EBC1C052E2E00B77D49 /* ENVTests.swift */,
 				D72E3EC41C05B4FE00B77D49 /* ArgsTests.swift */,
 				D7EEFD521C0BEF4500BF0F5D /* GlobTests.swift */,
+				D7EEFD541C0F5AB000BF0F5D /* DownloadBooks.ac */,
 			);
 			path = SwiftlineTests;
 			sourceTree = "<group>";
@@ -210,7 +213,7 @@
 				D72766331BF416C600126D99 /* Runner */,
 			);
 			name = Swiftline;
-			path = ../../Pod/Swiftline;
+			path = ../../Source;
 			sourceTree = "<group>";
 		};
 		D727661E1BF416C600126D99 /* Agree */ = {
@@ -396,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7EEFD551C0F5AB000BF0F5D /* DownloadBooks.ac in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

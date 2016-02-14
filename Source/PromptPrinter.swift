@@ -6,8 +6,6 @@
 //  Copyright © 2015 Omar Abdelhafith. All rights reserved.
 //
 
-import Foundation
-
 
 protocol PromptPrinter {
     func printString(string: String, terminator: String)
