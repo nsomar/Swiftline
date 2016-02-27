@@ -24,6 +24,20 @@ public func run(command: String, args: String...) -> RunResults {
 /**
  Executes a command and captures its output
  
+ - parameter command:   the command to execute
+ - parameter argString: the arguments passed as a single string
+ 
+ - returns: RunResults describing the command results
+ */
+public func run(command: String, argsString: String) -> RunResults {
+  let args = argsString.componentsSeparatedByString(" ").filter { !$0.isEmpty }
+  return 🏃.run(command, args: args)
+}
+
+
+/**
+ Executes a command and captures its output
+ 
  - parameter command: the command to execute
  - parameter args:    the parameters to pass to the command
  

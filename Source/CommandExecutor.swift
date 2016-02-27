@@ -40,12 +40,9 @@ class ActualTaskExecutor: TaskExecutor {
   
   func execute(commandParts: [String]) -> ExecutorReturnValue  {
     let task = NSTask()
-    
-//    let commands = ["-c", "\"\(commandParts.joinWithSeparator(" "))\""]
-    //        print(commands)
-    //        task.launchPath = "/usr/bin/env"
+
     task.launchPath = "/usr/bin/env"
-//    task.arguments = commandParts
+    task.arguments = commandParts
     
     let stdoutPipe = NSPipe()
     let stderrPipe = NSPipe()
