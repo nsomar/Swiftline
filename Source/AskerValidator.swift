@@ -8,7 +8,7 @@
 
 
 protocol AskerValidator {
-    typealias Item
+    associatedtype Item
     
     func invalidItemMessage(string: String?) -> String?
     func newItemPromptMessage() -> String
