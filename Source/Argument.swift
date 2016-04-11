@@ -89,10 +89,6 @@ extension String {
       distanceFromEndIndex = 0
     }
     
-    let actualRange = Range(
-      start: startIndex.advancedBy(range.startIndex),
-      end: endIndex.advancedBy(-distanceFromEndIndex))
-    
-    return self[actualRange]
+    return self[startIndex.advancedBy(range.startIndex) ..< endIndex.advancedBy(-distanceFromEndIndex)]
   }
 }
