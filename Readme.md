@@ -2,7 +2,7 @@
 <img src="http://swiftline.github.io/img/intro-bg.svg" width="400" align="middle"/>
 <br/>
 </p>
-[![Build Status](https://travis-ci.org/Swiftline/Swiftline.svg?branch=master)](https://travis-ci.org/Swiftline/Swiftline)
+[![Build Status](https://travis-ci.org/oarrabi/Swiftline.svg?branch=master)](https://travis-ci.org/oarrabi/Swiftline)
 [![Platform](https://img.shields.io/badge/platform-osx-lightgrey.svg)](https://travis-ci.org/Swiftline/Swiftline)
 [![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)](https://travis-ci.org/Swiftline/Swiftline)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Swiftline.svg)](https://cocoapods.org/pods/Swiftline)
