@@ -13,8 +13,8 @@ public class Env {
   
   /// Return the list of all the enviromenment keys passed to the script
   public static var keys: [String] {
-    let keyValues = run("env").stdout.componentsSeparatedByString("\n")
-    let keys = keyValues.map { $0.componentsSeparatedByString("=").first! }.filter { !$0.isEmpty }
+    let keyValues = run("env").stdout.components(separatedBy: "\n")
+    let keys = keyValues.map { $0.components(separatedBy: "=").first! }.filter { !$0.isEmpty }
     return keys
   }
   
@@ -30,9 +30,9 @@ public class Env {
    
    - returns: The enviromenment variable value
    */
-  public static func get(key: String) -> String? {
-    let value = getenv(key)
-    return String.fromCString(value)
+  public static func get(_ key: String) -> String? {
+    guard let value = getenv(key) else { return nil }
+    return String(cString: value)
   }
   
   /**
@@ -41,7 +41,7 @@ public class Env {
    - parameter key: The enviromenment variable key
    - parameter value: The enviromenment variable value
    */
-  public static func set(key: String, _ value: String?) {
+  public static func set(_ key: String, _ value: String?) {
     if let newValue = value {
       setenv(key, newValue, 1)
     } else {
@@ -67,7 +67,7 @@ public class Env {
    
    - returns: true if exists false otherwise
    */
-  public static func hasKey(key: String) -> Bool {
+  public static func hasKey(_ key: String) -> Bool {
     return self.keys.contains(key)
   }
   
@@ -79,7 +79,7 @@ public class Env {
    
    - returns: true if exists false otherwise
    */
-  public static func hasValue(value: String) -> Bool {
+  public static func hasValue(_ value: String) -> Bool {
     return self.values.contains(value)
   }
   
@@ -88,7 +88,7 @@ public class Env {
    
    - parameter callback: callback to call on each key/value pair
    */
-  public static func eachPair(callback: (key: String, value: String) -> ()) {
+  public static func eachPair(_ callback: (_ key: String, _ value: String) -> ()) {
     zip(self.keys, self.values).forEach(callback)
   }
   

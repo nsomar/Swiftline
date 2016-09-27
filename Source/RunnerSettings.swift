@@ -22,7 +22,7 @@ public class RunSettings {
 
 
 /// Echo settings
-public struct EchoSettings: OptionSetType {
+public struct EchoSettings: OptionSet {
     
     public let rawValue: Int
     

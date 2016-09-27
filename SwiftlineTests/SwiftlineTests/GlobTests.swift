@@ -7,7 +7,7 @@ class GlobTests: QuickSpec {
     override func spec() {
       
       it("expands globs") {
-        let expanded = Glob.expand("\(NSFileManager.defaultManager().currentDirectoryPath)/*")
+        let expanded = Glob.expand("\(FileManager.default.currentDirectoryPath)/*")
         expect(expanded.count).to(beGreaterThan(0))
       }
 

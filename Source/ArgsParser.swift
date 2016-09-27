@@ -8,7 +8,7 @@
 
 class ArgsParser {
   
-  static func parseFlags(args: [String]) -> ([Option], [String]) {
+  static func parseFlags(_ args: [String]) -> ([Option], [String]) {
     var options = [Option]()
     var others = [String]()
     var previousArgument: Argument?
@@ -33,7 +33,7 @@ class ArgsParser {
         continue
       }
       
-      if let previousArgument = previousArgument where previousArgument.isFlag {
+      if let previousArgument = previousArgument , previousArgument.isFlag {
         updatelastOption(forArray: &options, withValue: argumentString)
       } else {
         others += [argument.name]
@@ -44,7 +44,7 @@ class ArgsParser {
     
   }
   
-  static func updatelastOption(inout forArray array: [Option], withValue value: String) {
+  static func updatelastOption(forArray array: inout [Option], withValue value: String) {
     var previousOption = array.last!
     previousOption.value = value
     array.removeLast()

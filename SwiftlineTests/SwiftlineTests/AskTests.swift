@@ -38,7 +38,7 @@ class AskerTest: QuickSpec {
             let prompt = ["Enter a string",
                 "You must enter a valid Integer.",
                 "?  You must enter a valid Integer.",
-                "?  "].joinWithSeparator("\n")
+                "?  "].joined(separator: "\n")
             
             expect(res).to(equal(1))
             expect(promptPrinter.printed).to(equal(prompt))
@@ -62,7 +62,7 @@ class AskerTest: QuickSpec {
             
             let prompt = ["Enter a string",
                 "Invalid string",
-                "?  Invalid string\n?  "].joinWithSeparator("\n")
+                "?  Invalid string\n?  "].joined(separator: "\n")
             
             expect(promptPrinter.printed).to(equal(prompt))
         }
@@ -82,7 +82,7 @@ class AskerTest: QuickSpec {
             expect(res).to(equal("other val"))
             
             let prompt = ["Enter a string",
-                "Are you sure?  ?  Are you sure?  "].joinWithSeparator("\n")
+                "Are you sure?  ?  Are you sure?  "].joined(separator: "\n")
             
             expect(promptPrinter.printed).to(equal(prompt))
         }
@@ -101,7 +101,7 @@ class AskerTest: QuickSpec {
             let prompt = ["Age?",
                 "Are you sure?  ?  Age not correct",
                 "?  Are you sure?  "
-                ].joinWithSeparator("\n")
+                ].joined(separator: "\n")
             
             expect(promptPrinter.printed).to(equal(prompt))
         }

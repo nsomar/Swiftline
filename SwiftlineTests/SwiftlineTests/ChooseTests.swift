@@ -22,7 +22,7 @@ class ChooseTests: QuickSpec {
                 "1. one",
                 "2. two",
                 "3. three",
-                "Select one of  "].joinWithSeparator("\n")
+                "Select one of  "].joined(separator: "\n")
             expect(promptPrinter.printed).to(equal(prompt))
         }
         
@@ -48,7 +48,7 @@ class ChooseTests: QuickSpec {
                 "3. three\n",
                 "Select one of  ",
                 "You must choose one of [1, 2, 3, one, two, three].\n?  ",
-                "You must choose one of [1, 2, 3, one, two, three].\n?  "].joinWithSeparator("")
+                "You must choose one of [1, 2, 3, one, two, three].\n?  "].joined(separator: "")
             expect(promptPrinter.printed).to(equal(prompt))
             expect(choice).to(equal("three"))
         }
@@ -65,7 +65,7 @@ class ChooseTests: QuickSpec {
                 "1. one",
                 "2. two",
                 "3. three",
-                "Select one of  "].joinWithSeparator("\n")
+                "Select one of  "].joined(separator: "\n")
             expect(promptPrinter.printed).to(equal(prompt))
             expect(choice).to(equal(10))
         }
@@ -81,7 +81,7 @@ class ChooseTests: QuickSpec {
                 "1. one",
                 "2. two",
                 "3. three",
-                "Select one of  "].joinWithSeparator("\n")
+                "Select one of  "].joined(separator: "\n")
             expect(promptPrinter.printed).to(equal(prompt))
             expect(choice).to(equal(20))
         }
@@ -97,7 +97,7 @@ class ChooseTests: QuickSpec {
                 "1. one",
                 "2. two",
                 "3. three",
-                "Select one of  "].joinWithSeparator("\n")
+                "Select one of  "].joined(separator: "\n")
             expect(promptPrinter.printed).to(equal(prompt))
             expect(choice).to(equal(20))
         }
@@ -114,7 +114,7 @@ class ChooseTests: QuickSpec {
                 "1. one",
                 "2. two",
                 "3. three",
-                "Select one of  "].joinWithSeparator("\n")
+                "Select one of  "].joined(separator: "\n")
             expect(promptPrinter.printed).to(equal(prompt))
             expect(choice).to(equal(20))
         }
@@ -131,7 +131,7 @@ class ChooseTests: QuickSpec {
                 "1. one",
                 "2. two",
                 "3. three",
-                "Select one of  "].joinWithSeparator("\n")
+                "Select one of  "].joined(separator: "\n")
             expect(promptPrinter.printed).to(equal(prompt))
             expect(choice).to(equal(20))
         }

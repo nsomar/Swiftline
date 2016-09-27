@@ -22,29 +22,29 @@ struct Option {
 struct Argument {
   
   enum ArgumentType {
-    case ShortFlag
-    case LongFlag
-    case NotAFlag
-    case FlagsTerminator
+    case shortFlag
+    case longFlag
+    case notAFlag
+    case flagsTerminator
     
     var isFlag: Bool {
-      return self != .NotAFlag
+      return self != .notAFlag
     }
     
     var isFlagTerminator: Bool {
-      return self == .FlagsTerminator
+      return self == .flagsTerminator
     }
     
     init(_ argument: String) {
       
       if argument == "--" {
-        self = .FlagsTerminator
+        self = .flagsTerminator
       } else if argument.hasPrefix("--") {
-        self = .LongFlag
+        self = .longFlag
       } else if argument.hasPrefix("-") {
-        self = .ShortFlag
+        self = .shortFlag
       } else {
-        self = .NotAFlag
+        self = .notAFlag
       }
     }
   }
@@ -67,13 +67,13 @@ struct Argument {
   
   var name: String {
     switch type {
-    case .NotAFlag:
+    case .notAFlag:
       return argument
-    case .ShortFlag:
+    case .shortFlag:
       return argument[1..<argument.utf8.count]
-    case .LongFlag:
+    case .longFlag:
       return argument[2..<argument.utf8.count]
-    case .FlagsTerminator:
+    case .flagsTerminator:
       return ""
     }
   }
@@ -82,13 +82,15 @@ struct Argument {
 
 extension String {
   public subscript (range: Range<Int>) -> String {
-    let length = self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)
+    let length = self.lengthOfBytes(using: String.Encoding.utf8)
     
-    var distanceFromEndIndex = length - range.endIndex
+    var distanceFromEndIndex = length - range.upperBound
     if distanceFromEndIndex < 0 {
       distanceFromEndIndex = 0
     }
     
-    return self[startIndex.advancedBy(range.startIndex) ..< endIndex.advancedBy(-distanceFromEndIndex)]
+    let actualRange = (characters.index(startIndex, offsetBy: range.lowerBound) ..< characters.index(endIndex, offsetBy: -distanceFromEndIndex))
+    
+    return self[actualRange]
   }
 }

@@ -11,14 +11,17 @@ import Darwin
 
 class Glob {
   
-  static func expand(pattern: String) -> [String] {
+  static func expand(_ pattern: String) -> [String] {
     var files = [String]()
     var gt: glob_t = glob_t()
 
-    if (glob(pattern.cStringUsingEncoding(NSUTF8StringEncoding)!, 0, nil, &gt) == 0) {
+    if (glob(pattern.cString(using: String.Encoding.utf8)!, 0, nil, &gt) == 0) {
       
       for i in (0..<gt.gl_matchc) {
-        files.append(String(CString: gt.gl_pathv[Int(i)], encoding: NSUTF8StringEncoding)!)
+        let x = gt.gl_pathv[Int(i)]
+        let c = UnsafePointer<CChar>(x)!
+        let s = String.init(cString: c)
+        files.append(s)
       }
       
     }

@@ -16,7 +16,7 @@ class PromptSettings {
         return reader.read()
     }
     
-    class func print(string: String, terminator: String = "\n") {
+    class func print(_ string: String, terminator: String = "\n") {
         return printer.printString(string, terminator: terminator)
     }
 }

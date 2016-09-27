@@ -10,20 +10,20 @@ import Foundation
 
 
 protocol TaskPipe {
-    func read() -> NSData
+    func read() -> Data
 }
 
-extension NSPipe: TaskPipe {
-    func read() -> NSData {
+extension Pipe: TaskPipe {
+    func read() -> Data {
         return fileHandleForReading.readDataToEndOfFile()
     }
 }
 
 struct Dryipe: TaskPipe {
     
-    let dataToReturn: NSData
+    let dataToReturn: Data
     
-    func read() -> NSData {
+    func read() -> Data {
         return dataToReturn
     }
 }
