@@ -93,7 +93,7 @@ class ChooseSettingsTests: QuickSpec {
             it("creates prompt with letters and -") {
                 let items = ["a - one", "b - two", "c - three"]
                 chooseSettings.indexSuffix = " - "
-                chooseSettings.index = .Letters
+                chooseSettings.index = .letters
                 expect(chooseSettings.preparePromptItems()).to(equal(items))
             }
         }
