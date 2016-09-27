@@ -16,7 +16,7 @@
  
  - returns: RunResults describing the command results
  */
-public func run(command: String, args: String...) -> RunResults {
+public func run(_ command: String, args: String...) -> RunResults {
     return 🏃.run(command, args: args as [String])
 }
 
@@ -29,8 +29,8 @@ public func run(command: String, args: String...) -> RunResults {
  
  - returns: RunResults describing the command results
  */
-public func run(command: String, argsString: String) -> RunResults {
-  let args = argsString.componentsSeparatedByString(" ").filter { !$0.isEmpty }
+public func run(_ command: String, argsString: String) -> RunResults {
+  let args = argsString.components(separatedBy: " ").filter { !$0.isEmpty }
   return 🏃.run(command, args: args)
 }
 
@@ -43,7 +43,7 @@ public func run(command: String, argsString: String) -> RunResults {
  
  - returns: RunResults describing the command results
  */
-public func run(command: String, args: [String]) -> RunResults {
+public func run(_ command: String, args: [String]) -> RunResults {
     return 🏃.run(command, args: args)
 }
 
@@ -56,7 +56,7 @@ public func run(command: String, args: [String]) -> RunResults {
  
  - returns: RunResults describing the command results
  */
-public func run(command: String, settingsBlock: (RunSettings -> Void)) -> RunResults {
+public func run(_ command: String, settingsBlock: ((RunSettings) -> Void)) -> RunResults {
     return 🏃.run(command, settings: settingsBlock)
 }
 
@@ -70,7 +70,7 @@ public func run(command: String, settingsBlock: (RunSettings -> Void)) -> RunRes
  
  - returns: RunResults describing the command results
  */
-public func run(command: String, args: [String], settings: (RunSettings -> Void)) -> RunResults {
+public func run(_ command: String, args: [String], settings: ((RunSettings) -> Void)) -> RunResults {
     return 🏃.run(command, args: args, settings: settings)
 }
 
@@ -83,7 +83,7 @@ public func run(command: String, args: [String], settings: (RunSettings -> Void)
  
 - returns: RunResults describing the command results
  */
-func run(command: String, echo: EchoSettings) -> RunResults {
+func run(_ command: String, echo: EchoSettings) -> RunResults {
     return 🏃.run(command, echo: echo)
 }
 
@@ -94,6 +94,6 @@ func run(command: String, echo: EchoSettings) -> RunResults {
  
 - returns: executed command exit code
  */
-public func runWithoutCapture(command: String) -> Int {
+public func runWithoutCapture(_ command: String) -> Int {
     return 🏃.runWithoutCapture(command)
 }

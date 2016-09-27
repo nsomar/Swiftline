@@ -16,7 +16,7 @@
  
  - returns: The user selected item
  */
-public func choose(prompt: String, choices: String...) -> String {
+public func choose(_ prompt: String, choices: String...) -> String {
     return choose(prompt, type: String.self) {
         for choice in choices {
             $0.addChoice(choice) { return choice }
@@ -32,7 +32,7 @@ public func choose(prompt: String, choices: String...) -> String {
  
  - returns: The user selected item
  */
-public func choose<T>(costumizationBlock: (ChooseSettings<T> -> Void)) -> T {
+public func choose<T>(_ costumizationBlock: ((ChooseSettings<T>) -> Void)) -> T {
     
     let settings = getChooseSettings(costumizationBlock)
     return choose(settings, type: T.self)
@@ -48,7 +48,7 @@ public func choose<T>(costumizationBlock: (ChooseSettings<T> -> Void)) -> T {
  
  - returns: The user selected item
  */
-public func choose<T>(prompt: String, type: T.Type, costumizationBlock: (ChooseSettings<T> -> Void)) -> T {
+public func choose<T>(_ prompt: String, type: T.Type, costumizationBlock: ((ChooseSettings<T>) -> Void)) -> T {
     
     let settings = getChooseSettings(costumizationBlock)
     settings.promptQuestion = prompt
@@ -64,7 +64,7 @@ public func choose<T>(prompt: String, type: T.Type, costumizationBlock: (ChooseS
  
  - returns: The user selected item
  */
-public func choose<T>(type: T.Type, costumizationBlock: (ChooseSettings<T> -> Void)) -> T {
+public func choose<T>(_ type: T.Type, costumizationBlock: ((ChooseSettings<T>) -> Void)) -> T {
     
     let settings = getChooseSettings(costumizationBlock)
     return choose(settings, type: type)
@@ -74,7 +74,7 @@ public func choose<T>(type: T.Type, costumizationBlock: (ChooseSettings<T> -> Vo
 // MARK :- Internal functions
 
 
-func choose<T>(settings: ChooseSettings<T>, type: T.Type) -> T {
+func choose<T>(_ settings: ChooseSettings<T>, type: T.Type) -> T {
     
     let items = settings.preparePromptItems()
     
@@ -86,7 +86,7 @@ func choose<T>(settings: ChooseSettings<T>, type: T.Type) -> T {
     return askForValidatedItem(originalValue: stringRead, validator: settings)
 }
 
-func getChooseSettings<T>(costumizationBlock: ChooseSettings<T> -> Void) -> ChooseSettings<T> {
+func getChooseSettings<T>(_ costumizationBlock: (ChooseSettings<T>) -> Void) -> ChooseSettings<T> {
     let settings = ChooseSettings<T>()
     costumizationBlock(settings)
     return settings

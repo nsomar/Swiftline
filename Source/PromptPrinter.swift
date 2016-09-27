@@ -8,12 +8,12 @@
 
 
 protocol PromptPrinter {
-    func printString(string: String, terminator: String)
+    func printString(_ string: String, terminator: String)
 }
 
 class ConsolePromptPrinter: PromptPrinter {
     
-    func printString(string: String, terminator: String = "\n") {
+    func printString(_ string: String, terminator: String = "\n") {
         return print(string, separator: "", terminator: terminator)
     }
 }
@@ -22,7 +22,7 @@ class DummyPromptPrinter: PromptPrinter {
     
     var printed = ""
     
-    func printString(string: String, terminator: String = "\n") {
+    func printString(_ string: String, terminator: String = "\n") {
         printed += string + terminator
     }
 }

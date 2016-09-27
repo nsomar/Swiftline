@@ -15,101 +15,100 @@ let codesSeperators = ";"
 
 
 protocol StringStyle {
-    var rawValue: Int { get }
-    func colorize(string string: String) -> String
+  var rawValue: Int { get }
+  func colorize(string: String) -> String
 }
 
 
 extension StringStyle {
+  
+  func colorize(string: String) -> String {
     
-    func colorize(string string: String) -> String {
-        
-        if hasAnyStyleCode(string) {
-            return colorizeStringAndAddCodeSeperators(string)
-        } else {
-            return colorizeStringWithoutPriorCode(string)
-        }
+    if hasAnyStyleCode(string) {
+      return colorizeStringAndAddCodeSeperators(string)
+    } else {
+      return colorizeStringWithoutPriorCode(string)
     }
+  }
+  
+  fileprivate func colorizeStringWithoutPriorCode(_ string: String) -> String {
+    return "\(preparedColorCode(self.rawValue))\(string)\(endingColorCode())"
+  }
+  
+  fileprivate func colorizeStringAndAddCodeSeperators(_ string: String) -> String {
+    //To refactor and use regex matching instead of replacing strings and using tricks
+    let stringByRemovingEnding = removeEndingCode(string)
+    let sringwWithStart = "\(preparedColorCode(self.rawValue))\(stringByRemovingEnding)"
     
-    private func colorizeStringWithoutPriorCode(string: String) -> String {
-        return "\(preparedColorCode(self.rawValue))\(string)\(endingColorCode())"
-    }
+    let stringByAddingCodeSeperator = addCommandSeperators(sringwWithStart)
     
-    private func colorizeStringAndAddCodeSeperators(string: String) -> String {
-        //To refactor and use regex matching instead of replacing strings and using tricks
-        let stringByRemovingEnding = removeEndingCode(string)
-        let sringwWithStart = "\(preparedColorCode(self.rawValue))\(stringByRemovingEnding)"
-        
-        let stringByAddingCodeSeperator = addCommandSeperators(sringwWithStart)
-        
-        return "\(stringByAddingCodeSeperator)\(endingColorCode())"
-    }
+    return "\(stringByAddingCodeSeperator)\(endingColorCode())"
+  }
+  
+  fileprivate func preparedColorCode(_ color: Int) -> String {
+    return "\(startOfCode)\(color)\(endOfCode)"
+  }
+  
+  fileprivate func hasAnyStyleCode(_ string: String) -> Bool {
+    return string.contains(startOfCode)
+  }
+  
+  fileprivate func addCommandSeperators(_ string: String) -> String {
+    var rangeWithInset = (string.characters.index(after: string.startIndex) ..< string.characters.index(before: string.endIndex))
+    let newString = string.replacingOccurrences(of: startOfCode, with: ";", options: .literal, range: rangeWithInset)
     
-    private func preparedColorCode(color: Int) -> String {
-        return "\(startOfCode)\(color)\(endOfCode)"
-    }
-    
-    private func hasAnyStyleCode(string: String) -> Bool {
-        return string.containsString(startOfCode)
-    }
-    
-    private func addCommandSeperators(string: String) -> String {
-        
-        var rangeWithInset = string.startIndex.successor() ..< string.endIndex.predecessor()
-        let newString = string.stringByReplacingOccurrencesOfString(startOfCode, withString: ";", options: .LiteralSearch, range: rangeWithInset)
-        
-        rangeWithInset = newString.startIndex.successor() ..< newString.endIndex.predecessor()
-        return newString.stringByReplacingOccurrencesOfString("m;", withString: ";", options: .LiteralSearch, range: rangeWithInset)
-    }
-    
-    private func removeEndingCode(string: String) -> String {
-        let rangeWithInset = string.startIndex.successor() ..< string.endIndex
-        return string.stringByReplacingOccurrencesOfString(endingColorCode(), withString: "", options: .LiteralSearch, range: rangeWithInset)
-    }
-    
-    private func endingColorCode() -> String {
-        return preparedColorCode(0)
-    }
+    rangeWithInset = (newString.characters.index(after: newString.startIndex) ..< newString.characters.index(before: newString.endIndex))
+    return newString.replacingOccurrences(of: "m;", with: ";", options: .literal, range: rangeWithInset)
+  }
+  
+  fileprivate func removeEndingCode(_ string: String) -> String {
+    let rangeWithInset = (string.characters.index(after: string.startIndex) ..< string.endIndex)
+    return string.replacingOccurrences(of: endingColorCode(), with: "", options: .literal, range: rangeWithInset)
+  }
+  
+  fileprivate func endingColorCode() -> String {
+    return preparedColorCode(0)
+  }
 }
 
 
 enum ForegroundColor: Int, StringStyle {
-    
-    case Black = 30
-    case Red = 31
-    case Green = 32
-    case Yellow = 33
-    case Blue = 34
-    case Magenta = 35
-    case Cyan = 36
-    case White = 37
+  
+  case black = 30
+  case red = 31
+  case green = 32
+  case yellow = 33
+  case blue = 34
+  case magenta = 35
+  case cyan = 36
+  case white = 37
 }
 
 
 enum BackgroundColor: Int, StringStyle {
-    
-    case Black = 40
-    case Red = 41
-    case Green = 42
-    case Yellow = 43
-    case Blue = 44
-    case Magenta = 45
-    case Cyan = 46
-    case White = 47
+  
+  case black = 40
+  case red = 41
+  case green = 42
+  case yellow = 43
+  case blue = 44
+  case magenta = 45
+  case cyan = 46
+  case white = 47
 }
 
 
 enum StringTextStyle: Int, StringStyle {
-    
-    case Reset = 0
-    case Bold = 1
-    case Italic = 3
-    case Underline = 4
-    case Inverse = 7
-    case Strikethrough = 9
-    case BoldOff = 22
-    case ItalicOff = 23
-    case UnderlineOff = 24
-    case InverseOff = 27
-    case StrikethroughOff = 29
+  
+  case reset = 0
+  case bold = 1
+  case italic = 3
+  case underline = 4
+  case inverse = 7
+  case strikethrough = 9
+  case boldOff = 22
+  case italicOff = 23
+  case underlineOff = 24
+  case inverseOff = 27
+  case strikethroughOff = 29
 }

@@ -14,7 +14,7 @@ protocol ProcessInfoType {
   var cacheResults: Bool { get }
 }
 
-extension NSProcessInfo: ProcessInfoType {
+extension Foundation.ProcessInfo: ProcessInfoType {
   var cacheResults: Bool { return true }
 }
 
@@ -35,7 +35,7 @@ class DummyProcessInfo: ProcessInfoType {
 
 class ProcessInfo {
 
-  static var internalProcessInfo: ProcessInfoType = NSProcessInfo()
+  static var internalProcessInfo: ProcessInfoType = Foundation.ProcessInfo()
 
   static var arguments: [String] {
     return internalProcessInfo.arguments

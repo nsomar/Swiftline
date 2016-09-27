@@ -11,7 +11,7 @@
 public class Args {
   
   /// Return the list of arguments passed to the script
-  public static var all: [String] {
+  open static var all: [String] {
     return ProcessInfo.arguments
   }
   
@@ -21,9 +21,9 @@ public class Args {
   /// The flags are recognized as short flags `-f` or long flags `--force`
   /// The flag value will be the argument that follows the flag
   /// `--` is used to mark the terminatin of the flags
-  public static var parsed: ParsedArgs {
+  open static var parsed: ParsedArgs {
     
-    if let result = cachedResults where ProcessInfo.cacheResults {
+    if let result = cachedResults , ProcessInfo.cacheResults {
       return result
     }
     

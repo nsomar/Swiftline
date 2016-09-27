@@ -13,7 +13,7 @@
 public protocol ArgConvertibleType {
     
     /// Create an instance out of a string
-    static func fromString(string: String) -> Self?
+    static func fromString(_ string: String) -> Self?
     
     /// Return the display name of a type
     static func typeName() -> String
@@ -21,7 +21,7 @@ public protocol ArgConvertibleType {
 
 
 extension Int: ArgConvertibleType {
-    public static func fromString(string: String) -> Int? {
+    public static func fromString(_ string: String) -> Int? {
         return Int(string)
     }
     
@@ -32,7 +32,7 @@ extension Int: ArgConvertibleType {
 
 
 extension Double: ArgConvertibleType {
-    public static func fromString(string: String) -> Double? {
+    public static func fromString(_ string: String) -> Double? {
         return Double(string)
     }
     
@@ -42,7 +42,7 @@ extension Double: ArgConvertibleType {
 }
 
 extension Float: ArgConvertibleType {
-    public static func fromString(string: String) -> Float? {
+    public static func fromString(_ string: String) -> Float? {
         return Float(string)
     }
     
@@ -53,7 +53,7 @@ extension Float: ArgConvertibleType {
 
 
 extension String: ArgConvertibleType {
-    public static func fromString(string: String) -> String? {
+    public static func fromString(_ string: String) -> String? {
         return string
     }
     

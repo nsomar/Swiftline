@@ -26,15 +26,15 @@ public struct RunResults {
 
 // MARK:- Internal
 
-func splitCommandToArgs(command: String) -> [String] {
-    if command.containsString(" ") {
-        return command.componentsSeparatedByString(" ")
+func splitCommandToArgs(_ command: String) -> [String] {
+    if command.contains(" ") {
+        return command.components(separatedBy: " ")
     }
     
     return [command]
 }
 
-func readPipe(pipe: TaskPipe) -> String {
+func readPipe(_ pipe: TaskPipe) -> String {
     let data = pipe.read()
-    return NSString(data: data, encoding: NSUTF8StringEncoding) as? String ?? ""
+    return NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue) as? String ?? ""
 }
