@@ -17,7 +17,7 @@ public class AskSettings<T: ArgConvertibleType> {
     /// his selection
     public var confirm = false
     
-    var invalidClousures: [(T -> Bool, String)] = []
+    var invalidClousures: [((T) -> Bool, String)] = []
     
     
     /**
@@ -27,8 +27,8 @@ public class AskSettings<T: ArgConvertibleType> {
      - parameter invalidIfTrue: If true is returned, then the user input was invalid, if false, the 
                                 user input was valid.
      */
-    public func addInvalidCase(description: String, invalidIfTrue: (T -> Bool)) {
-        invalidClousures.append(invalidIfTrue, description)
+    public func addInvalidCase(_ description: String, invalidIfTrue: @escaping ((T) -> Bool)) {
+        invalidClousures.append((invalidIfTrue, description))
     }
     
     func preparedItem(originalString string: String) -> T {
@@ -45,7 +45,7 @@ public class AskSettings<T: ArgConvertibleType> {
 
 extension AskSettings: AskerValidator {
     
-    func invalidItemMessage(string: String?) -> String? {
+    func invalidItemMessage(_ string: String?) -> String? {
         guard let string = string else {
             return "You provided an empty message, pelase enter anything!"
         }
@@ -69,7 +69,7 @@ extension AskSettings: AskerValidator {
         return T.fromString(string)!
     }
     
-    func firstValidationError(item: T) -> String? {
+    func firstValidationError(_ item: T) -> String? {
         
         for (isInvalid, validationError) in invalidClousures {
             if isInvalid(item) {

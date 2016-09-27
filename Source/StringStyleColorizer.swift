@@ -14,47 +14,47 @@ public extension String {
         let string: String
         
         public var Reset: String {
-            return Colorizer(string: string, color: StringTextStyle.Reset).description
+            return Colorizer(string: string, color: StringTextStyle.reset).description
         }
         
         public var Bold: String {
-            return Colorizer(string: string, color: StringTextStyle.Bold).description
+            return Colorizer(string: string, color: StringTextStyle.bold).description
         }
         
         public var Italic: String {
-            return Colorizer(string: string, color: StringTextStyle.Italic).description
+            return Colorizer(string: string, color: StringTextStyle.italic).description
         }
         
         public var Underline: String {
-            return Colorizer(string: string, color: StringTextStyle.Underline).description
+            return Colorizer(string: string, color: StringTextStyle.underline).description
         }
         
         public var Inverse: String {
-            return Colorizer(string: string, color: StringTextStyle.Inverse).description
+            return Colorizer(string: string, color: StringTextStyle.inverse).description
         }
         
         public var Strikethrough: String {
-            return Colorizer(string: string, color: StringTextStyle.Strikethrough).description
+            return Colorizer(string: string, color: StringTextStyle.strikethrough).description
         }
         
         public var BoldOff: String {
-            return Colorizer(string: string, color: StringTextStyle.BoldOff).description
+            return Colorizer(string: string, color: StringTextStyle.boldOff).description
         }
         
         public var ItalicOff: String {
-            return Colorizer(string: string, color: StringTextStyle.ItalicOff).description
+            return Colorizer(string: string, color: StringTextStyle.italicOff).description
         }
         
         public var UnderlineOff: String {
-            return Colorizer(string: string, color: StringTextStyle.UnderlineOff).description
+            return Colorizer(string: string, color: StringTextStyle.underlineOff).description
         }
         
         public var InverseOff: String {
-            return Colorizer(string: string, color: StringTextStyle.InverseOff).description
+            return Colorizer(string: string, color: StringTextStyle.inverseOff).description
         }
         
         public var StrikethroughOff: String {
-            return Colorizer(string: string, color: StringTextStyle.StrikethroughOff).description
+            return Colorizer(string: string, color: StringTextStyle.strikethroughOff).description
         }
     }
     

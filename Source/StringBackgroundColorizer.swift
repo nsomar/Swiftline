@@ -14,35 +14,35 @@ extension String {
         let string: String
         
         public var Black: String {
-            return Colorizer(string: string, color: BackgroundColor.Black).description
+            return Colorizer(string: string, color: BackgroundColor.black).description
         }
         
         public var Red: String {
-            return Colorizer(string: string, color: BackgroundColor.Red).description
+            return Colorizer(string: string, color: BackgroundColor.red).description
         }
         
         public var Green: String {
-            return Colorizer(string: string, color: BackgroundColor.Green).description
+            return Colorizer(string: string, color: BackgroundColor.green).description
         }
         
         public var Yellow: String {
-            return Colorizer(string: string, color: BackgroundColor.Yellow).description
+            return Colorizer(string: string, color: BackgroundColor.yellow).description
         }
         
         public var Blue: String {
-            return Colorizer(string: string, color: BackgroundColor.Blue).description
+            return Colorizer(string: string, color: BackgroundColor.blue).description
         }
         
         public var Magenta: String {
-            return Colorizer(string: string, color: BackgroundColor.Magenta).description
+            return Colorizer(string: string, color: BackgroundColor.magenta).description
         }
         
         public var Cyan: String {
-            return Colorizer(string: string, color: BackgroundColor.Cyan).description
+            return Colorizer(string: string, color: BackgroundColor.cyan).description
         }
         
         public var White: String {
-            return Colorizer(string: string, color: BackgroundColor.White).description
+            return Colorizer(string: string, color: BackgroundColor.white).description
         }
     }
 }

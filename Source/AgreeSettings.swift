@@ -22,8 +22,8 @@ class AgreeSettings: AskerValidator {
         return string
     }
     
-    func invalidItemMessage(string: String?) -> String? {
-        if let message = string where positiveValues.contains(message) || negativeValues.contains(message) {
+    func invalidItemMessage(_ string: String?) -> String? {
+        if let message = string , positiveValues.contains(message) || negativeValues.contains(message) {
             return nil
         }
         
@@ -34,7 +34,7 @@ class AgreeSettings: AskerValidator {
         return "\(prompt)  "
     }
     
-    func isPositive(item: String) -> Bool {
+    func isPositive(_ item: String) -> Bool {
         return positiveValues.contains(item)
     }
     

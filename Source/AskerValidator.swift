@@ -10,14 +10,14 @@
 protocol AskerValidator {
     associatedtype Item
     
-    func invalidItemMessage(string: String?) -> String?
+    func invalidItemMessage(_ string: String?) -> String?
     func newItemPromptMessage() -> String
     
     func validatedItem(forString string: String) -> Item
 }
 
-func askForValidatedItem<T, W: AskerValidator where W.Item == T>
-    (originalValue value: String, validator: W) -> T {
+func askForValidatedItem<T, W: AskerValidator>
+    (originalValue value: String, validator: W) -> T where W.Item == T {
     
     var validatedValue: String = value
         

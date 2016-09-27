@@ -12,7 +12,7 @@
  - parameter prompt: The prompt to display
  - returns: the user decision
  */
-public func agree(prompt: String) -> Bool {
+public func agree(_ prompt: String) -> Bool {
     PromptSettings.print(prompt, terminator: "  ")
     let value = readStringOrEmpty()
     
