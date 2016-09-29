@@ -11,4 +11,5 @@ script:
 - pod lib lint --quick
 
 after_success:
-- bash <(curl -s https://codecov.io/bash)
+- find ~/Library/Developer/Xcode/DerivedData -name '*.profdata'
+- bash <(curl -s https://raw.githubusercontent.com/codecov/codecov-bash/master/codecov)
