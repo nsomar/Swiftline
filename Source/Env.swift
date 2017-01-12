@@ -6,7 +6,7 @@
 //  Copyright © 2015 Omar Abdelhafith. All rights reserved.
 //
 
-import Darwin
+import Foundation
 
 
 public class Env {
@@ -31,8 +31,7 @@ public class Env {
    - returns: The enviromenment variable value
    */
   public static func get(_ key: String) -> String? {
-    guard let value = getenv(key) else { return nil }
-    return String(cString: value)
+    return Foundation.ProcessInfo.processInfo.environment[key]
   }
   
   /**
