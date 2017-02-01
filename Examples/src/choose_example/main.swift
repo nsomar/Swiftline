@@ -1,5 +1,3 @@
-#!/usr/bin/env xcrun swift -F ./Rome/ -framework Swiftline
-
 import Swiftline
 
 
@@ -24,7 +22,7 @@ let choice3 = choose("Whats your favorite programming language? ", type: String.
     //choice value will be set to BAD
     settings.addChoice("Java") { "BAD" }
 
-    settings.index = .Letters
+    settings.index = .letters
     settings.indexSuffix = " ----> "
 }
 print("Your choice is \(choice3)")

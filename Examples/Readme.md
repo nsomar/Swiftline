@@ -1,18 +1,11 @@
 To run examples
 
-Install [cocoapods-rome](https://github.com/neonichu/Rome)
+Run `swift build`
 
-    $ gem install cocoapods-rome
-Run `pod install`
+This will build all the examples that can be found in `.build`:
 
----
-To run any example:
-
-    chmod a+x Example.swift
-    ./Example.swift
-
-
-For example to run `ColorizeExample.swift`
-
-    chmod a+x ColorizeExample.swift
-    ./ColorizeExample.swift
+- `agree_example` shows the `agree` functionality
+- `args_example` shows the `args` parsing functionality
+- `ask_example` shows the `ask` functionality
+- `choose_example` shows the `choose` functionality
+- `colorize_example` shows the `colorize` functionality

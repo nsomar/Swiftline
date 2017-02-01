@@ -1,5 +1,3 @@
-#!/usr/bin/env xcrun swift -F ./Rome/ -framework Swiftline
-
 import Swiftline
 
 // Ask for a String
@@ -14,10 +12,11 @@ print("\nYour age is \(age)\n")
 
 // Ask with validation
 let name = ask("Who are you?") { settings in
-    settings.addInvalidCase("Snuffles is not allowed") { value in
-        value.containsString("Snuffles")
-    }
+  settings.addInvalidCase("Snuffles is not allowed") { value in
+    return value == "snuffles"
+  }
 }
+
 print("\nYour are \(name)\n")
 
 
