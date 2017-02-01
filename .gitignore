@@ -172,3 +172,4 @@ Examples/Rome/
 TestPackage/.build
 .build/
 SwiftlineTests/Carthage/Checkouts
+.DS_STORE

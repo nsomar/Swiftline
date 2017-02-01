@@ -7,308 +7,590 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		__src_cc_ref_Source/Agree.swift /* Agree.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/Agree.swift /* Agree.swift */; };
-		__src_cc_ref_Source/AgreeSettings.swift /* AgreeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/AgreeSettings.swift /* AgreeSettings.swift */; };
-		__src_cc_ref_Source/ArgConvertible.swift /* ArgConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/ArgConvertible.swift /* ArgConvertible.swift */; };
-		__src_cc_ref_Source/Args.swift /* Args.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/Args.swift /* Args.swift */; };
-		__src_cc_ref_Source/ArgsParser.swift /* ArgsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/ArgsParser.swift /* ArgsParser.swift */; };
-		__src_cc_ref_Source/Argument.swift /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/Argument.swift /* Argument.swift */; };
-		__src_cc_ref_Source/Ask.swift /* Ask.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/Ask.swift /* Ask.swift */; };
-		__src_cc_ref_Source/AskSettings.swift /* AskSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/AskSettings.swift /* AskSettings.swift */; };
-		__src_cc_ref_Source/AskerValidator.swift /* AskerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/AskerValidator.swift /* AskerValidator.swift */; };
-		__src_cc_ref_Source/Choose.swift /* Choose.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/Choose.swift /* Choose.swift */; };
-		__src_cc_ref_Source/ChooseSettings.swift /* ChooseSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/ChooseSettings.swift /* ChooseSettings.swift */; };
-		__src_cc_ref_Source/Colorizer.swift /* Colorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/Colorizer.swift /* Colorizer.swift */; };
-		__src_cc_ref_Source/CommandExecutor.swift /* CommandExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/CommandExecutor.swift /* CommandExecutor.swift */; };
-		__src_cc_ref_Source/Env.swift /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/Env.swift /* Env.swift */; };
-		__src_cc_ref_Source/Glob.swift /* Glob.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/Glob.swift /* Glob.swift */; };
-		__src_cc_ref_Source/ProcessInfo.swift /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/ProcessInfo.swift /* ProcessInfo.swift */; };
-		__src_cc_ref_Source/PromptPrinter.swift /* PromptPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/PromptPrinter.swift /* PromptPrinter.swift */; };
-		__src_cc_ref_Source/PromptReader.swift /* PromptReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/PromptReader.swift /* PromptReader.swift */; };
-		__src_cc_ref_Source/PromptSettings.swift /* PromptSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/PromptSettings.swift /* PromptSettings.swift */; };
-		__src_cc_ref_Source/RunResults.swift /* RunResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/RunResults.swift /* RunResults.swift */; };
-		__src_cc_ref_Source/Runner.swift /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/Runner.swift /* Runner.swift */; };
-		__src_cc_ref_Source/RunnerSettings.swift /* RunnerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/RunnerSettings.swift /* RunnerSettings.swift */; };
-		__src_cc_ref_Source/ShortHandRunner.swift /* ShortHandRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/ShortHandRunner.swift /* ShortHandRunner.swift */; };
-		__src_cc_ref_Source/StringBackgroundColorizer.swift /* StringBackgroundColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/StringBackgroundColorizer.swift /* StringBackgroundColorizer.swift */; };
-		__src_cc_ref_Source/StringForegroundColorizer.swift /* StringForegroundColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/StringForegroundColorizer.swift /* StringForegroundColorizer.swift */; };
-		__src_cc_ref_Source/StringStyle.swift /* StringStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/StringStyle.swift /* StringStyle.swift */; };
-		__src_cc_ref_Source/StringStyleColorizer.swift /* StringStyleColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/StringStyleColorizer.swift /* StringStyleColorizer.swift */; };
-		__src_cc_ref_Source/TaskPipe.swift /* TaskPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Source/TaskPipe.swift /* TaskPipe.swift */; };
+		OBJ_100 /* ChooseSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* ChooseSettingsTests.swift */; };
+		OBJ_101 /* ChooseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* ChooseTests.swift */; };
+		OBJ_102 /* ColorizerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* ColorizerTest.swift */; };
+		OBJ_103 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* StringExtensionTests.swift */; };
+		OBJ_105 /* StringScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* StringScanner.framework */; };
+		OBJ_106 /* Swiftline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Swiftline.framework */; };
+		OBJ_57 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CharacterSet.swift */; };
+		OBJ_58 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Regex.swift */; };
+		OBJ_59 /* ScannerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ScannerResult.swift */; };
+		OBJ_60 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* StringExtension.swift */; };
+		OBJ_61 /* StringScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* StringScanner.swift */; };
+		OBJ_68 /* Agree.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Agree.swift */; };
+		OBJ_69 /* AgreeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* AgreeSettings.swift */; };
+		OBJ_70 /* ArgConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* ArgConvertible.swift */; };
+		OBJ_71 /* Args.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Args.swift */; };
+		OBJ_72 /* ArgsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* ArgsParser.swift */; };
+		OBJ_73 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Argument.swift */; };
+		OBJ_74 /* Ask.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Ask.swift */; };
+		OBJ_75 /* AskerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* AskerValidator.swift */; };
+		OBJ_76 /* AskSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* AskSettings.swift */; };
+		OBJ_77 /* Choose.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Choose.swift */; };
+		OBJ_78 /* ChooseSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ChooseSettings.swift */; };
+		OBJ_79 /* Colorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Colorizer.swift */; };
+		OBJ_80 /* PromptPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* PromptPrinter.swift */; };
+		OBJ_81 /* PromptReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* PromptReader.swift */; };
+		OBJ_82 /* PromptSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* PromptSettings.swift */; };
+		OBJ_83 /* StringBackgroundColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* StringBackgroundColorizer.swift */; };
+		OBJ_84 /* StringForegroundColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* StringForegroundColorizer.swift */; };
+		OBJ_85 /* StringStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* StringStyle.swift */; };
+		OBJ_86 /* StringStyleColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* StringStyleColorizer.swift */; };
+		OBJ_88 /* StringScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* StringScanner.framework */; };
+		OBJ_95 /* AgreeSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* AgreeSettingsTest.swift */; };
+		OBJ_96 /* AgreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* AgreeTests.swift */; };
+		OBJ_97 /* ArgsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* ArgsTests.swift */; };
+		OBJ_98 /* AskSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* AskSettingsTests.swift */; };
+		OBJ_99 /* AskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* AskTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D79204331E42438F00C4475C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_52;
+			remoteInfo = StringScanner;
+		};
+		D79204341E42438F00C4475C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_52;
+			remoteInfo = StringScanner;
+		};
+		D79204351E42438F00C4475C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_63;
+			remoteInfo = Swiftline;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/Agree.swift /* Agree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agree.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/AgreeSettings.swift /* AgreeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeSettings.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/ArgConvertible.swift /* ArgConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgConvertible.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/Args.swift /* Args.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Args.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/ArgsParser.swift /* ArgsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgsParser.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/Argument.swift /* Argument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Argument.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/Ask.swift /* Ask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ask.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/AskSettings.swift /* AskSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskSettings.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/AskerValidator.swift /* AskerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerValidator.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/Choose.swift /* Choose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choose.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/ChooseSettings.swift /* ChooseSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSettings.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/Colorizer.swift /* Colorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorizer.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/CommandExecutor.swift /* CommandExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandExecutor.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/Env.swift /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/Glob.swift /* Glob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glob.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/ProcessInfo.swift /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/PromptPrinter.swift /* PromptPrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptPrinter.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/PromptReader.swift /* PromptReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptReader.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/PromptSettings.swift /* PromptSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptSettings.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/RunResults.swift /* RunResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunResults.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/Runner.swift /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/RunnerSettings.swift /* RunnerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerSettings.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/ShortHandRunner.swift /* ShortHandRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortHandRunner.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/StringBackgroundColorizer.swift /* StringBackgroundColorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBackgroundColorizer.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/StringForegroundColorizer.swift /* StringForegroundColorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringForegroundColorizer.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/StringStyle.swift /* StringStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringStyle.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/StringStyleColorizer.swift /* StringStyleColorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringStyleColorizer.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Source/TaskPipe.swift /* TaskPipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPipe.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Swiftline.xcodeproj/Configs/Project.xcconfig /* Swiftline.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Swiftline.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
-		"_____Product_Swiftline" /* Swiftline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Swiftline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		OBJ_11 /* ScannerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerResult.swift; sourceTree = "<group>"; };
+		OBJ_12 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		OBJ_13 /* StringScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringScanner.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Agree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agree.swift; sourceTree = "<group>"; };
+		OBJ_16 /* AgreeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeSettings.swift; sourceTree = "<group>"; };
+		OBJ_17 /* ArgConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgConvertible.swift; sourceTree = "<group>"; };
+		OBJ_18 /* Args.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Args.swift; sourceTree = "<group>"; };
+		OBJ_19 /* ArgsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgsParser.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Argument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Argument.swift; sourceTree = "<group>"; };
+		OBJ_21 /* Ask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ask.swift; sourceTree = "<group>"; };
+		OBJ_22 /* AskerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskerValidator.swift; sourceTree = "<group>"; };
+		OBJ_23 /* AskSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskSettings.swift; sourceTree = "<group>"; };
+		OBJ_24 /* Choose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choose.swift; sourceTree = "<group>"; };
+		OBJ_25 /* ChooseSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSettings.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Colorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorizer.swift; sourceTree = "<group>"; };
+		OBJ_27 /* PromptPrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptPrinter.swift; sourceTree = "<group>"; };
+		OBJ_28 /* PromptReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptReader.swift; sourceTree = "<group>"; };
+		OBJ_29 /* PromptSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptSettings.swift; sourceTree = "<group>"; };
+		OBJ_30 /* StringBackgroundColorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBackgroundColorizer.swift; sourceTree = "<group>"; };
+		OBJ_31 /* StringForegroundColorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringForegroundColorizer.swift; sourceTree = "<group>"; };
+		OBJ_32 /* StringStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringStyle.swift; sourceTree = "<group>"; };
+		OBJ_33 /* StringStyleColorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringStyleColorizer.swift; sourceTree = "<group>"; };
+		OBJ_36 /* AgreeSettingsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeSettingsTest.swift; sourceTree = "<group>"; };
+		OBJ_37 /* AgreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeTests.swift; sourceTree = "<group>"; };
+		OBJ_38 /* ArgsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgsTests.swift; sourceTree = "<group>"; };
+		OBJ_39 /* AskSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskSettingsTests.swift; sourceTree = "<group>"; };
+		OBJ_40 /* AskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskTests.swift; sourceTree = "<group>"; };
+		OBJ_41 /* ChooseSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSettingsTests.swift; sourceTree = "<group>"; };
+		OBJ_42 /* ChooseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTests.swift; sourceTree = "<group>"; };
+		OBJ_43 /* ColorizerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorizerTest.swift; sourceTree = "<group>"; };
+		OBJ_44 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		OBJ_45 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = SOURCE_ROOT; };
+		OBJ_46 /* DerivedData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DerivedData; sourceTree = SOURCE_ROOT; };
+		OBJ_47 /* Examples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Examples; sourceTree = SOURCE_ROOT; };
+		OBJ_49 /* StringScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StringScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_50 /* Swiftline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Swiftline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_51 /* SwiftlineTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwiftlineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* CharacterSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		"___LinkPhase_Swiftline" /* Frameworks */ = {
+		OBJ_104 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_105 /* StringScanner.framework in Frameworks */,
+				OBJ_106 /* Swiftline.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		OBJ_87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_88 /* StringScanner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		"___RootGroup_" = {
+		OBJ_14 /* Swiftline */ = {
 			isa = PBXGroup;
 			children = (
-				__PBXFileRef_Package.swift /* Package.swift */,
-				"_____Configs_" /* Configs */,
-				"_____Sources_" /* Sources */,
-				"____Products_" /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		"____Products_" /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"_____Product_Swiftline" /* Swiftline.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		"_____Configs_" /* Configs */ = {
-			isa = PBXGroup;
-			children = (
-				__PBXFileRef_Swiftline.xcodeproj/Configs/Project.xcconfig /* Swiftline.xcodeproj/Configs/Project.xcconfig */,
-			);
-			name = Configs;
-			sourceTree = "<group>";
-		};
-		"_____Sources_" /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				"_______Group_Swiftline" /* Swiftline */,
-			);
-			name = Sources;
-			sourceTree = "<group>";
-		};
-		"_______Group_Swiftline" /* Swiftline */ = {
-			isa = PBXGroup;
-			children = (
-				__PBXFileRef_Source/Agree.swift /* Agree.swift */,
-				__PBXFileRef_Source/AgreeSettings.swift /* AgreeSettings.swift */,
-				__PBXFileRef_Source/ArgConvertible.swift /* ArgConvertible.swift */,
-				__PBXFileRef_Source/Args.swift /* Args.swift */,
-				__PBXFileRef_Source/ArgsParser.swift /* ArgsParser.swift */,
-				__PBXFileRef_Source/Argument.swift /* Argument.swift */,
-				__PBXFileRef_Source/Ask.swift /* Ask.swift */,
-				__PBXFileRef_Source/AskerValidator.swift /* AskerValidator.swift */,
-				__PBXFileRef_Source/AskSettings.swift /* AskSettings.swift */,
-				__PBXFileRef_Source/Choose.swift /* Choose.swift */,
-				__PBXFileRef_Source/ChooseSettings.swift /* ChooseSettings.swift */,
-				__PBXFileRef_Source/Colorizer.swift /* Colorizer.swift */,
-				__PBXFileRef_Source/CommandExecutor.swift /* CommandExecutor.swift */,
-				__PBXFileRef_Source/Env.swift /* Env.swift */,
-				__PBXFileRef_Source/Glob.swift /* Glob.swift */,
-				__PBXFileRef_Source/ProcessInfo.swift /* ProcessInfo.swift */,
-				__PBXFileRef_Source/PromptPrinter.swift /* PromptPrinter.swift */,
-				__PBXFileRef_Source/PromptReader.swift /* PromptReader.swift */,
-				__PBXFileRef_Source/PromptSettings.swift /* PromptSettings.swift */,
-				__PBXFileRef_Source/Runner.swift /* Runner.swift */,
-				__PBXFileRef_Source/RunnerSettings.swift /* RunnerSettings.swift */,
-				__PBXFileRef_Source/RunResults.swift /* RunResults.swift */,
-				__PBXFileRef_Source/ShortHandRunner.swift /* ShortHandRunner.swift */,
-				__PBXFileRef_Source/StringBackgroundColorizer.swift /* StringBackgroundColorizer.swift */,
-				__PBXFileRef_Source/StringForegroundColorizer.swift /* StringForegroundColorizer.swift */,
-				__PBXFileRef_Source/StringStyle.swift /* StringStyle.swift */,
-				__PBXFileRef_Source/StringStyleColorizer.swift /* StringStyleColorizer.swift */,
-				__PBXFileRef_Source/TaskPipe.swift /* TaskPipe.swift */,
+				OBJ_15 /* Agree.swift */,
+				OBJ_16 /* AgreeSettings.swift */,
+				OBJ_17 /* ArgConvertible.swift */,
+				OBJ_18 /* Args.swift */,
+				OBJ_19 /* ArgsParser.swift */,
+				OBJ_20 /* Argument.swift */,
+				OBJ_21 /* Ask.swift */,
+				OBJ_22 /* AskerValidator.swift */,
+				OBJ_23 /* AskSettings.swift */,
+				OBJ_24 /* Choose.swift */,
+				OBJ_25 /* ChooseSettings.swift */,
+				OBJ_26 /* Colorizer.swift */,
+				OBJ_27 /* PromptPrinter.swift */,
+				OBJ_28 /* PromptReader.swift */,
+				OBJ_29 /* PromptSettings.swift */,
+				OBJ_30 /* StringBackgroundColorizer.swift */,
+				OBJ_31 /* StringForegroundColorizer.swift */,
+				OBJ_32 /* StringStyle.swift */,
+				OBJ_33 /* StringStyleColorizer.swift */,
 			);
 			name = Swiftline;
-			path = Source;
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_34 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_35 /* SwiftlineTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
+		};
+		OBJ_35 /* SwiftlineTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_36 /* AgreeSettingsTest.swift */,
+				OBJ_37 /* AgreeTests.swift */,
+				OBJ_38 /* ArgsTests.swift */,
+				OBJ_39 /* AskSettingsTests.swift */,
+				OBJ_40 /* AskTests.swift */,
+				OBJ_41 /* ChooseSettingsTests.swift */,
+				OBJ_42 /* ChooseTests.swift */,
+				OBJ_43 /* ColorizerTest.swift */,
+				OBJ_44 /* StringExtensionTests.swift */,
+			);
+			name = SwiftlineTests;
+			path = Tests/SwiftlineTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_49 /* StringScanner.framework */,
+				OBJ_50 /* Swiftline.framework */,
+				OBJ_51 /* SwiftlineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_34 /* Tests */,
+				OBJ_45 /* build */,
+				OBJ_46 /* DerivedData */,
+				OBJ_47 /* Examples */,
+				OBJ_48 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* StringScanner */,
+				OBJ_14 /* Swiftline */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		OBJ_8 /* StringScanner */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* CharacterSet.swift */,
+				OBJ_10 /* Regex.swift */,
+				OBJ_11 /* ScannerResult.swift */,
+				OBJ_12 /* StringExtension.swift */,
+				OBJ_13 /* StringScanner.swift */,
+			);
+			name = StringScanner;
+			path = "Packages/StringScanner-0.2.0/Sources";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		"______Target_Swiftline" /* Swiftline */ = {
+		OBJ_52 /* StringScanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = "_______Confs_Swiftline" /* Build configuration list for PBXNativeTarget "Swiftline" */;
+			buildConfigurationList = OBJ_53 /* Build configuration list for PBXNativeTarget "StringScanner" */;
 			buildPhases = (
-				CompilePhase_Swiftline /* Sources */,
-				"___LinkPhase_Swiftline" /* Frameworks */,
+				OBJ_56 /* Sources */,
+				OBJ_62 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = StringScanner;
+			productName = StringScanner;
+			productReference = OBJ_49 /* StringScanner.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		OBJ_63 /* Swiftline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_64 /* Build configuration list for PBXNativeTarget "Swiftline" */;
+			buildPhases = (
+				OBJ_67 /* Sources */,
+				OBJ_87 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_89 /* PBXTargetDependency */,
+			);
 			name = Swiftline;
 			productName = Swiftline;
-			productReference = "_____Product_Swiftline" /* Swiftline.framework */;
+			productReference = OBJ_50 /* Swiftline.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		OBJ_90 /* SwiftlineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_91 /* Build configuration list for PBXNativeTarget "SwiftlineTests" */;
+			buildPhases = (
+				OBJ_94 /* Sources */,
+				OBJ_104 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_107 /* PBXTargetDependency */,
+				OBJ_108 /* PBXTargetDependency */,
+			);
+			name = SwiftlineTests;
+			productName = SwiftlineTests;
+			productReference = OBJ_51 /* SwiftlineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		__RootObject_ /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
-				TargetAttributes = {
-					"______Target_Swiftline" = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
-			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "Swiftline" */;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Swiftline" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = "___RootGroup_";
-			productRefGroup = "____Products_" /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"______Target_Swiftline" /* Swiftline */,
+				OBJ_52 /* StringScanner */,
+				OBJ_63 /* Swiftline */,
+				OBJ_90 /* SwiftlineTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CompilePhase_Swiftline /* Sources */ = {
+		OBJ_56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				__src_cc_ref_Source/Agree.swift /* Agree.swift in Sources */,
-				__src_cc_ref_Source/AgreeSettings.swift /* AgreeSettings.swift in Sources */,
-				__src_cc_ref_Source/ArgConvertible.swift /* ArgConvertible.swift in Sources */,
-				__src_cc_ref_Source/Args.swift /* Args.swift in Sources */,
-				__src_cc_ref_Source/ArgsParser.swift /* ArgsParser.swift in Sources */,
-				__src_cc_ref_Source/Argument.swift /* Argument.swift in Sources */,
-				__src_cc_ref_Source/Ask.swift /* Ask.swift in Sources */,
-				__src_cc_ref_Source/AskerValidator.swift /* AskerValidator.swift in Sources */,
-				__src_cc_ref_Source/AskSettings.swift /* AskSettings.swift in Sources */,
-				__src_cc_ref_Source/Choose.swift /* Choose.swift in Sources */,
-				__src_cc_ref_Source/ChooseSettings.swift /* ChooseSettings.swift in Sources */,
-				__src_cc_ref_Source/Colorizer.swift /* Colorizer.swift in Sources */,
-				__src_cc_ref_Source/CommandExecutor.swift /* CommandExecutor.swift in Sources */,
-				__src_cc_ref_Source/Env.swift /* Env.swift in Sources */,
-				__src_cc_ref_Source/Glob.swift /* Glob.swift in Sources */,
-				__src_cc_ref_Source/ProcessInfo.swift /* ProcessInfo.swift in Sources */,
-				__src_cc_ref_Source/PromptPrinter.swift /* PromptPrinter.swift in Sources */,
-				__src_cc_ref_Source/PromptReader.swift /* PromptReader.swift in Sources */,
-				__src_cc_ref_Source/PromptSettings.swift /* PromptSettings.swift in Sources */,
-				__src_cc_ref_Source/Runner.swift /* Runner.swift in Sources */,
-				__src_cc_ref_Source/RunnerSettings.swift /* RunnerSettings.swift in Sources */,
-				__src_cc_ref_Source/RunResults.swift /* RunResults.swift in Sources */,
-				__src_cc_ref_Source/ShortHandRunner.swift /* ShortHandRunner.swift in Sources */,
-				__src_cc_ref_Source/StringBackgroundColorizer.swift /* StringBackgroundColorizer.swift in Sources */,
-				__src_cc_ref_Source/StringForegroundColorizer.swift /* StringForegroundColorizer.swift in Sources */,
-				__src_cc_ref_Source/StringStyle.swift /* StringStyle.swift in Sources */,
-				__src_cc_ref_Source/StringStyleColorizer.swift /* StringStyleColorizer.swift in Sources */,
-				__src_cc_ref_Source/TaskPipe.swift /* TaskPipe.swift in Sources */,
+				OBJ_57 /* CharacterSet.swift in Sources */,
+				OBJ_58 /* Regex.swift in Sources */,
+				OBJ_59 /* ScannerResult.swift in Sources */,
+				OBJ_60 /* StringExtension.swift in Sources */,
+				OBJ_61 /* StringScanner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_68 /* Agree.swift in Sources */,
+				OBJ_69 /* AgreeSettings.swift in Sources */,
+				OBJ_70 /* ArgConvertible.swift in Sources */,
+				OBJ_71 /* Args.swift in Sources */,
+				OBJ_72 /* ArgsParser.swift in Sources */,
+				OBJ_73 /* Argument.swift in Sources */,
+				OBJ_74 /* Ask.swift in Sources */,
+				OBJ_75 /* AskerValidator.swift in Sources */,
+				OBJ_76 /* AskSettings.swift in Sources */,
+				OBJ_77 /* Choose.swift in Sources */,
+				OBJ_78 /* ChooseSettings.swift in Sources */,
+				OBJ_79 /* Colorizer.swift in Sources */,
+				OBJ_80 /* PromptPrinter.swift in Sources */,
+				OBJ_81 /* PromptReader.swift in Sources */,
+				OBJ_82 /* PromptSettings.swift in Sources */,
+				OBJ_83 /* StringBackgroundColorizer.swift in Sources */,
+				OBJ_84 /* StringForegroundColorizer.swift in Sources */,
+				OBJ_85 /* StringStyle.swift in Sources */,
+				OBJ_86 /* StringStyleColorizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_95 /* AgreeSettingsTest.swift in Sources */,
+				OBJ_96 /* AgreeTests.swift in Sources */,
+				OBJ_97 /* ArgsTests.swift in Sources */,
+				OBJ_98 /* AskSettingsTests.swift in Sources */,
+				OBJ_99 /* AskTests.swift in Sources */,
+				OBJ_100 /* ChooseSettingsTests.swift in Sources */,
+				OBJ_101 /* ChooseTests.swift in Sources */,
+				OBJ_102 /* ColorizerTest.swift in Sources */,
+				OBJ_103 /* StringExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin XCBuildConfiguration section */
-		_ReleaseConf_Swiftline /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = Swiftline.xcodeproj/Swiftline_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Swiftline;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
+/* Begin PBXTargetDependency section */
+		OBJ_107 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_52 /* StringScanner */;
+			targetProxy = D79204341E42438F00C4475C /* PBXContainerItemProxy */;
 		};
-		"___DebugConf_Swiftline" /* Debug */ = {
+		OBJ_108 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_63 /* Swiftline */;
+			targetProxy = D79204351E42438F00C4475C /* PBXContainerItemProxy */;
+		};
+		OBJ_89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_52 /* StringScanner */;
+			targetProxy = D79204331E42438F00C4475C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = Swiftline.xcodeproj/Swiftline_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Swiftline;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		"_____Release_" /* Release */ = {
+		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_Swiftline.xcodeproj/Configs/Project.xcconfig /* Swiftline.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
-		"_______Debug_" /* Debug */ = {
+		OBJ_54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_Swiftline.xcodeproj/Configs/Project.xcconfig /* Swiftline.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftline.xcodeproj/StringScanner_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = StringScanner;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				TARGET_NAME = StringScanner;
 			};
 			name = Debug;
+		};
+		OBJ_55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftline.xcodeproj/StringScanner_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = StringScanner;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				TARGET_NAME = StringScanner;
+			};
+			name = Release;
+		};
+		OBJ_65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftline.xcodeproj/Swiftline_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Swiftline;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				TARGET_NAME = Swiftline;
+			};
+			name = Debug;
+		};
+		OBJ_66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftline.xcodeproj/Swiftline_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Swiftline;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				TARGET_NAME = Swiftline;
+			};
+			name = Release;
+		};
+		OBJ_92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftline.xcodeproj/SwiftlineTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = SwiftlineTests;
+			};
+			name = Debug;
+		};
+		OBJ_93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Swiftline.xcodeproj/SwiftlineTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = SwiftlineTests;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		"___RootConfs_" /* Build configuration list for PBXProject "Swiftline" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "Swiftline" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				"_______Debug_" /* Debug */,
-				"_____Release_" /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		"_______Confs_Swiftline" /* Build configuration list for PBXNativeTarget "Swiftline" */ = {
+		OBJ_53 /* Build configuration list for PBXNativeTarget "StringScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				"___DebugConf_Swiftline" /* Debug */,
-				_ReleaseConf_Swiftline /* Release */,
+				OBJ_54 /* Debug */,
+				OBJ_55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_64 /* Build configuration list for PBXNativeTarget "Swiftline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_65 /* Debug */,
+				OBJ_66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_91 /* Build configuration list for PBXNativeTarget "SwiftlineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_92 /* Debug */,
+				OBJ_93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = __RootObject_ /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }
