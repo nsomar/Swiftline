@@ -18,6 +18,30 @@ Swiftline contains the following:
 - Env: Read and write environment variables [ruby-flavored](http://ruby-doc.org/core-2.2.0/ENV.html) (Note: moved out to its own repo [https://github.com/oarrabi/Env](https://github.com/oarrabi/Env))
 - Args: Parses command line arguments and return a hash of the passed flags
 
+## 🆕 Note on deprecation and the future of Swiftline
+In order to keep improving on `Swiftline` some functionality has been moved to seperate projects. 
+Environment reading and external command execution has been removed from `Swiftline` and promoted to their own projects.
+- External command execution (Runner 🏃) can be found here [https://github.com/oarrabi/Process](https://github.com/oarrabi/Process)
+- Environment reading (Env) can now be found here [https://github.com/oarrabi/Env](https://github.com/oarrabi/Env)
+
+You can add these functionalities again to your project:
+- Open your `Package.swift`
+- Add `Env` and `Process` as 2 new dependencies
+
+The updated `Package.swift` should look like:
+
+```swift
+import PackageDescription
+
+let package = Package(name: "Example",
+  dependencies: [
+    .Package(url: "https://github.com/oarrabi/Swiftline", majorVersion: 0),
+    .Package(url: "https://github.com/oarrabi/Env", majorVersion: 0),
+    .Package(url: "https://github.com/oarrabi/Process", majorVersion: 0),
+  ]
+)
+```
+
 ## Contents
 [Usage](#usage)
 [Installation](#installation)
