@@ -46,21 +46,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D79204331E42438F00C4475C /* PBXContainerItemProxy */ = {
+		D79205B71E42AF2500C4475C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_52;
 			remoteInfo = StringScanner;
 		};
-		D79204341E42438F00C4475C /* PBXContainerItemProxy */ = {
+		D79205B81E42AF2500C4475C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_52;
 			remoteInfo = StringScanner;
 		};
-		D79204351E42438F00C4475C /* PBXContainerItemProxy */ = {
+		D79205B91E42AF2500C4475C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -164,7 +164,7 @@
 				OBJ_33 /* StringStyleColorizer.swift */,
 			);
 			name = Swiftline;
-			path = src;
+			path = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_34 /* Tests */ = {
@@ -380,17 +380,17 @@
 		OBJ_107 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_52 /* StringScanner */;
-			targetProxy = D79204341E42438F00C4475C /* PBXContainerItemProxy */;
+			targetProxy = D79205B81E42AF2500C4475C /* PBXContainerItemProxy */;
 		};
 		OBJ_108 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_63 /* Swiftline */;
-			targetProxy = D79204351E42438F00C4475C /* PBXContainerItemProxy */;
+			targetProxy = D79205B91E42AF2500C4475C /* PBXContainerItemProxy */;
 		};
 		OBJ_89 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_52 /* StringScanner */;
-			targetProxy = D79204331E42438F00C4475C /* PBXContainerItemProxy */;
+			targetProxy = D79205B71E42AF2500C4475C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

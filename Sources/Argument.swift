@@ -38,9 +38,9 @@ struct Argument {
       
       if argument == "--" {
         self = .flagsTerminator
-      } else if argument.hasPrefix("--") {
+      } else if argument.isPrefixed(by: "--") {
         self = .longFlag
-      } else if argument.hasPrefix("-") {
+      } else if argument.isPrefixed(by: "-") {
         self = .shortFlag
       } else {
         self = .notAFlag
