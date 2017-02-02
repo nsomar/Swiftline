@@ -7,6 +7,7 @@ install:
 
 
 script:
+- make generate
 - make test
 - pod lib lint --quick
 
