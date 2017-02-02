@@ -1,5 +1,0 @@
-platform :osx, '10.10'
-plugin 'cocoapods-rome'
-
-pod 'Quick', '~> 0.8.0'
-pod 'Nimble', '~> 3.2.0'
