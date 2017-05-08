@@ -8,7 +8,7 @@
 
 
 /**
- Display a promt to the user
+ Display a prompt to the user
  
  - parameter prompt:   The message to display
  - parameter customizationBlock: The block to costumize the prompt before displaying
@@ -21,7 +21,7 @@ public func ask(_ prompt: String, customizationBlock: ((AskSettings<String>) -> 
 
 
 /**
-  Display a promt to the user
+  Display a prompt to the user
 
  - parameter prompt:The message to display
  - parameter type: The value type to be expected from the user
