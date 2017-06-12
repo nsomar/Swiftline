@@ -30,7 +30,7 @@ public func ask(_ prompt: String, customizationBlock: ((AskSettings<String>) -> 
  - returns: The string casted to the type requested
  - discussion: If the user enters a wrong type, ask will keep prompting until a correct value has been entered
  */
-public func ask<T: ArgConvertibleType>(_ prompt: String, type: T.Type, customizationBlock: ((AskSettings<T>) -> Void)? = nil) -> T {
+public func ask<T>(_ prompt: String, type: T.Type, customizationBlock: ((AskSettings<T>) -> Void)? = nil) -> T {
     
     PromptSettings.print(prompt)
     

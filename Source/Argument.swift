@@ -91,6 +91,6 @@ extension String {
     
     let actualRange = (characters.index(startIndex, offsetBy: range.lowerBound) ..< characters.index(endIndex, offsetBy: -distanceFromEndIndex))
     
-    return self[actualRange]
+    return String(self[actualRange])
   }
 }

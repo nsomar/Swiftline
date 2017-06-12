@@ -89,7 +89,10 @@ public class Env {
    - parameter callback: callback to call on each key/value pair
    */
   public static func eachPair(_ callback: (_ key: String, _ value: String) -> ()) {
-    zip(self.keys, self.values).forEach(callback)
+    zip(self.keys, self.values).forEach { (pair) in
+        let (key, value) = pair
+        callback(key, value)
+    }
   }
   
 }
