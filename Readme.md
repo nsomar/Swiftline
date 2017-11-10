@@ -1,7 +1,7 @@
 <p align="center">
 <img src="http://swiftline.github.io/img/intro-bg.svg" width="400" align="middle"/>
-<br/>
 </p>
+
 [![Build Status](https://travis-ci.org/oarrabi/Swiftline.svg?branch=master)](https://travis-ci.org/oarrabi/Swiftline)
 [![Platform](https://img.shields.io/badge/platform-osx-lightgrey.svg)](https://travis-ci.org/Swiftline/Swiftline)
 [![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)](https://travis-ci.org/Swiftline/Swiftline)
@@ -9,9 +9,9 @@
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GITTER: join chat](https://img.shields.io/badge/GITTER-join%20chat-00D06F.svg)](https://gitter.im/Swiftline?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 [![GITTER: join chat](https://img.shields.io/badge/license-MIT-000000.svg)](https://github.com/Swiftline/Swiftline/blob/oarrabi/adding-env-and-args/LICENCE)
-<br/>
+
 Swiftline is a set of tools to help you create command line applications. Swiftline is inspired by [highline](https://github.com/JEG2/highline)
-<br/>
+
 Swiftline contains the following:
 
 - Colorize: Helps adding colors to strings written to the terminal
@@ -36,27 +36,27 @@ Colorize works by extending `String` struct to add styling to it.
 To change the text color, use either `string.f` or `string.foreground`:
 
 ```swift
-    print("Red String".f.Red)
-    print("Blue String".foreground.Blue)
+print("Red String".f.Red)
+print("Blue String".foreground.Blue)
 ```
 
 To change the text background color, use either `string.b` or `string.background`:
 
 ```swift
-    print("I have a white background".b.White)
-    print("My background color is green".background.Green)
+print("I have a white background".b.White)
+print("My background color is green".background.Green)
 ```
 
 To change the text background style, use either `string.s` or `string.style`:
 
 ```swift
-    print("I am a bold string".s.Bold)
-    print("I have an underline".style.Underline)
+print("I am a bold string".s.Bold)
+print("I have an underline".style.Underline)
 ```
 
 You can compose foreground, background, and style:
 ```swift
-    print("I am an underlined red on white string".s.Underline.f.Red.b.White)
+print("I am an underlined red on white string".s.Underline.f.Red.b.White)
 ```
 
 ##  Ask, Choose, Agree ❓
@@ -65,14 +65,14 @@ Ask, Choose and Agree are used to prompt the user for more information.
 ### Ask
 Ask presents the user with a prompt and waits for the user input.
 ```swift
-    let userName = ask("Enter user name?")
+let userName = ask("Enter user name?")
 ```
 `userName` will contain the name entered by the user
 
 Ask can be used to ask for value of Int, Double or Float types, to ask for an integer for example:
 
 ```swift
-    let age = ask("How old are you?", type: Int.self)
+let age = ask("How old are you?", type: Int.self)
 ```
 If the user prints something thats not convertible to integer, a new prompt is displayed to him, this prompt will keep displaying until the user enters an Int:
 
@@ -87,11 +87,11 @@ If the user prints something thats not convertible to integer, a new prompt is d
 Validations are added by calling `addInvalidCase` on `AskSettings`.
 
 ```swift
-    let name = ask("Who are you?") { settings in
-        settings.addInvalidCase("Snuffles is not allowed") { value in
-            value.containsString("Snuffles")
-        }
+let name = ask("Who are you?") { settings in
+    settings.addInvalidCase("Snuffles is not allowed") { value in
+        value.containsString("Snuffles")
     }
+}
 ```
 If the user entered `Snuffles` ask will keep displaying the invalid message passed to `addInvalidCase`
 
@@ -107,9 +107,9 @@ If the user entered `Snuffles` ask will keep displaying the invalid message pass
 `AskSettings.confirm` will ask the user to confirm his choice after entering it
 
 ```swift
-    let name = ask("Who are you?") { settings in
-        settings.confirm = true
-    }
+let name = ask("Who are you?") { settings in
+    settings.confirm = true
+}
 ```
 
 The above will output:
@@ -124,8 +124,8 @@ Choose is used to prompt the user to select an item between several possible ite
 
 To display a choice of programming lanaugage for example:
 ```swift
-    let choice = choose("Whats your favorite programming language? ",
-        choices: "Swift", "Objective C", "Ruby", "Python", "Java :S")
+let choice = choose("Whats your favorite programming language? ",
+    choices: "Swift", "Objective C", "Ruby", "Python", "Java :S")
 ```
 
 This will print:
@@ -150,25 +150,25 @@ The user can either choose the numbers (1..5) or the item itself. If the user en
 You can customize the return value for each choice element. For example if you want to get an Int from the choice, you would do this
 
 ```swift
-    let choice = choose("Whats your favorite programming language? ", type: Int.self) { settings in
-        settings.addChoice("Swift") { 42 }
-        settings.addChoice("Objective C") { 20 }
-    }
+let choice = choose("Whats your favorite programming language? ", type: Int.self) { settings in
+    settings.addChoice("Swift") { 42 }
+    settings.addChoice("Objective C") { 20 }
+}
 ```
 
 The number on the left can be changed to letters, here is how you could do that:
 
 ```siwft
-    let choice = choose("Whats your favorite programming language? ", type: String.self) { settings in
-        //choice value will be set to GOOD
-        settings.addChoice("Swift") { "GOOD" }
+let choice = choose("Whats your favorite programming language? ", type: String.self) { settings in
+   //choice value will be set to GOOD
+   settings.addChoice("Swift") { "GOOD" }
 
-        //choice value will be set to BAD
-        settings.addChoice("Java") { "BAD" }
+   //choice value will be set to BAD
+   settings.addChoice("Java") { "BAD" }
 
-        settings.index = .Letters
-        settings.indexSuffix = " ----> "
-    }
+   settings.index = .Letters
+   settings.indexSuffix = " ----> "
+   }
 ```
 
 That will print:
@@ -181,7 +181,7 @@ That will print:
 Agree is used to ask a user for a Yes/No question. It returns a boolean representing the user input.
 
 ```swift
-    let choice = agree("Are you sure you want to `rm -rf /` ?")
+let choice = agree("Are you sure you want to `rm -rf /` ?")
 ```
 
 If the user enters any invalid input, agree will keep prompting him for a Yes/No question
@@ -200,8 +200,8 @@ Run provides a quick, concise way to run an external command and read its standa
 To execute a simple command you would do:
 
 ```swift
-    let result = run("ls -all")
-    print(result.stdout)
+let result = run("ls -all")
+print(result.stdout)
 ```
 `result` type is `RunResults`, it contains:
 
@@ -212,17 +212,17 @@ To execute a simple command you would do:
 While `run("command")` can split the arguments by spaces. Some times argument splitting is not trivial. If you have multiple argument to pass to the command to execute, you should use `run(command: String, args: String...)`. The above translates to:
 
 ```swift
-    let result = run("ls", args: "-all")
+let result = run("ls", args: "-all")
 ```
 
 To customize the run function, you can pass in a customization block:
 
 ```swift
-    let result = run("ls -all") { settings in
-        settings.dryRun = true
-        settings.echo = [.Stdout, .Stderr, .Command]
-        settings.interactive = false
-    }
+let result = run("ls -all") { settings in
+    settings.dryRun = true
+    settings.echo = [.Stdout, .Stderr, .Command]
+    settings.interactive = false
+}
 ```
 
 `settings` is an instance of RunSettings, which contains the following variables:
