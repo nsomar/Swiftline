@@ -15,7 +15,7 @@ print("\nYour age is \(age)\n")
 // Ask with validation
 let name = ask("Who are you?") { settings in
     settings.addInvalidCase("Snuffles is not allowed") { value in
-        value.containsString("Snuffles")
+        value.contains("Snuffles")
     }
 }
 print("\nYour are \(name)\n")
