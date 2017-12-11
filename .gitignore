@@ -43,7 +43,6 @@ Pods/
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
-Carthage/Build
 
 
 ### Objective-C ###
@@ -170,3 +169,6 @@ crashlytics.properties
 crashlytics-build.properties
 
 Examples/Rome/
+TestPackage/.build
+.build/
+SwiftlineTests/Carthage/Checkouts

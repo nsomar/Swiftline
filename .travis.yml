@@ -1,15 +1,10 @@
 sudo: false
 language: objective-c
-osx_image: xcode7.1
-cache: cocoapods
-podfile: SwiftlineTests/Podfile
-
-before_install:
-- gem install cocoapods-rome
-- pod install --project-directory=SwiftlineTests --no-integrate
+osx_image: xcode8
 
 install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+
 
 script:
 - make test

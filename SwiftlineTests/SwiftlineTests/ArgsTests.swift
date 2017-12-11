@@ -18,7 +18,7 @@ class ArgsTests: QuickSpec {
       }
       
       it("creats a hash from passed args") {
-        ProcessInfo.internalProcessInfo = DummyProcessInfo("-f", "file.rb", "--integer", "1", "Some custom one", "one", "two", "--no-ff")
+        ProcessInfo.internalProcessInfo = DummyProcessInfo("excutable_name", "-f", "file.rb", "--integer", "1", "Some custom one", "one", "two", "--no-ff")
         let result = [
           "f": "file.rb",
           "integer": "1",
@@ -110,29 +110,29 @@ class ArgsTests: QuickSpec {
       
       it("knows the arg type for a string") {
         expect(Argument.ArgumentType("-f"))
-          .to(equal(Argument.ArgumentType.ShortFlag))
+          .to(equal(Argument.ArgumentType.shortFlag))
         
         expect(Argument.ArgumentType("--force"))
-          .to(equal(Argument.ArgumentType.LongFlag))
+          .to(equal(Argument.ArgumentType.longFlag))
         
         expect(Argument.ArgumentType("--no-repo-update"))
-          .to(equal(Argument.ArgumentType.LongFlag))
+          .to(equal(Argument.ArgumentType.longFlag))
         
         expect(Argument.ArgumentType("not an arg"))
-          .to(equal(Argument.ArgumentType.NotAFlag))
+          .to(equal(Argument.ArgumentType.notAFlag))
         
         expect(Argument.ArgumentType("not-an-arg"))
-          .to(equal(Argument.ArgumentType.NotAFlag))
+          .to(equal(Argument.ArgumentType.notAFlag))
       }
       
       it("knows if an argument is a flag") {
-        expect(Argument.ArgumentType.ShortFlag.isFlag)
+        expect(Argument.ArgumentType.shortFlag.isFlag)
           .to(beTrue())
         
-        expect(Argument.ArgumentType.LongFlag.isFlag)
+        expect(Argument.ArgumentType.longFlag.isFlag)
           .to(beTrue())
         
-        expect(Argument.ArgumentType.NotAFlag.isFlag)
+        expect(Argument.ArgumentType.notAFlag.isFlag)
           .to(beFalse())
       }
       
