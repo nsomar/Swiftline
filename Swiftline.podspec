@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Swiftline"
-  s.version          = "0.4.0"
+  s.version          = "0.6.0"
   s.summary          = "Swiftline is a set of tools to help you create command line applications"
   s.description      = <<-DESC
   Swiftline can be divided to three main parts:
