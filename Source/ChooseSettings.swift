@@ -24,7 +24,7 @@ public enum ChoiceIndexType {
 public class ChooseSettings<T> {
     typealias Item = T
     
-    var choices: [(choice: String, callback: (Void) -> T)] = []
+    var choices: [(choice: String, callback: () -> T)] = []
     
     /// Prompt message to use
     public var promptQuestion = ""
@@ -41,7 +41,7 @@ public class ChooseSettings<T> {
      - parameter choice:   Item name
      - parameter callback: callback called when the item is selected, the value returned from this call back will be returned from choose
      */
-    public func addChoice(_ choice: String..., callback: @escaping (Void) -> T) {
+    public func addChoice(_ choice: String..., callback: @escaping () -> T) {
         choice.forEach {
             choices.append(($0, callback))
         }
@@ -76,7 +76,7 @@ public class ChooseSettings<T> {
     }
     
     func choiceWithStringValue(_ value: String) -> T? {
-        let possibleIndex = choices.index { $0.choice == value }
+        let possibleIndex = choices.firstIndex { $0.choice == value }
         if let index = possibleIndex {
             return choices[index].callback()
         }
