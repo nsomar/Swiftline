@@ -278,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = __PBXFileRef_Swiftline.xcodeproj/Configs/Project.xcconfig /* Swiftline.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -285,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = __PBXFileRef_Swiftline.xcodeproj/Configs/Project.xcconfig /* Swiftline.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
