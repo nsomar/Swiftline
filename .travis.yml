@@ -1,10 +1,6 @@
 sudo: false
-language: objective-c
+language: swift
 osx_image: xcode10.2
-
-install:
-- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-
 
 script:
 - make test
