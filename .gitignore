@@ -89,7 +89,6 @@ xcuserdata
 # Carthage/Checkouts
 
 Carthage/Build
-SwiftlineTests/Carthage/Build
 
 ### Objective-C Patch ###
 *.xcscmblueprint
