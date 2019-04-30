@@ -36,5 +36,5 @@ func splitCommandToArgs(_ command: String) -> [String] {
 
 func readPipe(_ pipe: TaskPipe) -> String {
     let data = pipe.read()
-    return NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue) as? String ?? ""
+    return NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue) as String? ?? ""
 }

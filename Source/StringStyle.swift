@@ -54,15 +54,15 @@ extension StringStyle {
   }
   
   fileprivate func addCommandSeperators(_ string: String) -> String {
-    var rangeWithInset = (string.characters.index(after: string.startIndex) ..< string.characters.index(before: string.endIndex))
+    var rangeWithInset = (string.index(after: string.startIndex) ..< string.index(before: string.endIndex))
     let newString = string.replacingOccurrences(of: startOfCode, with: ";", options: .literal, range: rangeWithInset)
     
-    rangeWithInset = (newString.characters.index(after: newString.startIndex) ..< newString.characters.index(before: newString.endIndex))
+    rangeWithInset = (newString.index(after: newString.startIndex) ..< newString.index(before: newString.endIndex))
     return newString.replacingOccurrences(of: "m;", with: ";", options: .literal, range: rangeWithInset)
   }
   
   fileprivate func removeEndingCode(_ string: String) -> String {
-    let rangeWithInset = (string.characters.index(after: string.startIndex) ..< string.endIndex)
+    let rangeWithInset = (string.index(after: string.startIndex) ..< string.endIndex)
     return string.replacingOccurrences(of: endingColorCode(), with: "", options: .literal, range: rangeWithInset)
   }
   
