@@ -17,15 +17,18 @@ class 🏃{
         return run(command, args: [], settings: initalSettings).exitStatus
     }
     
+    @discardableResult
     class func run(_ command: String, args: String...) -> RunResults {
         return run(command, args: args as [String])
     }
     
+    @discardableResult
     class func run(_ command: String, args: [String]) -> RunResults {
         let settings = RunSettings()
         return run(command, args: args, settings: settings)
     }
     
+    @discardableResult
     class func run(_ command: String, settings: ((RunSettings) -> Void)) -> RunResults {
         let initalSettings = RunSettings()
         settings(initalSettings)
@@ -33,6 +36,7 @@ class 🏃{
         return run(command, args: [], settings: initalSettings)
     }
     
+    @discardableResult
     class func run(_ command: String, args: [String], settings: ((RunSettings) -> Void)) -> RunResults {
         let initalSettings = RunSettings()
         settings(initalSettings)
@@ -40,12 +44,14 @@ class 🏃{
         return run(command, args: args, settings: initalSettings)
     }
     
+    @discardableResult
     class func run(_ command: String, echo: EchoSettings) -> RunResults {
         let initalSettings = RunSettings()
         initalSettings.echo = echo
         return run(command, args: [], settings: initalSettings)
     }
     
+    @discardableResult
     class func run(_ command: String, args: [String], settings: RunSettings) -> RunResults {
         
         let commandParts = commandToRun(command, args: args)

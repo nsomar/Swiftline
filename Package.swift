@@ -7,6 +7,6 @@ let package = Package(
     .library(name: "Swiftline", targets: ["Swiftline"]),
   ],
   targets: [
-    .target(name: "Swiftline", path: "Source"),
+    .target(name: "Swiftline"),
   ]
 )

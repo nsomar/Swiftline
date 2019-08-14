@@ -16,6 +16,7 @@
  
  - returns: The user selected item
  */
+@discardableResult
 public func choose(_ prompt: String, choices: String...) -> String {
     return choose(prompt, type: String.self) {
         for choice in choices {
