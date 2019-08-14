@@ -83,14 +83,10 @@ struct Argument {
 extension String {
   public subscript (range: Range<Int>) -> String {
     let length = self.lengthOfBytes(using: String.Encoding.utf8)
+    let distanceFromEndIndex = max(0, length - range.upperBound)
+    let actualRange = (index(startIndex, offsetBy: range.lowerBound) ..< index(endIndex, offsetBy: -distanceFromEndIndex))
+    let substring = self[actualRange]
     
-    var distanceFromEndIndex = length - range.upperBound
-    if distanceFromEndIndex < 0 {
-      distanceFromEndIndex = 0
-    }
-    
-    let actualRange = (characters.index(startIndex, offsetBy: range.lowerBound) ..< characters.index(endIndex, offsetBy: -distanceFromEndIndex))
-    
-    return self[actualRange]
+    return String(substring)
   }
 }

@@ -64,7 +64,7 @@ class InteractiveTaskExecutor: TaskExecutor {
     defer { for case let arg? in argv { free(arg) } }
     
     var childFDActions: posix_spawn_file_actions_t? = nil
-    var outputPipe: [Int32] = [-1, -1]
+    let outputPipe: [Int32] = [-1, -1]
     
     posix_spawn_file_actions_init(&childFDActions)
     posix_spawn_file_actions_adddup2(&childFDActions, outputPipe[1], 1)

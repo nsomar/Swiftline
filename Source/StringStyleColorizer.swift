@@ -9,8 +9,7 @@
 
 public extension String {
     
-    public struct StringStyleColorizer {
-        
+    struct StringStyleColorizer {
         let string: String
         
         public var Reset: String {
