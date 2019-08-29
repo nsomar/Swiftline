@@ -268,55 +268,8 @@ Returns the arguments passed to the script. For example when calling `script -f1
 
 `Args.parsed.command` returns the name of the executable itself `"script"`
 
-## Installation
-You can install Swiftline using CocoaPods, carthage and Swift package manager
-
-### CocoaPods
-    use_frameworks!
-    pod 'Swiftline'
-
-### Carthage
-    github 'swiftline/swiftline'
-
-### Swift Package Manager
-Add swiftline as dependency in your `Package.swift`
-
-```
-  import PackageDescription
-
-  let package = Package(name: "YourPackage",
-    dependencies: [
-      .Package(url: "https://github.com/Swiftline/Swiftline.git", majorVersion: 0, minor: 3),
-    ]
-  )
-```
-
-### CocoaPods + Rome plugin
-If you want to use swiftline in a script you can use [Rome](https://github.com/neonichu/Rome) CocoaPods plugin. This plugin builds the framework from the pod file and place them in a Rome directory.
-
-    platform :osx, '10.10'
-    plugin 'cocoapods-rome'
-
-    pod 'Swiftline'
-
-### Manual
-To install Swiftline manually, add `Pod/Swiftline` directory to your project.
-
-## Examples
-A list of examples can be found [here](https://github.com/oarrabi/Swiftline/tree/master/Examples)
-
-## Tests
-Tests can be found [here](https://github.com/oarrabi/Swiftline/tree/master/SwiftlineTests). They can be normally run from the Xcode
-.
-
 ## Documentation
 Documentation can be found [here](http://swiftline.github.io/docs/index.html)
-
-## Future Improvement
-- Add gather (from [highline](https://github.com/JEG2/highline)) to ask function
-- Figure out a way to eliminate the need of `interactive`
-- Add Glob handling
-- Better documentation
 
 ## Credits
 Daniel Beere for creating the logo [@DanielBeere](https://twitter.com/DanielBeere) check out [danielbeere on dribble](https://dribbble.com/danielbeere)
