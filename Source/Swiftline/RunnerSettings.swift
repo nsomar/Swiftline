@@ -10,14 +10,28 @@
 /// Settings to costumize the run function
 public class RunSettings {
     
-    /// If set to true, the command wont be run on the system, the stdout will contain the command executed
-    public var dryRun = false
-    
     /// Which parts of the command to be echoed during execution
     public var echo = EchoSettings.None
     
+    /// Wich executed will be used to run the commands
+    public var execution = ExecutionSettings.default
+}
+
+
+/// Execution settings
+public enum ExecutionSettings {
+    
+    /// Run the command on the system
+    case `default`
+    
+    /// Wont be run on the system, the stdout will contain the command executed
+    case dryRun
+
     /// Run the command in interactive mode; output wont be captured
-    public var interactive = false
+    case interactive
+
+    /// Run the command on the system and the output will be captured in a log file
+    case log(file: String)
 }
 
 
