@@ -96,12 +96,17 @@ class LogTaskExecutor: TaskExecutor {
     
     func execute(_ commandParts: [String]) -> ExecutorReturnValue  {
         let argv: [UnsafeMutablePointer<CChar>?] = commandParts.map{ $0.withCString(strdup) }
-        defer { for case let arg? in argv { free(arg) } }
-        
         var pid: pid_t = 0
         var childFDActions: posix_spawn_file_actions_t? = nil
         let outputPipe: Int32 = 69
         let outerrPipe: Int32 = 70
+        
+        defer {
+            for case let arg? in argv { free(arg) }
+            posix_spawn_file_actions_addclose(&childFDActions, outputPipe)
+            posix_spawn_file_actions_addclose(&childFDActions, outerrPipe)
+            posix_spawn_file_actions_destroy(&childFDActions)
+        }
         
         posix_spawn_file_actions_init(&childFDActions)
         posix_spawn_file_actions_addopen(&childFDActions, outputPipe, stdoutLogPath, O_CREAT | O_TRUNC | O_WRONLY, ~0)
@@ -110,13 +115,9 @@ class LogTaskExecutor: TaskExecutor {
         posix_spawn_file_actions_adddup2(&childFDActions, outerrPipe, 2)
         
         var result = posix_spawn(&pid, argv[0], &childFDActions, nil, argv + [nil], nil)
-        guard result == 0 else { return (Int(1), "", "") }
-        
+        guard result == 0 else { return (Int(result), "", "") }
         waitpid(pid, &result, 0)
-        posix_spawn_file_actions_addclose(&childFDActions, outputPipe)
-        posix_spawn_file_actions_addclose(&childFDActions, outerrPipe)
-        posix_spawn_file_actions_destroy(&childFDActions)
-        
+    
         let (stdout, stderr) = read(outputPath: stdoutLogPath, outerrPath: stderrLogPath)
         removeFiles(stdoutLogPath, stderrLogPath)
         write(atPath: logPath, content: "\(stdout)\n\(stderr)")
