@@ -13,7 +13,7 @@ class 🏃{
     
     class func runWithoutCapture(_ command: String) -> Int {
         let initalSettings = RunSettings()
-        initalSettings.interactive = true
+        initalSettings.execution = .interactive
         return run(command, args: [], settings: initalSettings).exitStatus
     }
     
@@ -60,12 +60,15 @@ class 🏃{
         
         echoCommand(commandParts, settings: settings)
         
-        if settings.dryRun {
-            result = executeDryCommand(commandParts)
-        } else if settings.interactive {
-            result = executeIneractiveCommand(commandParts)
-        } else {
+        switch settings.execution {
+        case .default:
             result = executeActualCommand(commandParts)
+        case .dryRun:
+            result = executeDryCommand(commandParts)
+        case .interactive:
+            result = executeIneractiveCommand(commandParts)
+        case .log(let path):
+            result = executeLogCommand(commandParts, logPath: path)
         }
         
         echoResult(result, settings: settings)
@@ -81,15 +84,16 @@ class 🏃{
         return execute(commandParts, withExecutor: InteractiveTaskExecutor())
     }
     
+    fileprivate class func executeLogCommand(_ commandParts: [String], logPath: String) -> RunResults {
+        return execute(commandParts, withExecutor: LogTaskExecutor(logPath: logPath))
+    }
+    
     fileprivate class func executeActualCommand(_ commandParts: [String]) -> RunResults {
         return execute(commandParts, withExecutor: CommandExecutor.currentTaskExecutor)
     }
     
     fileprivate class func execute(_ commandParts: [String], withExecutor executor: TaskExecutor) -> RunResults {
-        let (status, stdoutPipe, stderrPipe) = executor.execute(commandParts)
-        
-        let stdout = readPipe(stdoutPipe).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        let stderr = readPipe(stderrPipe).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let (status, stdout, stderr) = executor.execute(commandParts)
         return RunResults(exitStatus: status, stdout: stdout, stderr: stderr)
     }
     

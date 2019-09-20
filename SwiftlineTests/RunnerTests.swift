@@ -176,7 +176,7 @@ class RunnerTests: QuickSpec {
       it("execute ls") {
         CommandExecutor.currentTaskExecutor = ActualTaskExecutor()
         let res = 🏃.run("ls -all") {
-          $0.dryRun = true
+            $0.execution = .dryRun
         }
         
         expect(res.exitStatus).to(equal(0))

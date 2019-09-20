@@ -9,7 +9,7 @@
 import Foundation
 
 
-typealias ExecutorReturnValue = (status: Int, standardOutput: TaskPipe, standardError: TaskPipe)
+typealias ExecutorReturnValue = (status: Int, standardOutput: String, standardError: String)
 
 class CommandExecutor {
   
@@ -25,14 +25,21 @@ protocol TaskExecutor {
   func execute(_ commandParts: [String]) -> ExecutorReturnValue
 }
 
+extension TaskExecutor {
+    func readPipes(stdoutPipe: Pipe, stderrPipe: Pipe) -> (stdout: String, stderr: String) {
+        let stdout = readPipe(stdoutPipe).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let stderr = readPipe(stderrPipe).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    
+        return (stdout, stderr)
+    }
+}
+
 class DryTaskExecutor: TaskExecutor {
   
   func execute(_ commandParts: [String]) -> ExecutorReturnValue {
     let command = commandParts.joined(separator: " ")
     PromptSettings.print("Executed command '\(command)'")
-    return (0,
-      Dryipe(dataToReturn: "".data(using: String.Encoding.utf8)!),
-      Dryipe(dataToReturn: "".data(using: String.Encoding.utf8)!))
+    return (0, "", "")
   }
 }
 
@@ -52,7 +59,8 @@ class ActualTaskExecutor: TaskExecutor {
     task.launch()
     task.waitUntilExit()
     
-    return (Int(task.terminationStatus), stdoutPipe, stderrPipe)
+    let (stdout, stderr) = readPipes(stdoutPipe: stdoutPipe, stderrPipe: stderrPipe)
+    return (Int(task.terminationStatus), stdout, stderr)
   }
 }
 
@@ -72,13 +80,70 @@ class InteractiveTaskExecutor: TaskExecutor {
     posix_spawn_file_actions_addclose(&childFDActions, outputPipe[0])
     posix_spawn_file_actions_addclose(&childFDActions, outputPipe[1])
 
-    
     var pid: pid_t = 0
     let result = posix_spawn(&pid, argv[0], &childFDActions, nil, argv + [nil], nil)
     
-    let emptyPipe = Dryipe(dataToReturn: "".data(using: String.Encoding.utf8)!)
-    return (Int(result), emptyPipe, emptyPipe)
+    return (Int(result), "", "")
   }
+}
+
+class LogTaskExecutor: TaskExecutor {
+    let logPath: String
+    
+    init(logPath: String) {
+        self.logPath = logPath
+    }
+    
+    func execute(_ commandParts: [String]) -> ExecutorReturnValue  {
+        let argv: [UnsafeMutablePointer<CChar>?] = commandParts.map{ $0.withCString(strdup) }
+        var pid: pid_t = 0
+        var childFDActions: posix_spawn_file_actions_t? = nil
+        let outputPipe: Int32 = 69
+        let outerrPipe: Int32 = 70
+        
+        defer {
+            for case let arg? in argv { free(arg) }
+            posix_spawn_file_actions_addclose(&childFDActions, outputPipe)
+            posix_spawn_file_actions_addclose(&childFDActions, outerrPipe)
+            posix_spawn_file_actions_destroy(&childFDActions)
+        }
+        
+        posix_spawn_file_actions_init(&childFDActions)
+        posix_spawn_file_actions_addopen(&childFDActions, outputPipe, stdoutLogPath, O_CREAT | O_TRUNC | O_WRONLY, ~0)
+        posix_spawn_file_actions_addopen(&childFDActions, outerrPipe, stderrLogPath, O_CREAT | O_TRUNC | O_WRONLY, ~0)
+        posix_spawn_file_actions_adddup2(&childFDActions, outputPipe, 1)
+        posix_spawn_file_actions_adddup2(&childFDActions, outerrPipe, 2)
+        
+        var result = posix_spawn(&pid, argv[0], &childFDActions, nil, argv + [nil], nil)
+        guard result == 0 else { return (Int(result), "", "") }
+        waitpid(pid, &result, 0)
+    
+        let (stdout, stderr) = read(outputPath: stdoutLogPath, outerrPath: stderrLogPath)
+        removeFiles(stdoutLogPath, stderrLogPath)
+        write(atPath: logPath, content: "\(stdout)\n\(stderr)")
+        
+        return (Int(0), stdout, stderr)
+    }
+    
+    private var stdoutLogPath: String { return "\(logPath)-stdout.log" }
+    private var stderrLogPath: String { return "\(logPath)-stderr.log" }
+    
+    private func removeFiles(_ files: String...) {
+        files.forEach { file in
+            try? FileManager.default.removeItem(atPath: file)
+        }
+    }
+    
+    private func read(outputPath: String, outerrPath: String) -> (stdout: String, stderr: String) {
+        let stdout = String(data: FileManager.default.contents(atPath: outputPath) ?? Data(), encoding: .utf8) ?? ""
+        let stderr = String(data: FileManager.default.contents(atPath: outerrPath) ?? Data(), encoding: .utf8) ?? ""
+        
+        return (stdout, stderr)
+    }
+    
+    private func write(atPath path: String, content: String) {
+        FileManager.default.createFile(atPath: path, contents: content.data(using: .utf8), attributes: nil)
+    }
 }
 
 class DummyTaskExecutor: TaskExecutor {
@@ -99,8 +164,6 @@ class DummyTaskExecutor: TaskExecutor {
     let command = commandParts.joined(separator: " ")
     commandsExecuted.append(command)
     
-    return (statusCodeToReturn,
-      Dryipe(dataToReturn: outputToReturn.data(using: String.Encoding.utf8)!),
-      Dryipe(dataToReturn: errorToReturn.data(using: String.Encoding.utf8)!))
+    return (statusCodeToReturn, outputToReturn, errorToReturn)
   }
 }
