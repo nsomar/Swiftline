@@ -1,14 +1,17 @@
+language: swift
+osx_image: xcode11
 sudo: false
-language: objective-c
-osx_image: xcode8
 
-install:
-- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+env:
+  global:
+    - PROJECT="Swiftline.xcodeproj"
+    - JOB="XCODE"
+    - DEST="platform=macOS,arch=x86_64"
 
-
-script:
-- make test
-- pod lib lint --quick
-
-after_success:
-- bash <(curl -s https://codecov.io/bash)
+jobs:
+  include:
+    - stage: test
+      name: "Tests"
+      script:
+        - set -o pipefail
+        - xcodebuild test -project "$PROJECT" -scheme "SwiftlineTests" -destination "$DEST" | xcpretty -c
