@@ -7,8 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B48DACB2344E1C90053CCC9 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 8B48DACA2344E1C90053CCC9 /* Nimble */; };
-		8B48DAD02344E2A40053CCC9 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 8B48DACF2344E2A40053CCC9 /* Quick */; };
+		8B48DAD32344E6F40053CCC9 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 8B48DAD22344E6F40053CCC9 /* Quick */; };
+		8B48DAD62344E7040053CCC9 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 8B48DAD52344E7040053CCC9 /* Nimble */; };
+		8B48DAD82344E9210053CCC9 /* AgreeSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A223042EDD0008C1D0 /* AgreeSettingsTest.swift */; };
+		8B48DAD92344E9210053CCC9 /* AgreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A823042EDD0008C1D0 /* AgreeTests.swift */; };
+		8B48DADA2344E9210053CCC9 /* ArgsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A323042EDD0008C1D0 /* ArgsTests.swift */; };
+		8B48DADB2344E9210053CCC9 /* AskSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7AB23042EDE0008C1D0 /* AskSettingsTests.swift */; };
+		8B48DADC2344E9210053CCC9 /* AskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7AA23042EDE0008C1D0 /* AskTests.swift */; };
+		8B48DADD2344E9210053CCC9 /* ChooseSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A723042EDD0008C1D0 /* ChooseSettingsTests.swift */; };
+		8B48DADE2344E9210053CCC9 /* ChooseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7AC23042EDE0008C1D0 /* ChooseTests.swift */; };
+		8B48DADF2344E9210053CCC9 /* ColorizerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A623042EDD0008C1D0 /* ColorizerTest.swift */; };
+		8B48DAE02344E9210053CCC9 /* ENVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7AD23042EDE0008C1D0 /* ENVTests.swift */; };
+		8B48DAE12344E9210053CCC9 /* GlobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A923042EDE0008C1D0 /* GlobTests.swift */; };
+		8B48DAE22344E9210053CCC9 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A123042EDD0008C1D0 /* RunnerTests.swift */; };
+		8B48DAE62344EA360053CCC9 /* CwlCatchException in Frameworks */ = {isa = PBXBuildFile; productRef = 8B48DAE52344EA360053CCC9 /* CwlCatchException */; };
 		8B6AA76123042E370008C1D0 /* Swiftline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Swiftline" /* Swiftline.framework */; };
 		8B6AA78523042E910008C1D0 /* ArgsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA76923042E910008C1D0 /* ArgsParser.swift */; };
 		8B6AA78623042E910008C1D0 /* AskSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA76A23042E910008C1D0 /* AskSettings.swift */; };
@@ -38,17 +50,6 @@
 		8B6AA79E23042E910008C1D0 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA78223042E910008C1D0 /* ProcessInfo.swift */; };
 		8B6AA79F23042E910008C1D0 /* TaskPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA78323042E910008C1D0 /* TaskPipe.swift */; };
 		8B6AA7A023042E910008C1D0 /* RunResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA78423042E910008C1D0 /* RunResults.swift */; };
-		8B6AA7AE23042EDE0008C1D0 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A123042EDD0008C1D0 /* RunnerTests.swift */; };
-		8B6AA7AF23042EDE0008C1D0 /* AgreeSettingsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A223042EDD0008C1D0 /* AgreeSettingsTest.swift */; };
-		8B6AA7B023042EDE0008C1D0 /* ArgsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A323042EDD0008C1D0 /* ArgsTests.swift */; };
-		8B6AA7B323042EDE0008C1D0 /* ColorizerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A623042EDD0008C1D0 /* ColorizerTest.swift */; };
-		8B6AA7B423042EDE0008C1D0 /* ChooseSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A723042EDD0008C1D0 /* ChooseSettingsTests.swift */; };
-		8B6AA7B523042EDE0008C1D0 /* AgreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A823042EDD0008C1D0 /* AgreeTests.swift */; };
-		8B6AA7B623042EDE0008C1D0 /* GlobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A923042EDE0008C1D0 /* GlobTests.swift */; };
-		8B6AA7B723042EDE0008C1D0 /* AskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7AA23042EDE0008C1D0 /* AskTests.swift */; };
-		8B6AA7B823042EDE0008C1D0 /* AskSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7AB23042EDE0008C1D0 /* AskSettingsTests.swift */; };
-		8B6AA7B923042EDE0008C1D0 /* ChooseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7AC23042EDE0008C1D0 /* ChooseTests.swift */; };
-		8B6AA7BA23042EDE0008C1D0 /* ENVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7AD23042EDE0008C1D0 /* ENVTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,9 +114,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B48DAD02344E2A40053CCC9 /* Quick in Frameworks */,
+				8B48DAD62344E7040053CCC9 /* Nimble in Frameworks */,
+				8B48DAE62344EA360053CCC9 /* CwlCatchException in Frameworks */,
+				8B48DAD32344E6F40053CCC9 /* Quick in Frameworks */,
 				8B6AA76123042E370008C1D0 /* Swiftline.framework in Frameworks */,
-				8B48DACB2344E1C90053CCC9 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,8 +247,9 @@
 			);
 			name = SwiftlineTests;
 			packageProductDependencies = (
-				8B48DACA2344E1C90053CCC9 /* Nimble */,
-				8B48DACF2344E2A40053CCC9 /* Quick */,
+				8B48DAD22344E6F40053CCC9 /* Quick */,
+				8B48DAD52344E7040053CCC9 /* Nimble */,
+				8B48DAE52344EA360053CCC9 /* CwlCatchException */,
 			);
 			productName = SwiftlineTests;
 			productReference = 8B6AA75C23042E370008C1D0 /* SwiftlineTests.xctest */;
@@ -297,8 +300,9 @@
 			);
 			mainGroup = "___RootGroup_";
 			packageReferences = (
-				8B48DAC72344E1B80053CCC9 /* XCRemoteSwiftPackageReference "Nimble" */,
-				8B48DACC2344E29E0053CCC9 /* XCRemoteSwiftPackageReference "Quick" */,
+				8B48DAD12344E6F40053CCC9 /* XCRemoteSwiftPackageReference "Quick" */,
+				8B48DAD42344E7040053CCC9 /* XCRemoteSwiftPackageReference "Nimble" */,
+				8B48DAE42344EA360053CCC9 /* XCRemoteSwiftPackageReference "CwlCatchException" */,
 			);
 			productRefGroup = "____Products_" /* Products */;
 			projectDirPath = "";
@@ -325,17 +329,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B6AA7B523042EDE0008C1D0 /* AgreeTests.swift in Sources */,
-				8B6AA7AE23042EDE0008C1D0 /* RunnerTests.swift in Sources */,
-				8B6AA7B923042EDE0008C1D0 /* ChooseTests.swift in Sources */,
-				8B6AA7B323042EDE0008C1D0 /* ColorizerTest.swift in Sources */,
-				8B6AA7BA23042EDE0008C1D0 /* ENVTests.swift in Sources */,
-				8B6AA7B023042EDE0008C1D0 /* ArgsTests.swift in Sources */,
-				8B6AA7B623042EDE0008C1D0 /* GlobTests.swift in Sources */,
-				8B6AA7AF23042EDE0008C1D0 /* AgreeSettingsTest.swift in Sources */,
-				8B6AA7B423042EDE0008C1D0 /* ChooseSettingsTests.swift in Sources */,
-				8B6AA7B823042EDE0008C1D0 /* AskSettingsTests.swift in Sources */,
-				8B6AA7B723042EDE0008C1D0 /* AskTests.swift in Sources */,
+				8B48DAE02344E9210053CCC9 /* ENVTests.swift in Sources */,
+				8B48DADB2344E9210053CCC9 /* AskSettingsTests.swift in Sources */,
+				8B48DAD92344E9210053CCC9 /* AgreeTests.swift in Sources */,
+				8B48DAE12344E9210053CCC9 /* GlobTests.swift in Sources */,
+				8B48DADA2344E9210053CCC9 /* ArgsTests.swift in Sources */,
+				8B48DADD2344E9210053CCC9 /* ChooseSettingsTests.swift in Sources */,
+				8B48DAD82344E9210053CCC9 /* AgreeSettingsTest.swift in Sources */,
+				8B48DAE22344E9210053CCC9 /* RunnerTests.swift in Sources */,
+				8B48DADE2344E9210053CCC9 /* ChooseTests.swift in Sources */,
+				8B48DADC2344E9210053CCC9 /* AskTests.swift in Sources */,
+				8B48DADF2344E9210053CCC9 /* ColorizerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +422,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -445,12 +448,10 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.47deg.SwiftlineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -487,7 +488,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -512,7 +512,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -528,7 +527,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Swiftline;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -545,7 +543,6 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -553,8 +550,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = __PBXFileRef_Swiftline.xcodeproj/Configs/Project.xcconfig /* Swiftline.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -563,8 +562,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = __PBXFileRef_Swiftline.xcodeproj/Configs/Project.xcconfig /* Swiftline.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -602,15 +603,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8B48DAC72344E1B80053CCC9 /* XCRemoteSwiftPackageReference "Nimble" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Nimble.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.4;
-			};
-		};
-		8B48DACC2344E29E0053CCC9 /* XCRemoteSwiftPackageReference "Quick" */ = {
+		8B48DAD12344E6F40053CCC9 /* XCRemoteSwiftPackageReference "Quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
@@ -618,18 +611,39 @@
 				minimumVersion = 2.2.0;
 			};
 		};
+		8B48DAD42344E7040053CCC9 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.4;
+			};
+		};
+		8B48DAE42344EA360053CCC9 /* XCRemoteSwiftPackageReference "CwlCatchException" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mattgallagher/CwlCatchException.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8B48DACA2344E1C90053CCC9 /* Nimble */ = {
+		8B48DAD22344E6F40053CCC9 /* Quick */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8B48DAC72344E1B80053CCC9 /* XCRemoteSwiftPackageReference "Nimble" */;
+			package = 8B48DAD12344E6F40053CCC9 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		8B48DAD52344E7040053CCC9 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B48DAD42344E7040053CCC9 /* XCRemoteSwiftPackageReference "Nimble" */;
 			productName = Nimble;
 		};
-		8B48DACF2344E2A40053CCC9 /* Quick */ = {
+		8B48DAE52344EA360053CCC9 /* CwlCatchException */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8B48DACC2344E29E0053CCC9 /* XCRemoteSwiftPackageReference "Quick" */;
-			productName = Quick;
+			package = 8B48DAE42344EA360053CCC9 /* XCRemoteSwiftPackageReference "CwlCatchException" */;
+			productName = CwlCatchException;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
