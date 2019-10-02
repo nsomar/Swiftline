@@ -1,6 +1,6 @@
 language: swift
 osx_image: xcode11
-sudo: required
+sudo: false
 
 env:
   global:
