@@ -271,6 +271,16 @@ Returns the arguments passed to the script. For example when calling `script -f1
 ## Documentation
 Documentation can be found [here](http://swiftline.github.io/docs/index.html)
 
+## Installation
+You can install Swiftline using [Swift package manager](https://swift.org/package-manager/)
+
+Add the following to your `Package.swift` dependencies:
+```
+.package(url: "https://github.com/Swiftline/Swiftline.git", from: "0.6.0")
+```
+
+Or by adding https://github.com/Swiftline/Swiftline.git, version "0.6.0" or later, to the list of Swift packages for any project in Xcode.
+
 ## Credits
 Daniel Beere for creating the logo [@DanielBeere](https://twitter.com/DanielBeere) check out [danielbeere on dribble](https://dribbble.com/danielbeere)
 Omar Abdelhafith current project maintainer [@ifnottrue](https://twitter.com/ifnottrue)
