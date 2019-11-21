@@ -172,3 +172,5 @@ Examples/Rome/
 TestPackage/.build
 .build/
 SwiftlineTests/Carthage/Checkouts
+Package.resolved
+.swiftpm
