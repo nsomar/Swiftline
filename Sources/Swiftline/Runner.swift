@@ -11,42 +11,42 @@ import Foundation
 
 class 🏃{
     
-    class func runWithoutCapture(_ command: String) -> Int {
+    @discardableResult class func runWithoutCapture(_ command: String) -> Int {
         let initalSettings = RunSettings()
         initalSettings.interactive = true
         return run(command, args: [], settings: initalSettings).exitStatus
     }
     
-    class func run(_ command: String, args: String...) -> RunResults {
+    @discardableResult class func run(_ command: String, args: String...) -> RunResults {
         return run(command, args: args as [String])
     }
     
-    class func run(_ command: String, args: [String]) -> RunResults {
+    @discardableResult class func run(_ command: String, args: [String]) -> RunResults {
         let settings = RunSettings()
         return run(command, args: args, settings: settings)
     }
     
-    class func run(_ command: String, settings: ((RunSettings) -> Void)) -> RunResults {
+    @discardableResult class func run(_ command: String, settings: ((RunSettings) -> Void)) -> RunResults {
         let initalSettings = RunSettings()
         settings(initalSettings)
         
         return run(command, args: [], settings: initalSettings)
     }
     
-    class func run(_ command: String, args: [String], settings: ((RunSettings) -> Void)) -> RunResults {
+    @discardableResult class func run(_ command: String, args: [String], settings: ((RunSettings) -> Void)) -> RunResults {
         let initalSettings = RunSettings()
         settings(initalSettings)
         
         return run(command, args: args, settings: initalSettings)
     }
     
-    class func run(_ command: String, echo: EchoSettings) -> RunResults {
+    @discardableResult class func run(_ command: String, echo: EchoSettings) -> RunResults {
         let initalSettings = RunSettings()
         initalSettings.echo = echo
         return run(command, args: [], settings: initalSettings)
     }
     
-    class func run(_ command: String, args: [String], settings: RunSettings) -> RunResults {
+    @discardableResult class func run(_ command: String, args: [String], settings: RunSettings) -> RunResults {
         
         let commandParts = commandToRun(command, args: args)
         

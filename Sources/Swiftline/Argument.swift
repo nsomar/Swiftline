@@ -70,27 +70,12 @@ struct Argument {
     case .notAFlag:
       return argument
     case .shortFlag:
-      return argument[1..<argument.utf8.count]
+        return argument.components(separatedBy: "-")[1]
     case .longFlag:
-      return argument[2..<argument.utf8.count]
+      return argument.components(separatedBy: "--")[1]
     case .flagsTerminator:
       return ""
     }
   }
   
-}
-
-extension String {
-  public subscript (range: Range<Int>) -> String {
-    let length = self.lengthOfBytes(using: String.Encoding.utf8)
-    
-    var distanceFromEndIndex = length - range.upperBound
-    if distanceFromEndIndex < 0 {
-      distanceFromEndIndex = 0
-    }
-    
-    let actualRange = (characters.index(startIndex, offsetBy: range.lowerBound) ..< characters.index(endIndex, offsetBy: -distanceFromEndIndex))
-    
-    return self[actualRange]
-  }
 }
