@@ -63,6 +63,8 @@ class 🏃{
         switch settings.execution {
         case .default:
             result = executeActualCommand(commandParts)
+        case .parallelizable:
+            result = executeActualCommand(commandParts, executor: ActualTaskExecutor())
         case .dryRun:
             result = executeDryCommand(commandParts)
         case .interactive:
@@ -88,8 +90,8 @@ class 🏃{
         return execute(commandParts, withExecutor: LogTaskExecutor(logPath: logPath))
     }
     
-    fileprivate class func executeActualCommand(_ commandParts: [String]) -> RunResults {
-        return execute(commandParts, withExecutor: CommandExecutor.currentTaskExecutor)
+    fileprivate class func executeActualCommand(_ commandParts: [String], executor: TaskExecutor = CommandExecutor.currentTaskExecutor) -> RunResults {
+        return execute(commandParts, withExecutor: executor)
     }
     
     fileprivate class func execute(_ commandParts: [String], withExecutor executor: TaskExecutor) -> RunResults {

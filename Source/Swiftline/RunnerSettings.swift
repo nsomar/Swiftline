@@ -24,6 +24,9 @@ public enum ExecutionSettings {
     /// Run the command on the system
     case `default`
     
+    /// Run the command on the system (in different executor)
+    case parallelizable
+    
     /// Wont be run on the system, the stdout will contain the command executed
     case dryRun
 
