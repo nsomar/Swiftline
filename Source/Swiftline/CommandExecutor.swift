@@ -46,18 +46,22 @@ class DryTaskExecutor: TaskExecutor {
 class ActualTaskExecutor: TaskExecutor {
   
   func execute(_ commandParts: [String]) -> ExecutorReturnValue  {
+    let group = DispatchGroup()
+    group.enter()
+    
     let task = Process()
-
     task.launchPath = "/usr/bin/env"
     task.arguments = commandParts
     
     let stdoutPipe = Pipe()
     let stderrPipe = Pipe()
     
+    task.terminationHandler = { _ in group.leave() }
     task.standardOutput = stdoutPipe
     task.standardError = stderrPipe
     task.launch()
-    task.waitUntilExit()
+    
+    group.wait()
     
     let (stdout, stderr) = readPipes(stdoutPipe: stdoutPipe, stderrPipe: stderrPipe)
     return (Int(task.terminationStatus), stdout, stderr)
