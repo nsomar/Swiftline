@@ -5,9 +5,9 @@
         "package": "CwlCatchException",
         "repositoryURL": "https://github.com/mattgallagher/CwlCatchException.git",
         "state": {
-          "branch": "master",
-          "revision": "f809deb30dc5c9d9b78c872e553261a61177721a",
-          "version": null
+          "branch": null,
+          "revision": "7cd2f8cacc4d22f21bc0b2309c3b18acf7957b66",
+          "version": "1.2.0"
         }
       },
       {

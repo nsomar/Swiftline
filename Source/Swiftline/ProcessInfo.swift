@@ -33,16 +33,15 @@ class DummyProcessInfo: ProcessInfoType {
   var cacheResults: Bool { return false }
 }
 
-class ProcessInfo {
-
-  static var internalProcessInfo: ProcessInfoType = Foundation.ProcessInfo()
-
-  static var arguments: [String] {
-    return internalProcessInfo.arguments
-  }
-
-  static var cacheResults: Bool {
-    return internalProcessInfo.cacheResults
-  }
-
+enum ProcessInfo {
+    static var internalProcessInfo: ProcessInfoType = Foundation.ProcessInfo.processInfo
+    
+    static var arguments: [String] {
+        return internalProcessInfo.arguments
+    }
+    
+    static var cacheResults: Bool {
+        return internalProcessInfo.cacheResults
+    }
+    
 }

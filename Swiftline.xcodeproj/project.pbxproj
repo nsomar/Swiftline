@@ -18,9 +18,7 @@
 		8B48DADE2344E9210053CCC9 /* ChooseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7AC23042EDE0008C1D0 /* ChooseTests.swift */; };
 		8B48DADF2344E9210053CCC9 /* ColorizerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A623042EDD0008C1D0 /* ColorizerTest.swift */; };
 		8B48DAE02344E9210053CCC9 /* ENVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7AD23042EDE0008C1D0 /* ENVTests.swift */; };
-		8B48DAE12344E9210053CCC9 /* GlobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A923042EDE0008C1D0 /* GlobTests.swift */; };
 		8B48DAE22344E9210053CCC9 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA7A123042EDD0008C1D0 /* RunnerTests.swift */; };
-		8B48DAE62344EA360053CCC9 /* CwlCatchException in Frameworks */ = {isa = PBXBuildFile; productRef = 8B48DAE52344EA360053CCC9 /* CwlCatchException */; };
 		8B6AA76123042E370008C1D0 /* Swiftline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Swiftline" /* Swiftline.framework */; };
 		8B6AA78523042E910008C1D0 /* ArgsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA76923042E910008C1D0 /* ArgsParser.swift */; };
 		8B6AA78623042E910008C1D0 /* AskSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA76A23042E910008C1D0 /* AskSettings.swift */; };
@@ -45,7 +43,6 @@
 		8B6AA79923042E910008C1D0 /* PromptReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA77D23042E910008C1D0 /* PromptReader.swift */; };
 		8B6AA79A23042E910008C1D0 /* StringBackgroundColorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA77E23042E910008C1D0 /* StringBackgroundColorizer.swift */; };
 		8B6AA79B23042E910008C1D0 /* Colorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA77F23042E910008C1D0 /* Colorizer.swift */; };
-		8B6AA79C23042E910008C1D0 /* Glob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA78023042E910008C1D0 /* Glob.swift */; };
 		8B6AA79D23042E910008C1D0 /* AskerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA78123042E910008C1D0 /* AskerValidator.swift */; };
 		8B6AA79E23042E910008C1D0 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA78223042E910008C1D0 /* ProcessInfo.swift */; };
 		8B6AA79F23042E910008C1D0 /* TaskPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AA78323042E910008C1D0 /* TaskPipe.swift */; };
@@ -88,7 +85,6 @@
 		8B6AA77D23042E910008C1D0 /* PromptReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptReader.swift; sourceTree = "<group>"; };
 		8B6AA77E23042E910008C1D0 /* StringBackgroundColorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringBackgroundColorizer.swift; sourceTree = "<group>"; };
 		8B6AA77F23042E910008C1D0 /* Colorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colorizer.swift; sourceTree = "<group>"; };
-		8B6AA78023042E910008C1D0 /* Glob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glob.swift; sourceTree = "<group>"; };
 		8B6AA78123042E910008C1D0 /* AskerValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskerValidator.swift; sourceTree = "<group>"; };
 		8B6AA78223042E910008C1D0 /* ProcessInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
 		8B6AA78323042E910008C1D0 /* TaskPipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPipe.swift; sourceTree = "<group>"; };
@@ -99,7 +95,6 @@
 		8B6AA7A623042EDD0008C1D0 /* ColorizerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorizerTest.swift; sourceTree = "<group>"; };
 		8B6AA7A723042EDD0008C1D0 /* ChooseSettingsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSettingsTests.swift; sourceTree = "<group>"; };
 		8B6AA7A823042EDD0008C1D0 /* AgreeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreeTests.swift; sourceTree = "<group>"; };
-		8B6AA7A923042EDE0008C1D0 /* GlobTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobTests.swift; sourceTree = "<group>"; };
 		8B6AA7AA23042EDE0008C1D0 /* AskTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskTests.swift; sourceTree = "<group>"; };
 		8B6AA7AB23042EDE0008C1D0 /* AskSettingsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskSettingsTests.swift; sourceTree = "<group>"; };
 		8B6AA7AC23042EDE0008C1D0 /* ChooseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTests.swift; sourceTree = "<group>"; };
@@ -115,7 +110,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B48DAD62344E7040053CCC9 /* Nimble in Frameworks */,
-				8B48DAE62344EA360053CCC9 /* CwlCatchException in Frameworks */,
 				8B48DAD32344E6F40053CCC9 /* Quick in Frameworks */,
 				8B6AA76123042E370008C1D0 /* Swiftline.framework in Frameworks */,
 			);
@@ -143,7 +137,6 @@
 				8B6AA7AC23042EDE0008C1D0 /* ChooseTests.swift */,
 				8B6AA7A623042EDD0008C1D0 /* ColorizerTest.swift */,
 				8B6AA7AD23042EDE0008C1D0 /* ENVTests.swift */,
-				8B6AA7A923042EDE0008C1D0 /* GlobTests.swift */,
 				8B6AA7A123042EDD0008C1D0 /* RunnerTests.swift */,
 				8B6AA76023042E370008C1D0 /* Info.plist */,
 			);
@@ -184,7 +177,6 @@
 				8B6AA77D23042E910008C1D0 /* PromptReader.swift */,
 				8B6AA77E23042E910008C1D0 /* StringBackgroundColorizer.swift */,
 				8B6AA77F23042E910008C1D0 /* Colorizer.swift */,
-				8B6AA78023042E910008C1D0 /* Glob.swift */,
 				8B6AA78123042E910008C1D0 /* AskerValidator.swift */,
 				8B6AA78223042E910008C1D0 /* ProcessInfo.swift */,
 				8B6AA78323042E910008C1D0 /* TaskPipe.swift */,
@@ -249,7 +241,6 @@
 			packageProductDependencies = (
 				8B48DAD22344E6F40053CCC9 /* Quick */,
 				8B48DAD52344E7040053CCC9 /* Nimble */,
-				8B48DAE52344EA360053CCC9 /* CwlCatchException */,
 			);
 			productName = SwiftlineTests;
 			productReference = 8B6AA75C23042E370008C1D0 /* SwiftlineTests.xctest */;
@@ -302,7 +293,6 @@
 			packageReferences = (
 				8B48DAD12344E6F40053CCC9 /* XCRemoteSwiftPackageReference "Quick" */,
 				8B48DAD42344E7040053CCC9 /* XCRemoteSwiftPackageReference "Nimble" */,
-				8B48DAE42344EA360053CCC9 /* XCRemoteSwiftPackageReference "CwlCatchException" */,
 			);
 			productRefGroup = "____Products_" /* Products */;
 			projectDirPath = "";
@@ -332,7 +322,6 @@
 				8B48DAE02344E9210053CCC9 /* ENVTests.swift in Sources */,
 				8B48DADB2344E9210053CCC9 /* AskSettingsTests.swift in Sources */,
 				8B48DAD92344E9210053CCC9 /* AgreeTests.swift in Sources */,
-				8B48DAE12344E9210053CCC9 /* GlobTests.swift in Sources */,
 				8B48DADA2344E9210053CCC9 /* ArgsTests.swift in Sources */,
 				8B48DADD2344E9210053CCC9 /* ChooseSettingsTests.swift in Sources */,
 				8B48DAD82344E9210053CCC9 /* AgreeSettingsTest.swift in Sources */,
@@ -348,7 +337,6 @@
 			buildActionMask = 0;
 			files = (
 				8B6AA78623042E910008C1D0 /* AskSettings.swift in Sources */,
-				8B6AA79C23042E910008C1D0 /* Glob.swift in Sources */,
 				8B6AA79F23042E910008C1D0 /* TaskPipe.swift in Sources */,
 				8B6AA79B23042E910008C1D0 /* Colorizer.swift in Sources */,
 				8B6AA79523042E910008C1D0 /* Env.swift in Sources */,
@@ -619,14 +607,6 @@
 				minimumVersion = 8.0.4;
 			};
 		};
-		8B48DAE42344EA360053CCC9 /* XCRemoteSwiftPackageReference "CwlCatchException" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mattgallagher/CwlCatchException.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -639,11 +619,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8B48DAD42344E7040053CCC9 /* XCRemoteSwiftPackageReference "Nimble" */;
 			productName = Nimble;
-		};
-		8B48DAE52344EA360053CCC9 /* CwlCatchException */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B48DAE42344EA360053CCC9 /* XCRemoteSwiftPackageReference "CwlCatchException" */;
-			productName = CwlCatchException;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

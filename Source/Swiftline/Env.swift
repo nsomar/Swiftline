@@ -6,8 +6,7 @@
 //  Copyright © 2015 Omar Abdelhafith. All rights reserved.
 //
 
-import Darwin
-
+import Foundation
 
 public class Env {
   
