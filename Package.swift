@@ -14,11 +14,11 @@ let package = Package(
         .package(url: "https://github.com/Quick/Nimble.git", from: "8.0.7"),
     ],
     targets: [
-        .target(name: "Swiftline"),
+        .target(name: "Swiftline", path: "Sources"),
         .testTarget(name: "SwiftlineTests",
                     dependencies: [.target(name: "Swiftline"),
                                    .product(name: "Quick"),
                                    .product(name: "Nimble")],
-                    path: "SwiftlineTests"),
+                    path: "Tests"),
     ]
 )

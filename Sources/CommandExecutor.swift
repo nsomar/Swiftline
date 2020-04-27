@@ -108,6 +108,7 @@ class LogTaskExecutor: TaskExecutor {
     func execute(_ commandParts: [String]) -> ExecutorReturnValue  {
         let argv: [UnsafeMutablePointer<CChar>?] = commandParts.map { $0.withCString(strdup) }
         var pid: pid_t = 0
+        var childFDActions: posix_spawn_file_actions_t!
         let outputPipe: Int32 = 69
         let outerrPipe: Int32 = 70
         
@@ -118,7 +119,6 @@ class LogTaskExecutor: TaskExecutor {
             posix_spawn_file_actions_destroy(&childFDActions)
         }
         
-        var childFDActions: posix_spawn_file_actions_t!
         posix_spawn_file_actions_init(&childFDActions)
         posix_spawn_file_actions_addopen(&childFDActions, outputPipe, stdoutLogPath, O_CREAT | O_TRUNC | O_WRONLY, ~0)
         posix_spawn_file_actions_addopen(&childFDActions, outerrPipe, stderrLogPath, O_CREAT | O_TRUNC | O_WRONLY, ~0)
