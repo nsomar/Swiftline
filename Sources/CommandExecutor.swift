@@ -41,7 +41,7 @@ class ActualTaskExecutor: TaskExecutor {
         group.enter()
         
         let task = Process()
-        task.launchPath = "/usr/bin/env"
+        task.executableURL = URL(fileURLWithPath: "/usr/bin/env")
         task.arguments = commandParts
         
         let stdoutPipe = Pipe()
@@ -50,8 +50,11 @@ class ActualTaskExecutor: TaskExecutor {
         task.standardOutput = stdoutPipe
         task.standardError = stderrPipe
         task.terminationHandler = { _ in group.leave() }
-        task.launch()
-        
+        do {
+            try task.run()
+        } catch {
+            group.leave()
+        }
         
         group.wait()
         let (stdout, stderr) = readPipes(stdoutPipe: stdoutPipe, stderrPipe: stderrPipe)
@@ -77,19 +80,19 @@ class InteractiveTaskExecutor: TaskExecutor {
     func execute(_ commandParts: [String]) -> ExecutorReturnValue  {
         let argv: [UnsafeMutablePointer<CChar>?] = commandParts.map { $0.withCString(strdup) }
         defer { for case let arg? in argv { free(arg) } }
-        
-        var childFDActions: posix_spawn_file_actions_t? = nil
+
         let outputPipe: [Int32] = [-1, -1]
         
+        var childFDActions: posix_spawn_file_actions_t!
         posix_spawn_file_actions_init(&childFDActions)
         posix_spawn_file_actions_adddup2(&childFDActions, outputPipe[1], 1)
         posix_spawn_file_actions_adddup2(&childFDActions, outputPipe[1], 2)
         posix_spawn_file_actions_addclose(&childFDActions, outputPipe[0])
         posix_spawn_file_actions_addclose(&childFDActions, outputPipe[1])
-        
+
         var pid: pid_t = 0
         let result = posix_spawn(&pid, argv[0], &childFDActions, nil, argv + [nil], ActualTaskExecutor.environment)
-        
+
         return (Int(result), "", "")
     }
 }
@@ -105,7 +108,7 @@ class LogTaskExecutor: TaskExecutor {
     func execute(_ commandParts: [String]) -> ExecutorReturnValue  {
         let argv: [UnsafeMutablePointer<CChar>?] = commandParts.map { $0.withCString(strdup) }
         var pid: pid_t = 0
-        var childFDActions: posix_spawn_file_actions_t? = nil
+        var childFDActions: posix_spawn_file_actions_t!
         let outputPipe: Int32 = 69
         let outerrPipe: Int32 = 70
         

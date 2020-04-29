@@ -21,6 +21,8 @@ xcuserdata
 *.xcuserstate
 *.xcscmblueprint
 **.DS_Store
+.travis.yml
+.ruby-version
 
 ## Obj-C/Swift specific
 *.hmap
@@ -34,3 +36,8 @@ Pods/
 # Carthage
 Carthage
 **/Carthage/**
+
+## Swift package
+**/LinuxMain.swift
+**/XCTestManifests.swift
+Swiftline.xcodeproj
