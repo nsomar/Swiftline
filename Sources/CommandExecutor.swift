@@ -2,6 +2,25 @@ import Foundation
 
 typealias ExecutorReturnValue = (status: Int, standardOutput: String, standardError: String)
 
+enum STDLIB {
+    #if os(Linux)
+    typealias _posix_spawn_file_actions_t = posix_spawn_file_actions_t
+    #else
+    typealias _posix_spawn_file_actions_t = posix_spawn_file_actions_t?
+    #endif
+
+    #if os(Linux)
+    static func _make_posix_spawn_file_actions_t() -> _posix_spawn_file_actions_t {
+        posix_spawn_file_actions_t()
+    }
+    #else
+    static func _make_posix_spawn_file_actions_t() -> _posix_spawn_file_actions_t {
+        nil
+    }
+    #endif
+}
+
+
 class CommandExecutor {
     static var currentTaskExecutor: TaskExecutor = ActualTaskExecutor()
     
@@ -83,7 +102,7 @@ class InteractiveTaskExecutor: TaskExecutor {
 
         let outputPipe: [Int32] = [-1, -1]
         
-        var childFDActions: posix_spawn_file_actions_t!
+        var childFDActions = STDLIB._make_posix_spawn_file_actions_t()
         posix_spawn_file_actions_init(&childFDActions)
         posix_spawn_file_actions_adddup2(&childFDActions, outputPipe[1], 1)
         posix_spawn_file_actions_adddup2(&childFDActions, outputPipe[1], 2)
@@ -108,7 +127,7 @@ class LogTaskExecutor: TaskExecutor {
     func execute(_ commandParts: [String]) -> ExecutorReturnValue  {
         let argv: [UnsafeMutablePointer<CChar>?] = commandParts.map { $0.withCString(strdup) }
         var pid: pid_t = 0
-        var childFDActions: posix_spawn_file_actions_t!
+        var childFDActions = STDLIB._make_posix_spawn_file_actions_t()
         let outputPipe: Int32 = 69
         let outerrPipe: Int32 = 70
         
