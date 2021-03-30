@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -185,10 +185,11 @@
 				};
 			};
 			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "Swiftline" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = "___RootGroup_";
@@ -252,7 +253,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Swiftline;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -269,7 +270,7 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -277,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = __PBXFileRef_Swiftline.xcodeproj/Configs/Project.xcconfig /* Swiftline.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -284,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = __PBXFileRef_Swiftline.xcodeproj/Configs/Project.xcconfig /* Swiftline.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
