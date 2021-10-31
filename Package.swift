@@ -10,8 +10,8 @@ let package = Package(
         .library(name: "Swiftline", targets: ["Swiftline"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Quick/Quick.git", from: "2.2.0"),
-        .package(url: "https://github.com/Quick/Nimble.git", from: "8.0.7"),
+        .package(url: "https://github.com/Quick/Quick.git", from: "4.0.0"),
+        .package(url: "https://github.com/Quick/Nimble.git", from: "9.0.0"),
     ],
     targets: [
         .target(name: "Swiftline", path: "Sources"),

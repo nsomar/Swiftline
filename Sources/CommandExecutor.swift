@@ -125,14 +125,14 @@ class LogTaskExecutor: TaskExecutor {
     }
     
     func execute(_ commandParts: [String]) -> ExecutorReturnValue  {
-        let argv: [UnsafeMutablePointer<CChar>?] = commandParts.map { $0.withCString(strdup) }
+        let argv: [UnsafeMutablePointer<CChar>] = commandParts.compactMap { $0.withCString(strdup) }
         var pid: pid_t = 0
         var childFDActions = STDLIB._make_posix_spawn_file_actions_t()
         let outputPipe: Int32 = 69
         let outerrPipe: Int32 = 70
         
         defer {
-            for case let arg? in argv { free(arg) }
+            argv.forEach { arg in free(arg) }
             posix_spawn_file_actions_addclose(&childFDActions, outputPipe)
             posix_spawn_file_actions_addclose(&childFDActions, outerrPipe)
             posix_spawn_file_actions_destroy(&childFDActions)
